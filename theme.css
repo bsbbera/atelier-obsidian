@@ -2366,7 +2366,7 @@ body.at-no-anim *::after {
     }
 }
 
-/* ----- .at-gradient — cross-theme custom style. In Aurora this paints an Apple-style
+/* ----- .at-gradient — cross-theme custom style. In Lucid this paints an Apple-style
    gradient; here in Atelier the same class is a SINGLE accent colour (coral),
    matching the rest of the theme. Style Settings → "Gradient-text color" drives it; or
    override per use with style="--grad-color: <hex>". ----------------------------- */

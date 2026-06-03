@@ -8,7 +8,7 @@ Its signature is a **webpage-like card system** you compose in plain Markdown, p
 utilities so any run of text can be restyled inline. Everything resolves through `--at-*` design tokens,
 so a single accent picker recolours the whole theme.
 
-> **Companion theme:** [Aurora](https://github.com/bsbbera/aurora-obsidian) shares the *same* card /
+> **Companion theme:** [Lucid](https://github.com/bsbbera/lucid-obsidian) shares the *same* card /
 > column / utility syntax — switch between them and your layout is preserved; only the skin (frosted glass
 > + blue) changes.
 
@@ -87,7 +87,7 @@ A wiki-style text infobox that floats `left`/`right`/`center` and lets body text
 | `at-lead` | large muted lead paragraph |
 | `at-stat` | big coral numeral |
 | `at-mark` | soft coral highlight |
-| `at-gradient` | single accent-colour text (a gradient in Aurora) |
+| `at-gradient` | single accent-colour text (a gradient in Lucid) |
 
 **Inline font size:** `at-xs · at-sm · at-md · at-lg · at-xl · at-2xl · at-3xl · at-4xl`, or exact with
 `at-fs` + `style="--fs: 30px"`. They **compose** — e.g. `class="at-gradient at-2xl"`.

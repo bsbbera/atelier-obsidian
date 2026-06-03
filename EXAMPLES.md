@@ -1,7 +1,7 @@
 # Atelier — examples
 
 Paste this whole note into Obsidian (reading view + Atelier selected) to see every feature. Works the
-same under the companion **Aurora** theme — only the skin changes.
+same under the companion **Lucid** theme — only the skin changes.
 
 ---
 
