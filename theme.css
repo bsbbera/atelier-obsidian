@@ -1781,7 +1781,17 @@ body.at-tag-underline .tag, body.at-tag-underline a.tag {
    verbatim (surface, border, radius, shadow, hover, coral dot-kicker) so it looks
    identical to every other card; it only hides the auto callout title (content
    supplies its own ###### kicker + ### heading) and tightens the heading + list.
-   NO accent top-stripe, NO square kicker, NO per-field colour. ----- */
+   NO accent top-stripe, NO square kicker, NO per-field colour.
+   EXCEPTION: section cards rest FLAT (no resting shadow) and only lift gently on
+   hover — the base card's permanent shadow + heavy 26/60 hover lift read as harsh
+   here (these were flat in the original design). ----- */
+:is(.callout[data-callout="card"][data-callout-metadata*="section"],
+    body.at-card-section .callout[data-callout="card"]:not([data-callout-metadata])) { box-shadow: none; }
+:is(.callout[data-callout="card"][data-callout-metadata*="section"],
+    body.at-card-section .callout[data-callout="card"]:not([data-callout-metadata])):hover {
+    transform: translateY(-3px);
+    box-shadow: var(--at-shadow-pop);
+}
 :is(.callout[data-callout="card"][data-callout-metadata*="section"],
     body.at-card-section .callout[data-callout="card"]:not([data-callout-metadata])) > .callout-title { display: none; }
 :is(.callout[data-callout="card"][data-callout-metadata*="section"],
