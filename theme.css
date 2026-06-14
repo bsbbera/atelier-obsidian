@@ -1166,9 +1166,25 @@ body.at-halign-right .markdown-source-view .HyperMD-header { text-align: right; 
 .markdown-rendered pre code .code-line-numbers,
 .markdown-rendered .code-block-line-num { color: var(--at-code-line-nr); }
 
-/* ----- code-emitter plugin: run-output renders INSIDE the dark code surface, but
-   its default .log-info uses --text-normal (near-black in light mode) → invisible.
-   Recolor the output + separator onto the on-dark code palette. ----- */
+/* ----- code-emitter plugin: it wraps a runnable block in a <div.code-emitter-block>
+   holding the inner <pre>, a play button, an <hr> and the output. The wrapper is
+   transparent and only the inner <pre> carries the dark code surface, so the run
+   output sits on the page (cream) not the dark surface — and an empty .code-output
+   leaves a 2em bar. Make the WHOLE block one dark surface, flatten the inner <pre>,
+   hide empty output, and recolor output text onto the on-dark palette. ----- */
+.code-emitter-block {
+    background: var(--at-code-surface) !important;
+    border: 1px solid var(--at-border-2);
+    border-radius: var(--radius-m);
+    overflow: hidden;
+}
+.code-emitter-block pre {
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    margin: 0;
+}
+.code-emitter-block .code-output:empty { display: none !important; min-height: 0 !important; }
 .code-emitter-block .code-output { color: var(--at-code-text); }
 .code-emitter-block .code-output .log-info { color: var(--at-code-text); }
 .code-emitter-block .code-output .log-debug { color: var(--at-on-dark-muted); }
