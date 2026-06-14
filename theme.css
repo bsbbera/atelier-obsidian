@@ -125,7 +125,7 @@ settings:
         type: variable-themed-color
         format: hex
         opacity: false
-        default-light: '#8a7f6d'
+        default-light: '#736959'
         default-dark: '#a99e87'
 
     -
@@ -573,7 +573,7 @@ body.theme-light {
 
     --at-text: #3a352c;
     --at-text-strong: #1f1b14;
-    --at-muted: #8a7f6d;
+    --at-muted: #736959;   /* a11y: was #8a7f6d = 3.5:1 on the note bg (fails WCAG AA); #736959 = 4.8:1 */
     --at-faint: #b3a892;
 
     --at-dark-surface: #241d15;
@@ -638,7 +638,7 @@ body.theme-dark {
     --at-on-dark-muted: #d3c7af;
     /* DARK: the "accent" hero becomes the BLACK version of the section — a warm-dark
        panel with coral accents (not a coral block). Nested cards lift above it. */
-    --at-accent-surface: #1f1810;       /* dark panel, slightly lifted off the page */
+    --at-accent-surface: #0e0b08;       /* deep near-black hero (was muddy brown #1f1810) */
     --at-on-accent: #f5efe1;            /* cream text on the dark hero */
     --at-on-accent-em: var(--at-accent); /* italic emphasis = coral on the dark hero */
     --at-on-accent-kick: var(--at-accent); /* kicker / labels = coral */
@@ -675,6 +675,28 @@ body {
     --at-accent-line: color-mix(in srgb, var(--at-accent) 55%, transparent);
     --at-code-bg: color-mix(in srgb, var(--at-accent) 12%, transparent);
     --at-chip-bg: color-mix(in srgb, var(--at-accent) 14%, transparent);
+
+    /* CODE BLOCKS: a warm dark ink in BOTH modes so syntax pops (like a terminal /
+       editor pane). Because the surface is always dark, the Prism/CodeMirror token
+       colors below are FIXED light-on-dark values — Obsidian's default tokens are
+       mode-adaptive and would go invisibly dark on this surface in light mode. */
+    --at-code-surface: #14100a;       /* deeper than the dark note bg (#1c1710) so the
+                                         block reads as a recessed terminal panel in dark
+                                         mode; a rich dark block on the cream light page.
+                                         Same value in BOTH modes = consistent. */
+    --at-code-surface-border: rgba(245, 239, 225, 0.12);
+    --at-code-text: #ece3d0;          /* default code text — warm cream */
+    --at-code-line-nr: #6f6450;       /* gutter line numbers */
+    --code-comment: #8a7f68;
+    --code-keyword: #f0866a;          /* coral signature */
+    --code-operator: #d9b27a;
+    --code-function: #e7b86a;
+    --code-property: #ef9d7c;
+    --code-tag: #ef9d7c;
+    --code-string: #9cc081;
+    --code-value: #d9a06f;
+    --code-punctuation: #c7bca2;
+    --code-important: #f0866a;
     --at-border: color-mix(in srgb, var(--at-text-strong) 10%, transparent);
     --at-border-2: color-mix(in srgb, var(--at-text-strong) 16%, transparent);
     --at-border-strong: color-mix(in srgb, var(--at-text-strong) 26%, transparent);
@@ -757,8 +779,12 @@ body {
     --interactive-accent: var(--at-accent);
     --interactive-accent-hover: color-mix(in srgb, var(--at-accent) 82%, white);
 
-    --code-background: var(--at-code-bg);
-    --code-normal: var(--at-code-fg);
+    /* code BLOCKS use a warm DARK ink in both modes (terminal feel) so the syntax
+       highlight pops. Token colors are the fixed light-on-dark palette defined on
+       `body`. The coral --at-code-bg tint is for INLINE code pills only
+       (see .markdown-rendered code). */
+    --code-background: var(--at-code-surface);
+    --code-normal: var(--at-code-text);
 
     --titlebar-background: var(--at-ribbon);
     --titlebar-background-focused: var(--at-ribbon);
@@ -899,6 +925,33 @@ body { background-color: var(--at-bg-0); }
 }
 .nav-folder-title-content { color: var(--at-gold); }
 
+/* default note + folder glyphs before each tree item (Obsidian shows none by
+   default; mirrors the MyWiki Glass treatment with Anthropic Touch tokens). */
+.nav-file-title-content::before,
+.nav-folder-title-content::before {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 7px;
+    vertical-align: -3px;
+    flex-shrink: 0;
+    background-color: var(--at-faint);
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: 15px;
+    transition: background-color 150ms;
+}
+.nav-file-title-content::before {
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z'/%3E%3Cpolyline points='14 2 14 8 20 8'/%3E%3Cline x1='16' y1='13' x2='8' y2='13'/%3E%3Cline x1='16' y1='17' x2='8' y2='17'/%3E%3Cline x1='10' y1='9' x2='8' y2='9'/%3E%3C/svg%3E");
+}
+.nav-folder-title-content::before {
+    background-color: var(--at-gold);
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z'/%3E%3C/svg%3E");
+}
+.nav-file-title:hover .nav-file-title-content::before,
+.nav-file-title.is-active .nav-file-title-content::before { background-color: var(--at-accent); }
+
 .status-bar { background: var(--at-pane); border-top: 1px solid var(--at-border); }
 
 /* graph view */
@@ -1008,7 +1061,7 @@ body.at-halign-right .markdown-source-view .HyperMD-header { text-align: right; 
 .markdown-rendered ol { list-style-type: decimal; }
 .markdown-rendered :is(ul, ol) > li { display: list-item; margin: 0.3em 0; }
 .markdown-rendered ul > li::marker { color: var(--at-accent); }
-/* ordered lists: coral mono numerals (the editorial numbered-list look) */
+/* ordered lists: coral mono numerals (the Anthropic numbered-list look) */
 .markdown-rendered ol > li::marker { color: var(--at-accent); font-family: var(--at-font-mono); font-weight: 600; }
 .markdown-source-view.mod-cm6 .cm-formatting-list { color: var(--at-accent); }
 /* task list checkboxes pick up the accent (and keep their item un-bulleted) */
@@ -1065,20 +1118,53 @@ body.at-halign-right .markdown-source-view .HyperMD-header { text-align: right; 
     border-radius: var(--radius-s);
 }
 
-/* ----- Inline code ----- */
-.markdown-rendered code {
-    background: var(--at-code-bg);
-    color: var(--at-code-fg);
+/* ----- Touch targets (mobile a11y): tags + checkboxes are < the 44px minimum.
+   On touch devices give them a comfortable hit area without changing desktop look. */
+@media (pointer: coarse) {
+    .markdown-rendered a.tag {
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
+        padding-block: 6px;
+    }
+    .markdown-rendered input[type="checkbox"].task-list-item-checkbox {
+        min-width: 24px;
+        min-height: 24px;
+        /* the tappable row is the list item; enlarge the checkbox + its padding */
+    }
+    .markdown-rendered li.task-list-item { min-height: 44px; }
+    .markdown-rendered button,
+    button.mod-cta,
+    .clickable-icon { min-height: 44px; min-width: 44px; }
+}
+
+/* ----- Inline code: a DARK pill matching the code blocks (both modes).
+   Scoped to :not(pre) so multi-line block code (pre > code) keeps its own
+   transparent treatment and doesn't get a doubled border. ----- */
+.markdown-rendered :not(pre) > code {
+    background: var(--at-code-surface);
+    color: #f0a07f;
+    border: 1px solid var(--at-code-surface-border);
     border-radius: 5px;
-    padding: 0.1em 0.4em;
-    font-size: 0.88em;
+    padding: 0.05em 0.36em;
+    font-size: 0.86em;
 }
 .markdown-rendered pre {
-    background: var(--at-dark-surface);
-    border: 1px solid var(--at-on-dark-border);
+    background: var(--at-code-surface);
+    border: 1px solid var(--at-code-surface-border);
     border-radius: var(--radius-m);
 }
-.markdown-rendered pre code { color: var(--at-on-dark); background: none; }
+.markdown-rendered pre code { color: var(--at-code-text); background: none; }
+/* live-preview code block surface + gutter line numbers (warm dark, both modes) */
+.HyperMD-codeblock,
+.cm-s-obsidian .HyperMD-codeblock {
+    background: var(--at-code-surface);
+    color: var(--at-code-text);
+}
+.markdown-source-view .cm-gutters,
+.code-block-flair { color: var(--at-code-line-nr); }
+.markdown-rendered pre code .code-line-numbers,
+.markdown-rendered .code-block-line-num { color: var(--at-code-line-nr); }
 button.copy-code-button {
     background: var(--at-accent);
     color: #fff;
@@ -1089,8 +1175,21 @@ button.copy-code-button {
     text-transform: uppercase;
 }
 
-/* ----- Tables ----- */
-.markdown-rendered table { border-collapse: collapse; border-radius: var(--radius-m); overflow: hidden; }
+/* ----- Tables -----
+   Rounded corners need `border-collapse: separate` (collapsed borders ignore
+   border-radius, which is why the previous `collapse` + overflow:hidden hack had to
+   fake rounding by CLIPPING — and that clip cut the right column). With `separate` +
+   spacing:0 the radius rounds the real outer border and overflow:hidden tidies the
+   cell corners without ever cutting content. Wide tables scroll via the wrapper. */
+.markdown-rendered table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid var(--at-border-2);
+    border-radius: var(--radius-m);
+    overflow: hidden;
+    max-width: 100%;
+}
+.markdown-rendered .table-wrapper { overflow-x: auto; }
 .markdown-rendered th {
     background: var(--at-pane);
     color: var(--at-text-strong);
@@ -1142,31 +1241,55 @@ body.at-tag-underline .tag, body.at-tag-underline a.tag {
     border-bottom: 1px solid var(--at-accent);
 }
 
-/* category auto-tint by href (applies to pill/outline) */
-a.tag[href="#Cloud" i], a.tag[href="#CloudEngineering" i], a.tag[href="#AWS" i],
-a.tag[href="#Azure" i], a.tag[href="#GCP" i], a.tag[href="#Architecture" i] {
+/* Inline tags — auto-varied colours by POSITION (not per tag name), cycling the
+   theme's tag palette so each tag differs (matches the property pills). Covers
+   reading view + live preview. PP-coloured pills are unaffected (those aren't a.tag). */
+:is(.markdown-rendered, .markdown-source-view) a.tag:nth-of-type(4n + 1) {
     background: color-mix(in srgb, var(--at-tag-blue) 18%, transparent);
-    color: color-mix(in srgb, var(--at-tag-blue) 72%, var(--at-text-strong));
+    color: color-mix(in srgb, var(--at-tag-blue) 74%, var(--at-text-strong));
 }
-a.tag[href="#DataEngineering" i], a.tag[href="#ETL" i], a.tag[href="#Pipelines" i],
-a.tag[href="#Spark" i], a.tag[href="#Streaming" i], a.tag[href="#Analytics" i] {
+:is(.markdown-rendered, .markdown-source-view) a.tag:nth-of-type(4n + 2) {
     background: color-mix(in srgb, var(--at-tag-green) 18%, transparent);
-    color: color-mix(in srgb, var(--at-tag-green) 70%, var(--at-text-strong));
+    color: color-mix(in srgb, var(--at-tag-green) 72%, var(--at-text-strong));
 }
-a.tag[href="#Storage" i], a.tag[href="#Database" i], a.tag[href="#SQL" i],
-a.tag[href="#NoSQL" i], a.tag[href="#Lakehouse" i], a.tag[href="#Modeling" i] {
+:is(.markdown-rendered, .markdown-source-view) a.tag:nth-of-type(4n + 3) {
     background: color-mix(in srgb, var(--at-tag-amber) 20%, transparent);
-    color: color-mix(in srgb, var(--at-tag-amber) 72%, var(--at-text-strong));
+    color: color-mix(in srgb, var(--at-tag-amber) 74%, var(--at-text-strong));
 }
-a.tag[href="#person" i], a.tag[href="#book" i], a.tag[href="#Guide" i],
-a.tag[href="#Theory" i], a.tag[href="#index" i], a.tag[href="#python" i] {
+:is(.markdown-rendered, .markdown-source-view) a.tag:nth-of-type(4n + 4) {
     background: color-mix(in srgb, var(--at-tag-rose) 18%, transparent);
-    color: color-mix(in srgb, var(--at-tag-rose) 70%, var(--at-text-strong));
+    color: color-mix(in srgb, var(--at-tag-rose) 72%, var(--at-text-strong));
 }
 
 /* ----- Properties / metadata block ----- */
 .metadata-container { border: none; border-top: 1px solid var(--at-border); padding-top: 8px; }
 .metadata-property-key { color: var(--at-muted); font-family: var(--at-font-mono); font-size: 0.82em; }
+/* Tag property pills — auto-varied colours by POSITION (not per tag name), cycling
+   the theme's tag palette so each pill differs. PP's user-set colours still win. */
+.metadata-property[data-property-key="tags" i] .multi-select-pill:not(.custom-color):not(.theme-color):not(.transparent-color) {
+    border-radius: 99px;
+    border: 1px solid transparent;
+}
+.metadata-property[data-property-key="tags" i] .multi-select-pill:not(.custom-color):not(.theme-color):not(.transparent-color):nth-child(4n+1) {
+    background: color-mix(in srgb, var(--at-tag-blue) 18%, transparent);
+    color: color-mix(in srgb, var(--at-tag-blue) 74%, var(--at-text-strong));
+    border-color: color-mix(in srgb, var(--at-tag-blue) 32%, transparent);
+}
+.metadata-property[data-property-key="tags" i] .multi-select-pill:not(.custom-color):not(.theme-color):not(.transparent-color):nth-child(4n+2) {
+    background: color-mix(in srgb, var(--at-tag-green) 18%, transparent);
+    color: color-mix(in srgb, var(--at-tag-green) 72%, var(--at-text-strong));
+    border-color: color-mix(in srgb, var(--at-tag-green) 32%, transparent);
+}
+.metadata-property[data-property-key="tags" i] .multi-select-pill:not(.custom-color):not(.theme-color):not(.transparent-color):nth-child(4n+3) {
+    background: color-mix(in srgb, var(--at-tag-amber) 20%, transparent);
+    color: color-mix(in srgb, var(--at-tag-amber) 74%, var(--at-text-strong));
+    border-color: color-mix(in srgb, var(--at-tag-amber) 34%, transparent);
+}
+.metadata-property[data-property-key="tags" i] .multi-select-pill:not(.custom-color):not(.theme-color):not(.transparent-color):nth-child(4n+4) {
+    background: color-mix(in srgb, var(--at-tag-rose) 18%, transparent);
+    color: color-mix(in srgb, var(--at-tag-rose) 72%, var(--at-text-strong));
+    border-color: color-mix(in srgb, var(--at-tag-rose) 32%, transparent);
+}
 
 /* ----- REUSABLE TEXT UTILITIES -----------------------------------------------
    Apply the theme's signature text looks to ANY text in a note via inline HTML:
@@ -1397,6 +1520,52 @@ a.tag[href="#Theory" i], a.tag[href="#index" i], a.tag[href="#python" i] {
 @media (max-width: 700px) {
     .callout[data-callout="grid"] > .callout-content { grid-template-columns: 1fr; }
 }
+
+/* ----- RATIO distribution (mirrors the multi-column note system [!col|wN]): give
+   child cards weights w1..w10 to split a row by ratio, e.g. > [!card|w3] + [!card|w7]
+   = 30 / 70. When ANY card in the grid carries a weight the container switches from
+   CSS-grid to flex (grid can't read child weights to build its template), so cards
+   flex-grow by their weight off a 0 basis — identical mechanics to [!col|wN]. ----- */
+.callout[data-callout="grid"] > .callout-content:has(> .callout[data-callout="card"][data-callout-metadata~="w1"]),
+.callout[data-callout="grid"] > .callout-content:has(> .callout[data-callout="card"][data-callout-metadata~="w2"]),
+.callout[data-callout="grid"] > .callout-content:has(> .callout[data-callout="card"][data-callout-metadata~="w3"]),
+.callout[data-callout="grid"] > .callout-content:has(> .callout[data-callout="card"][data-callout-metadata~="w4"]),
+.callout[data-callout="grid"] > .callout-content:has(> .callout[data-callout="card"][data-callout-metadata~="w5"]),
+.callout[data-callout="grid"] > .callout-content:has(> .callout[data-callout="card"][data-callout-metadata~="w6"]),
+.callout[data-callout="grid"] > .callout-content:has(> .callout[data-callout="card"][data-callout-metadata~="w7"]),
+.callout[data-callout="grid"] > .callout-content:has(> .callout[data-callout="card"][data-callout-metadata~="w8"]),
+.callout[data-callout="grid"] > .callout-content:has(> .callout[data-callout="card"][data-callout-metadata~="w9"]),
+.callout[data-callout="grid"] > .callout-content:has(> .callout[data-callout="card"][data-callout-metadata~="w10"]) {
+    display: flex !important;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+/* weights: flex-grow = N off a 0 basis (so the row divides purely by ratio). The
+   base `flex: 1 1 0` on a plain card outspecifies a bare flex-grow, so use !important
+   exactly as the [!col|wN] weights do. min-width:0 lets a weighted card shrink. */
+.callout[data-callout="grid"] > .callout-content > .callout[data-callout="card"][data-callout-metadata~="w1"]  { flex: 1  1 0 !important; min-width: 0; }
+.callout[data-callout="grid"] > .callout-content > .callout[data-callout="card"][data-callout-metadata~="w2"]  { flex: 2  1 0 !important; min-width: 0; }
+.callout[data-callout="grid"] > .callout-content > .callout[data-callout="card"][data-callout-metadata~="w3"]  { flex: 3  1 0 !important; min-width: 0; }
+.callout[data-callout="grid"] > .callout-content > .callout[data-callout="card"][data-callout-metadata~="w4"]  { flex: 4  1 0 !important; min-width: 0; }
+.callout[data-callout="grid"] > .callout-content > .callout[data-callout="card"][data-callout-metadata~="w5"]  { flex: 5  1 0 !important; min-width: 0; }
+.callout[data-callout="grid"] > .callout-content > .callout[data-callout="card"][data-callout-metadata~="w6"]  { flex: 6  1 0 !important; min-width: 0; }
+.callout[data-callout="grid"] > .callout-content > .callout[data-callout="card"][data-callout-metadata~="w7"]  { flex: 7  1 0 !important; min-width: 0; }
+.callout[data-callout="grid"] > .callout-content > .callout[data-callout="card"][data-callout-metadata~="w8"]  { flex: 8  1 0 !important; min-width: 0; }
+.callout[data-callout="grid"] > .callout-content > .callout[data-callout="card"][data-callout-metadata~="w9"]  { flex: 9  1 0 !important; min-width: 0; }
+.callout[data-callout="grid"] > .callout-content > .callout[data-callout="card"][data-callout-metadata~="w10"] { flex: 10 1 0 !important; min-width: 0; }
+@media (max-width: 700px) {
+    /* stack weighted cards on narrow panes (matches the column system's reflow) */
+    .callout[data-callout="grid"] > .callout-content > .callout[data-callout="card"][data-callout-metadata~="w1"],
+    .callout[data-callout="grid"] > .callout-content > .callout[data-callout="card"][data-callout-metadata~="w2"],
+    .callout[data-callout="grid"] > .callout-content > .callout[data-callout="card"][data-callout-metadata~="w3"],
+    .callout[data-callout="grid"] > .callout-content > .callout[data-callout="card"][data-callout-metadata~="w4"],
+    .callout[data-callout="grid"] > .callout-content > .callout[data-callout="card"][data-callout-metadata~="w5"],
+    .callout[data-callout="grid"] > .callout-content > .callout[data-callout="card"][data-callout-metadata~="w6"],
+    .callout[data-callout="grid"] > .callout-content > .callout[data-callout="card"][data-callout-metadata~="w7"],
+    .callout[data-callout="grid"] > .callout-content > .callout[data-callout="card"][data-callout-metadata~="w8"],
+    .callout[data-callout="grid"] > .callout-content > .callout[data-callout="card"][data-callout-metadata~="w9"],
+    .callout[data-callout="grid"] > .callout-content > .callout[data-callout="card"][data-callout-metadata~="w10"] { flex: 1 1 100% !important; }
+}
 /* the blank ">" separators between child cards can leave empty paragraphs —
    don't let them become stray grid cells */
 .callout[data-callout="grid"] > .callout-content > p:empty,
@@ -1608,39 +1777,59 @@ a.tag[href="#Theory" i], a.tag[href="#index" i], a.tag[href="#python" i] {
     margin-bottom: 2px;
 }
 
-/* ----- STYLE: section — flat column block (use inside [!grid|cols3]) ----- */
+/* ----- STYLE: section — a clean FIELD CARD (surface + accent top-stripe + kicker).
+   Was a bare text block with a hairline left rule and no surface, so it read as
+   unfinished beside the infobox and, in an equal-height row, left long empty left
+   bars. Now a proper card: light surface, hairline border, rounded, accent stripe,
+   gentle hover lift. The field modifier (de/ml/cloud/...) sets the accent `--cc`
+   (it was a no-op before) for quiet per-field wayfinding. Works in a [!grid] AND
+   standalone inside a [!col]. ----- */
 :is(.callout[data-callout="card"][data-callout-metadata*="section"],
     body.at-card-section .callout[data-callout="card"]:not([data-callout-metadata])) {
-    background: transparent;
-    border: none;
-    box-shadow: none;
+    --cc: var(--at-accent);
+    position: relative;
+    background: var(--at-pane-2);
+    border: 1px solid var(--at-border-2);
+    border-radius: var(--radius-l);
+    box-shadow: var(--at-shadow-pop);
     padding: 0;
+    overflow: hidden;
+}
+/* accent top-stripe in the field's colour */
+:is(.callout[data-callout="card"][data-callout-metadata*="section"],
+    body.at-card-section .callout[data-callout="card"]:not([data-callout-metadata]))::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 3px;
+    background: var(--cc);
 }
 :is(.callout[data-callout="card"][data-callout-metadata*="section"],
     body.at-card-section .callout[data-callout="card"]:not([data-callout-metadata])):hover {
-    transform: none;
-    box-shadow: none;
-    border-color: transparent;
+    transform: translateY(-4px);
+    box-shadow: 0 2px 4px rgba(60, 45, 25, 0.10), 0 22px 50px rgba(60, 45, 25, 0.18);
+    border-color: color-mix(in srgb, var(--cc) 32%, var(--at-border-2));
 }
 :is(.callout[data-callout="card"][data-callout-metadata*="section"],
     body.at-card-section .callout[data-callout="card"]:not([data-callout-metadata])) > .callout-title { display: none; }
 :is(.callout[data-callout="card"][data-callout-metadata*="section"],
-    body.at-card-section .callout[data-callout="card"]:not([data-callout-metadata])) > .callout-content { padding: 4px 0; }
+    body.at-card-section .callout[data-callout="card"]:not([data-callout-metadata])) > .callout-content { padding: 20px 22px 22px; }
+/* the kicker (h6) wears the field accent */
+:is(.callout[data-callout="card"][data-callout-metadata*="section"],
+    body.at-card-section .callout[data-callout="card"]:not([data-callout-metadata])) .callout-content > h6:first-child { color: var(--cc); }
+:is(.callout[data-callout="card"][data-callout-metadata*="section"],
+    body.at-card-section .callout[data-callout="card"]:not([data-callout-metadata])) .callout-content > h6:first-child::before { background: var(--cc); }
 :is(.callout[data-callout="card"][data-callout-metadata*="section"],
     body.at-card-section .callout[data-callout="card"]:not([data-callout-metadata])) h3 { margin: 4px 0 8px; font-size: 1.4em; }
 :is(.callout[data-callout="card"][data-callout-metadata*="section"],
-    body.at-card-section .callout[data-callout="card"]:not([data-callout-metadata])) ul { padding-left: 1.1em; }
+    body.at-card-section .callout[data-callout="card"]:not([data-callout-metadata])) ul { padding-left: 1.1em; margin-bottom: 0; }
 :is(.callout[data-callout="card"][data-callout-metadata*="section"],
-    body.at-card-section .callout[data-callout="card"]:not([data-callout-metadata])) ul > li::marker { color: var(--at-accent); }
-/* vertical divider between section columns (skips the first in a row) */
-.callout[data-callout="grid"] > .callout-content > .callout[data-callout="card"][data-callout-metadata*="section"] {
-    border-left: 1px solid color-mix(in srgb, currentColor 16%, transparent);
-    padding-left: 1.8rem;
-}
-.callout[data-callout="grid"] > .callout-content > .callout[data-callout="card"][data-callout-metadata*="section"]:first-child {
-    border-left: none;
-    padding-left: 0;
-}
+    body.at-card-section .callout[data-callout="card"]:not([data-callout-metadata])) ul > li::marker { color: var(--cc); }
+
+/* No per-field colours — section cards use ONE uniform accent (the theme accent)
+   so the design is consistent across the whole vault and identical in approach
+   between Atelier and Glass. The de/ml/cloud/... field tokens remain valid as
+   labels but no longer recolour the card. */
 
 /* ----- STYLE: step — SELF-CONTAINED dark tile (ring + "Step 0N" + heading + body).
    Built like the honor/profile cards (which render reliably) — a complete dark card,
@@ -1660,7 +1849,22 @@ a.tag[href="#Theory" i], a.tag[href="#index" i], a.tag[href="#python" i] {
 :is(.callout[data-callout="card"][data-callout-metadata~="step"],
     body.at-card-step .callout[data-callout="card"]:not([data-callout-metadata])) > .callout-title { display: none; }
 :is(.callout[data-callout="card"][data-callout-metadata~="step"],
-    body.at-card-step .callout[data-callout="card"]:not([data-callout-metadata])) > .callout-content { padding: 30px 26px 40px; }
+    body.at-card-step .callout[data-callout="card"]:not([data-callout-metadata])) > .callout-content {
+    padding: 30px 26px 40px;
+    /* equal-height grid rows + uneven content used to leave a big empty gap at the
+       BOTTOM of short cards (one long card forced them all tall). Make the content a
+       flex column and push the trailing description to the bottom: every card now has
+       icon+kicker+number aligned at the TOP and its description aligned at the BOTTOM,
+       so the slack lands as intentional mid-card breathing room, not dead space. */
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+}
+:is(.callout[data-callout="card"][data-callout-metadata~="step"],
+    body.at-card-step .callout[data-callout="card"]:not([data-callout-metadata])) > .callout-content > p:last-child {
+    margin-top: auto;
+    margin-bottom: 0;
+}
 /* "Step 0N" kicker: title-case (not all-caps) like the reference */
 :is(.callout[data-callout="card"][data-callout-metadata~="step"],
     body.at-card-step .callout[data-callout="card"]:not([data-callout-metadata])) .callout-content > h6:first-child { text-transform: none; letter-spacing: 0.12em; }
@@ -1678,17 +1882,34 @@ a.tag[href="#Theory" i], a.tag[href="#index" i], a.tag[href="#python" i] {
     background-size: 20px 20px;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d8552f' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E");
 }
-/* per-step reference icons (file / chat / list). The spanfull hero is the grid's
-   1st child, so Step 01 = nth-of-type(2) keeps the default magnifier and the
-   file/chat/list icons sit on nth-of-type 3/4/5 (Steps 02/03/04). */
-.callout[data-callout="grid"] > .callout-content > .callout[data-callout="card"][data-callout-metadata~="step"]:nth-of-type(3) > .callout-content::before {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d8552f' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 4H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V9z'/%3E%3Cpath d='M14 4v5h5'/%3E%3C/svg%3E");
+/* ----- NAMED icons (intent-based, NOT position-based). Add an `icon-NAME` token to
+   any step card to set its ring glyph: > [!card|step icon-cloud]. Without one, the
+   default magnifier (above) is used. This replaces the old :nth-of-type rules, which
+   broke whenever the grid wasn't the hero+steps slab (two cards fell on the default
+   icon → duplicate magnifiers). Stroke = coral (%23d8552f) to match the theme. ----- */
+.callout[data-callout="card"][data-callout-metadata~="icon-search"] > .callout-content::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d8552f' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E") !important;
 }
-.callout[data-callout="grid"] > .callout-content > .callout[data-callout="card"][data-callout-metadata~="step"]:nth-of-type(4) > .callout-content::before {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d8552f' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z'/%3E%3C/svg%3E");
+.callout[data-callout="card"][data-callout-metadata~="icon-file"] > .callout-content::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d8552f' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 4H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V9z'/%3E%3Cpath d='M14 4v5h5'/%3E%3C/svg%3E") !important;
 }
-.callout[data-callout="grid"] > .callout-content > .callout[data-callout="card"][data-callout-metadata~="step"]:nth-of-type(5) > .callout-content::before {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d8552f' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 12l2 2 4-4M3 6l2 2 4-4M3 18l2 2 4-4M13 6h8M13 12h8M13 18h8'/%3E%3C/svg%3E");
+.callout[data-callout="card"][data-callout-metadata~="icon-chat"] > .callout-content::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d8552f' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z'/%3E%3C/svg%3E") !important;
+}
+.callout[data-callout="card"][data-callout-metadata~="icon-list"] > .callout-content::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d8552f' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 12l2 2 4-4M3 6l2 2 4-4M3 18l2 2 4-4M13 6h8M13 12h8M13 18h8'/%3E%3C/svg%3E") !important;
+}
+.callout[data-callout="card"][data-callout-metadata~="icon-book"] > .callout-content::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d8552f' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 19.5A2.5 2.5 0 0 1 6.5 17H20'/%3E%3Cpath d='M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z'/%3E%3C/svg%3E") !important;
+}
+.callout[data-callout="card"][data-callout-metadata~="icon-cloud"] > .callout-content::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d8552f' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M17.5 19a4.5 4.5 0 1 0 0-9 6 6 0 0 0-11.6 2.1A3.5 3.5 0 0 0 6.5 19z'/%3E%3C/svg%3E") !important;
+}
+.callout[data-callout="card"][data-callout-metadata~="icon-database"] > .callout-content::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d8552f' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cellipse cx='12' cy='5' rx='8' ry='3'/%3E%3Cpath d='M4 5v14c0 1.66 3.58 3 8 3s8-1.34 8-3V5'/%3E%3Cpath d='M4 12c0 1.66 3.58 3 8 3s8-1.34 8-3'/%3E%3C/svg%3E") !important;
+}
+.callout[data-callout="card"][data-callout-metadata~="icon-layers"] > .callout-content::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d8552f' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m12 2 9 5-9 5-9-5 9-5z'/%3E%3Cpath d='m3 12 9 5 9-5'/%3E%3Cpath d='m3 17 9 5 9-5'/%3E%3C/svg%3E") !important;
 }
 :is(.callout[data-callout="card"][data-callout-metadata~="step"],
     body.at-card-step .callout[data-callout="card"]:not([data-callout-metadata])) h3 {
@@ -1749,6 +1970,28 @@ a.tag[href="#Theory" i], a.tag[href="#index" i], a.tag[href="#python" i] {
 .callout[data-callout="grid"]:has(> .callout-content > .callout[data-callout-metadata~="step"]) :is(h1, h2, h3) { color: var(--at-on-dark) !important; }
 .callout[data-callout="grid"]:has(> .callout-content > .callout[data-callout-metadata~="step"]) :is(h6, em) { color: var(--at-accent) !important; }
 .callout[data-callout="grid"]:has(> .callout-content > .callout[data-callout-metadata~="step"]) p:not(:has(strong)) { color: var(--at-on-dark-muted) !important; }
+
+/* ===== FUSE a standalone hero card with an immediately-following step grid ========
+   The reader writes the hero and the stat band as two SEPARATE top-level blocks (not
+   one grid). They were drifting apart — a rounded hero, a gap, then a square-cornered
+   slab — reading as two disconnected boxes. Reading view wraps each top-level callout
+   in an `.el-div`, so we bridge the pair with :has()/+ : the hero flattens its bottom
+   edge + drops the gap, the grid drops its top gap, and the slab rounds only its
+   BOTTOM outer corners — so the two meet as ONE continuous dark slab. Where `.el-div`
+   isn't the wrapper (e.g. live-preview edit mode) it degrades to two tidy blocks. == */
+.el-div:has(> .callout[data-callout="card"][data-callout-metadata~="hero"]):has(+ .el-div > .callout[data-callout="grid"] .callout[data-callout-metadata~="step"]) > .callout[data-callout="card"][data-callout-metadata~="hero"] {
+    margin-bottom: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+.el-div:has(> .callout[data-callout="card"][data-callout-metadata~="hero"]) + .el-div:has(> .callout[data-callout="grid"] .callout[data-callout-metadata~="step"]) { margin-top: 0 !important; }
+.el-div:has(> .callout[data-callout="card"][data-callout-metadata~="hero"]) + .el-div > .callout[data-callout="grid"]:has(.callout[data-callout-metadata~="step"]) { margin-top: 0 !important; }
+.el-div:has(> .callout[data-callout="card"][data-callout-metadata~="hero"]) + .el-div > .callout[data-callout="grid"] > .callout-content > .callout[data-callout-metadata~="step"]:first-of-type {
+    border-bottom-left-radius: var(--radius-l) !important;
+}
+.el-div:has(> .callout[data-callout="card"][data-callout-metadata~="hero"]) + .el-div > .callout[data-callout="grid"] > .callout-content > .callout[data-callout-metadata~="step"]:last-of-type {
+    border-bottom-right-radius: var(--radius-l) !important;
+}
 
 /* HEADER: two columns — display heading left, intro paragraph right (reference). */
 .callout[data-callout="grid"] > .callout-content > .callout[data-callout="card"][data-callout-metadata*="hero"] > .callout-content {
@@ -2366,8 +2609,8 @@ body.at-no-anim *::after {
     }
 }
 
-/* ----- .at-gradient — cross-theme custom style. In Lucid this paints an Apple-style
-   gradient; here in Atelier the same class is a SINGLE accent colour (coral),
+/* ----- .at-gradient — cross-theme custom style. In Glass this paints an Apple-style
+   gradient; here in Anthropic Touch the same class is a SINGLE accent colour (coral),
    matching the rest of the theme. Style Settings → "Gradient-text color" drives it; or
    override per use with style="--grad-color: <hex>". ----------------------------- */
 .markdown-rendered .at-gradient {

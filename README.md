@@ -42,6 +42,7 @@ Wrap any number of cards in `> [!grid]`; they flow into as many columns as fit a
 ```
 - Lock columns: `> [!grid|cols2]` … `cols6`.
 - Span a card: `span2`, `span3`, `spanfull`.
+- **Distribute by ratio:** give cards `w1`…`w10` to split a row by weight — e.g. `> [!card|w3]` + `[!card|w7]` = **30 / 70** (works exactly like `[!col|wN]`; the grid switches to ratio mode automatically and stacks on mobile).
 - Nest a `[!grid]` inside a card.
 
 > **Nesting rule:** child cards use `>>` and must be separated by a blank `>` line.
@@ -51,8 +52,8 @@ Pick a card **style** with `> [!card|<style>]` (bare `[!card]` follows the *Defa
 | Style | Look |
 |---|---|
 | `skill` | kicker, big serif title, dark command bar, coral `01 02 03` steps |
-| `section` | flat column block — coral `###### I · LABEL` (use in `cols3`) |
-| `step` | coral ring + `###### Step 0N` (use inside a `hero`) |
+| `section` | field card — surface, hairline border, accent top-stripe + kicker (great in `cols3`/`cols4`) |
+| `step` | coral ring icon + `###### LABEL` + big number/title; pick the glyph with `icon-*` |
 | `profile` | centered avatar, coral label, serif name, link |
 | `honor` | dark — rank badge, ringed avatar, serif pull-quote, big coral stats |
 | `channels` | dark — table of `#channel \| LABEL` rows |
@@ -61,6 +62,9 @@ Pick a card **style** with `> [!card|<style>]` (bare `[!card]` follows the *Defa
 **Surfaces:** add `dark` or `accent` (`> [!card|profile dark]`, `> [!card|hero accent]`).
 **Buttons (hero):** `**[Label](url)**` → filled pill; `[Label](url)` → outline.
 **Emphasis:** `*italic*` words in any title/heading render in coral.
+**Step icons:** add an `icon-*` token to a `step` card to set its ring glyph — `icon-search · file · chat · list · book · cloud · database · layers` (e.g. `> [!card|step icon-cloud]`).
+
+> A `hero` card placed directly above a `[!grid]` of `step` cards automatically **fuses** with it into one seamless slab.
 
 ### 2. Multi-column notes — `[!columns]` + `[!col|wN]`
 Plain note content in columns of any ratio:
