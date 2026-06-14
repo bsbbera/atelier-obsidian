@@ -1777,59 +1777,17 @@ body.at-tag-underline .tag, body.at-tag-underline a.tag {
     margin-bottom: 2px;
 }
 
-/* ----- STYLE: section — a clean FIELD CARD (surface + accent top-stripe + kicker).
-   Was a bare text block with a hairline left rule and no surface, so it read as
-   unfinished beside the infobox and, in an equal-height row, left long empty left
-   bars. Now a proper card: light surface, hairline border, rounded, accent stripe,
-   gentle hover lift. The field modifier (de/ml/cloud/...) sets the accent `--cc`
-   (it was a no-op before) for quiet per-field wayfinding. Works in a [!grid] AND
-   standalone inside a [!col]. ----- */
-:is(.callout[data-callout="card"][data-callout-metadata*="section"],
-    body.at-card-section .callout[data-callout="card"]:not([data-callout-metadata])) {
-    --cc: var(--at-accent);
-    position: relative;
-    background: var(--at-pane-2);
-    border: 1px solid var(--at-border-2);
-    border-radius: var(--radius-l);
-    box-shadow: var(--at-shadow-pop);
-    padding: 0;
-    overflow: hidden;
-}
-/* accent top-stripe in the field's colour */
-:is(.callout[data-callout="card"][data-callout-metadata*="section"],
-    body.at-card-section .callout[data-callout="card"]:not([data-callout-metadata]))::before {
-    content: "";
-    position: absolute;
-    inset: 0 0 auto 0;
-    height: 3px;
-    background: var(--cc);
-}
-:is(.callout[data-callout="card"][data-callout-metadata*="section"],
-    body.at-card-section .callout[data-callout="card"]:not([data-callout-metadata])):hover {
-    transform: translateY(-4px);
-    box-shadow: 0 2px 4px rgba(60, 45, 25, 0.10), 0 22px 50px rgba(60, 45, 25, 0.18);
-    border-color: color-mix(in srgb, var(--cc) 32%, var(--at-border-2));
-}
+/* ----- STYLE: section — the USUAL card style. Inherits the base [!card] chrome
+   verbatim (surface, border, radius, shadow, hover, coral dot-kicker) so it looks
+   identical to every other card; it only hides the auto callout title (content
+   supplies its own ###### kicker + ### heading) and tightens the heading + list.
+   NO accent top-stripe, NO square kicker, NO per-field colour. ----- */
 :is(.callout[data-callout="card"][data-callout-metadata*="section"],
     body.at-card-section .callout[data-callout="card"]:not([data-callout-metadata])) > .callout-title { display: none; }
-:is(.callout[data-callout="card"][data-callout-metadata*="section"],
-    body.at-card-section .callout[data-callout="card"]:not([data-callout-metadata])) > .callout-content { padding: 20px 22px 22px; }
-/* the kicker (h6) wears the field accent */
-:is(.callout[data-callout="card"][data-callout-metadata*="section"],
-    body.at-card-section .callout[data-callout="card"]:not([data-callout-metadata])) .callout-content > h6:first-child { color: var(--cc); }
-:is(.callout[data-callout="card"][data-callout-metadata*="section"],
-    body.at-card-section .callout[data-callout="card"]:not([data-callout-metadata])) .callout-content > h6:first-child::before { background: var(--cc); }
 :is(.callout[data-callout="card"][data-callout-metadata*="section"],
     body.at-card-section .callout[data-callout="card"]:not([data-callout-metadata])) h3 { margin: 4px 0 8px; font-size: 1.4em; }
 :is(.callout[data-callout="card"][data-callout-metadata*="section"],
     body.at-card-section .callout[data-callout="card"]:not([data-callout-metadata])) ul { padding-left: 1.1em; margin-bottom: 0; }
-:is(.callout[data-callout="card"][data-callout-metadata*="section"],
-    body.at-card-section .callout[data-callout="card"]:not([data-callout-metadata])) ul > li::marker { color: var(--cc); }
-
-/* No per-field colours — section cards use ONE uniform accent (the theme accent)
-   so the design is consistent across the whole vault and identical in approach
-   between Atelier and Glass. The de/ml/cloud/... field tokens remain valid as
-   labels but no longer recolour the card. */
 
 /* ----- STYLE: step — SELF-CONTAINED dark tile (ring + "Step 0N" + heading + body).
    Built like the honor/profile cards (which render reliably) — a complete dark card,
