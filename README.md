@@ -14,6 +14,9 @@ so a single accent picker recolours the whole theme.
 
 ![screenshot](screenshot.png)
 
+> ▶ **Try the demo:** paste **[EXAMPLES.md](EXAMPLES.md)** into a note (reading view, Atelier selected)
+> to see every feature — cards, `wN` ratios, named step icons, infobox, multi-column, code blocks.
+
 ---
 
 ## Install

@@ -87,6 +87,45 @@ Inline sizes: normal, <span class="at-xs">xs</span>, <span class="at-lg">lg</spa
 >
 > **[Read the guide →](https://obsidian.md)** [GitHub](https://github.com/)
 
+### Card width distribution (`wN`)
+Distribute cards by ratio, like multi-column notes — add `w1…w10` to each card in a grid.
+> [!grid]
+>
+> > [!card|w3]
+> > ###### W3
+> > ### 30%
+> > A narrow sidebar card.
+>
+> > [!card|w7]
+> > ###### W7
+> > ### 70%
+> > A wider main card taking the rest.
+
+### Step tiles — named icons
+Add an intent-named icon to a `step` tile: `icon-search`, `icon-file`, `icon-chat`, `icon-list`,
+`icon-book`, `icon-cloud`, `icon-database`, `icon-layers`.
+> [!grid|cols4]
+>
+> > [!card|step icon-search]
+> > ###### NOTES
+> > ### 480+
+> > interlinked
+>
+> > [!card|step icon-layers]
+> > ###### FIELDS
+> > ### 10
+> > tech · ML · cloud
+>
+> > [!card|step icon-cloud]
+> > ###### CLOUD
+> > ### 4
+> > GCP · AWS · Azure
+>
+> > [!card|step icon-book]
+> > ###### BOOKS
+> > ### 12
+> > fully noted
+
 ---
 
 ## Multi-column notes
