@@ -1165,6 +1165,18 @@ body.at-halign-right .markdown-source-view .HyperMD-header { text-align: right; 
 .code-block-flair { color: var(--at-code-line-nr); }
 .markdown-rendered pre code .code-line-numbers,
 .markdown-rendered .code-block-line-num { color: var(--at-code-line-nr); }
+
+/* ----- code-emitter plugin: run-output renders INSIDE the dark code surface, but
+   its default .log-info uses --text-normal (near-black in light mode) → invisible.
+   Recolor the output + separator onto the on-dark code palette. ----- */
+.code-emitter-block .code-output { color: var(--at-code-text); }
+.code-emitter-block .code-output .log-info { color: var(--at-code-text); }
+.code-emitter-block .code-output .log-debug { color: var(--at-on-dark-muted); }
+.code-emitter-block hr.code-seprator {
+    border: none;
+    border-top: 1px solid var(--at-on-dark-border);
+}
+
 button.copy-code-button {
     background: var(--at-accent);
     color: #fff;
