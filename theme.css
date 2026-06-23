@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Fira+Code:wght@400;500;600&family=Caveat:wght@500;600&display=swap');
 
 /* ============================================================================
-   ANTHROPIC TOUCH — an Obsidian theme
-   Warm cream paper · coral accent · serif display headings · multi-variant
-   cards / infobox / tags / headings. Light-first, warm dark variant.
-   Token namespace: --at-*  (sibling theme MyWiki Glass uses --mwg-*)
+   ATELIER — an Obsidian theme
+   18th-c excavation journal · Parchment (light) / Excavation (dark) · copper accent
+   · IM Fell English + Spectral + Caveat · multi-variant cards / infobox / casts.
+   Token namespace: --at-*
    ========================================================================== */
 
 /* ============================================================================
@@ -13,7 +13,7 @@
 /* @settings
 
 name: Atelier
-id: anthropic-touch
+id: atelier
 settings:
     -
         id: at-info
@@ -2727,7 +2727,7 @@ body.at-no-anim *::after {
 }
 
 /* ----- .at-gradient — cross-theme custom style. In Glass this paints an Apple-style
-   gradient; here in Anthropic Touch the same class is a SINGLE accent colour (coral),
+   gradient; here in Atelier the same class is a SINGLE accent colour (coral),
    matching the rest of the theme. Style Settings → "Gradient-text color" drives it; or
    override per use with style="--grad-color: <hex>". ----------------------------- */
 .markdown-rendered .at-gradient {
