@@ -1,118 +1,90 @@
-# Atelier
+<div align="center">
 
-A warm, editorial Obsidian theme — **cream/parchment paper, a coral accent, Newsreader serif display
-headings with coral *italic* emphasis,** and mono small-caps labels, with intentionally-dark "honor / CTA"
-cards. **Light-first** with a warm dark variant.
+# ⌖ Atelier
 
-Its signature is a **webpage-like card system** you compose in plain Markdown, plus reusable text
-utilities so any run of text can be restyled inline. Everything resolves through `--at-*` design tokens,
-so a single accent picker recolours the whole theme.
+### An excavation journal for your notes.
 
-> **Companion theme:** [Lucid](https://github.com/bsbbera/lucid-obsidian) shares the *same* card /
-> column / utility syntax — switch between them and your layout is preserved; only the skin (frosted glass
-> + blue) changes.
+*A documentary-editorial Obsidian theme — aged parchment & deep excavation dark, a single copper accent, and the antiquarian elegance of **IM Fell English**, **Spectral**, and **Caveat** marginalia.*
 
-![screenshot](screenshot.png)
+![version](https://img.shields.io/badge/version-2.0.0-c2784a?style=flat-square)
+![obsidian](https://img.shields.io/badge/Obsidian-1.5.0%2B-7d5f3e?style=flat-square)
+![style settings](https://img.shields.io/badge/Style_Settings-ready-8a7044?style=flat-square)
+![license](https://img.shields.io/badge/license-MIT-a68b5c?style=flat-square)
 
-> ▶ **Try the demo:** paste **[EXAMPLES.md](EXAMPLES.md)** into a note (reading view, Atelier selected)
-> to see every feature — cards, `wN` ratios, named step icons, infobox, multi-column, code blocks.
+![Atelier theme screenshot](screenshot.png)
+
+</div>
 
 ---
 
-## Install
+> **What it is.** Atelier turns plain Markdown into something that reads like a printed monograph — hero banners, museum plates, ledger tables, illuminated quotes, infoboxes and handwritten margins — all from ordinary Obsidian callouts. One copper accent, two paper modes, zero plugins required for the look.
 
-**From Obsidian (once published):** Settings → Appearance → Themes → **Manage** → search **Atelier**.
+## ✦ Two papers
 
-**Manually:** copy `manifest.json` + `theme.css` into `<vault>/.obsidian/themes/Atelier/`, then pick
-**Atelier** under Settings → Appearance.
-
-> Requires Obsidian 1.5.0+. Install the **Style Settings** plugin to customise colours, fonts, sizes,
-> the default-style dropdowns, and animations. Bundled Google Fonts (Newsreader / Inter / JetBrains Mono)
-> need internet on first load — turn on **"Use system fonts"** in Style Settings for offline/mobile.
-
----
-
-## Tutorial
-
-### 1. Cards — a layout + a style
-Wrap any number of cards in `> [!grid]`; they flow into as many columns as fit and reflow on resize.
-
-```md
-> [!grid]
-> > [!card] One
-> > [!card] Two
-> > [!card] Three
-```
-- Lock columns: `> [!grid|cols2]` … `cols6`.
-- Span a card: `span2`, `span3`, `spanfull`.
-- **Distribute by ratio:** give cards `w1`…`w10` to split a row by weight — e.g. `> [!card|w3]` + `[!card|w7]` = **30 / 70** (works exactly like `[!col|wN]`; the grid switches to ratio mode automatically and stacks on mobile).
-- Nest a `[!grid]` inside a card.
-
-> **Nesting rule:** child cards use `>>` and must be separated by a blank `>` line.
-
-Pick a card **style** with `> [!card|<style>]` (bare `[!card]` follows the *Default card style* dropdown):
-
-| Style | Look |
+| | |
 |---|---|
-| `skill` | kicker, big serif title, dark command bar, coral `01 02 03` steps |
-| `section` | field card — surface, hairline border, accent top-stripe + kicker (great in `cols3`/`cols4`) |
-| `step` | coral ring icon + `###### LABEL` + big number/title; pick the glyph with `icon-*` |
-| `profile` | centered avatar, coral label, serif name, link |
-| `honor` | dark — rank badge, ringed avatar, serif pull-quote, big coral stats |
-| `channels` | dark — table of `#channel \| LABEL` rows |
-| `hero` | big serif display heading + buttons; add `split` for a side-by-side hero |
+| **Parchment** *(light)* | Warm aged paper `#E8DFC8`, ink-brown text, copper rules. Daylight reading. |
+| **Excavation** *(dark)* | Deep dig-site `#14110E`, bone-white text, lifted cards. The signature mode. |
 
-**Surfaces:** add `dark` or `accent` (`> [!card|profile dark]`, `> [!card|hero accent]`).
-**Buttons (hero):** `**[Label](url)**` → filled pill; `[Label](url)` → outline.
-**Emphasis:** `*italic*` words in any title/heading render in coral.
-**Step icons:** add an `icon-*` token to a `step` card to set its ring glyph — `icon-search · file · chat · list · book · cloud · database · layers` (e.g. `> [!card|step icon-cloud]`).
+Switch with Obsidian's normal light/dark toggle — the whole palette pivots on one set of `--at-*` tokens.
 
-> A `hero` card placed directly above a `[!grid]` of `step` cards automatically **fuses** with it into one seamless slab.
+## ✦ What you get
 
-### 2. Multi-column notes — `[!columns]` + `[!col|wN]`
-Plain note content in columns of any ratio:
-```md
-> [!columns|ruled]
-> > [!col|w3]
-> > ### Narrow
-> > - point one
-> > [!col|w7]
-> > ### Wide
-> > ~70% of the width.
+- **A card system** — `hero · skill · section · step · profile · honor · channels`, composed in `> [!grid|colsN]`, reflowing on resize.
+- **Editorial elements** — infoboxes, ledger/boxed tables, illuminated/gloss/tablet quotes, museum figure plates, ornamented dividers.
+- **Margin annotations** — `seal · folio · marg` casts that drop the box and sit *in* the page, in Caveat handwriting.
+- **26 emotion casts** — stamps, flags, tablets and tags for every semantic callout.
+- **Inline typography** — `at-kicker · at-lead · at-display · at-stat · at-mark · at-badge` for magazine openers without a single plugin.
+- **Style Settings** — accent, fonts, width, roundness, per-element default styles, and entrance animations, all from one panel.
+
+## ✦ Install
+
+**From Obsidian** *(once published)* — Settings → Appearance → Themes → **Manage** → search **Atelier**.
+
+**Manually** — copy `manifest.json` + `theme.css` into `<vault>/.obsidian/themes/Atelier/`, then select **Atelier** under Settings → Appearance.
+
+> Requires Obsidian **1.5.0+**. Install the **Style Settings** plugin to customise everything. Bundled Google Fonts (IM Fell English · Spectral · Fira Code · Caveat) need internet on first load — flip **"Use system fonts"** in Style Settings for offline/mobile.
+
+## ✦ Sixty-second start
+
+```markdown
+> [!card|hero dark spanfull]
+> ###### RENAISSANCE · FLORENCE → MILAN → AMBOISE
+> # The man who would *know everything*.
+> One continuous study of the whole world.
+
+> [!grid|cols2]
+>
+>> [!card]
+>> ###### 01 · LIFE
+>> ### Life & Times
+>> Vinci to Amboise — the workshops and the courts.
+>
+>> [!card]
+>> ###### 02 · ART
+>> ### The Paintings
+>> The Mona Lisa, the Last Supper, and sfumato.
+
+> [!quote|illum] Leonardo da Vinci
+> Learning never exhausts the mind.
 ```
-Weights `w1…w10`; add `ruled` for dividers.
 
-### 3. Infobox — `[!infobox|right]`
-A wiki-style text infobox that floats `left`/`right`/`center` and lets body text wrap beside it.
+That's three of Atelier's elements. There are dozens more.
 
-### 4. Reusable text utilities (inline HTML, restyle with the palette)
-| Class | Effect |
-|---|---|
-| `at-kicker` | mono small-caps coral label with a dot (`.no-dot` to drop it) |
-| `at-badge` | filled coral pill (`.ghost` = outline) |
-| `at-display` | serif display line (`<em>` → coral) |
-| `at-lead` | large muted lead paragraph |
-| `at-stat` | big coral numeral |
-| `at-mark` | soft coral highlight |
-| `at-gradient` | single accent-colour text (a gradient in Lucid) |
+## ✦ The element cookbook
 
-**Inline font size:** `at-xs · at-sm · at-md · at-lg · at-xl · at-2xl · at-3xl · at-4xl`, or exact with
-`at-fs` + `style="--fs: 30px"`. They **compose** — e.g. `class="at-gradient at-2xl"`.
+Every component, one file at a time, with copy-pasteable syntax — in **[`examples/`](examples/)**:
 
-### 5. Tags, headings, body size
-- **Tags** auto-tint by category; *Tag style* dropdown: pill · outline · mono-caps · underline.
-- **Headings** — *Heading style* dropdown; per-heading `#center` / `#right` / `#left`.
-- **Body size** — Style Settings slider, or per-note `cssclasses: [text-lg]`.
+[Callouts](examples/01-callouts.md) · [Cards](examples/02-cards.md) · [Grids & Columns](examples/03-grids-and-columns.md) · [Infobox](examples/04-infobox.md) · [Tables](examples/05-tables.md) · [Code](examples/06-code.md) · [Quotes](examples/07-quotes.md) · [Figures](examples/08-figures.md) · [Dividers](examples/09-dividers.md) · [Text utilities](examples/10-text-utilities.md) · [Emotion casts](examples/11-emotion-casts.md) · [Structural casts](examples/12-structural-casts.md)
 
-See **[EXAMPLES.md](EXAMPLES.md)** for a ready-to-paste note exercising every feature.
+## ✦ Customising
 
----
+**Settings → Style Settings → Atelier** — accent & full palette, font dropdowns, note width, roundness, default card/infobox/tag/heading styles, body size, and entrance animations.
 
-## Customising
-**Settings → Style Settings → Atelier** — accent & colours, **font dropdowns**, note width, roundness,
-default card/infobox/tag/heading styles, body size, gradient colour, and animations.
+## ✦ Credits
 
-## Credits
-- Inspired by the open-design.ai community page.
-- Fonts: Newsreader, Inter, JetBrains Mono (Google Fonts).
-- License: [MIT](LICENSE).
+- Aesthetic: 18th-century excavation journals & antiquarian print.
+- Fonts: **IM Fell English**, **Spectral**, **Fira Code**, **Caveat** (Google Fonts).
+- License: **[MIT](LICENSE)**.
+
+<div align="center"><sub>Built for Obsidian · <code>--at-*</code> token system · made by <a href="https://github.com/bsbbera">Subhadip</a></sub></div>

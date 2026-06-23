@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500;1,6..72,600&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Fira+Code:wght@400;500;600&family=Caveat:wght@500;600&display=swap');
 
 /* ============================================================================
    ANTHROPIC TOUCH — an Obsidian theme
@@ -18,7 +18,7 @@ settings:
     -
         id: at-info
         title: Atelier
-        description: "Warm cream paper + coral accent, inspired by the open-design.ai community page. Colors, fonts, layout and the per-element style variants below drive the whole theme."
+        description: "18th-c excavation-journal aesthetic — Excavation (dark) / Parchment (light), copper accent, IM Fell English + Spectral + Caveat. Colors, fonts, layout, animations and the per-element style variants below drive the whole theme."
         type: info-text
         markdown: false
 
@@ -35,8 +35,8 @@ settings:
         type: variable-themed-color
         format: hex
         opacity: false
-        default-light: '#d8552f'
-        default-dark: '#e8714c'
+        default-light: '#b0632f'
+        default-dark: '#c2784a'
     -
         id: at-accent-2
         title: Secondary accent
@@ -44,56 +44,56 @@ settings:
         type: variable-themed-color
         format: hex
         opacity: false
-        default-light: '#b8442a'
-        default-dark: '#d2603f'
+        default-light: '#6b5232'
+        default-dark: '#7d5f3e'
     -
         id: at-gold
         title: Folder / highlight gold
         type: variable-themed-color
         format: hex
         opacity: false
-        default-light: '#b07d20'
-        default-dark: '#d9a441'
+        default-light: '#8a7044'
+        default-dark: '#a68b5c'
     -
         id: at-danger
         title: Danger / close
         type: variable-themed-color
         format: hex
         opacity: false
-        default-light: '#c0392b'
-        default-dark: '#e0623f'
+        default-light: '#a23d22'
+        default-dark: '#c2724a'
     -
         id: at-bg-0
         title: App background (deepest)
         type: variable-themed-color
         format: hex
         opacity: false
-        default-light: '#ece3d0'
-        default-dark: '#14110c'
+        default-light: '#e8dfc8'
+        default-dark: '#14110e'
     -
         id: at-editor
         title: Editor / note background
         type: variable-themed-color
         format: hex
         opacity: false
-        default-light: '#f7f1e4'
-        default-dark: '#14110c'
+        default-light: '#fbf6e9'
+        default-dark: '#14110e'
     -
         id: at-pane
         title: Sidebar background
         type: variable-themed-color
         format: hex
         opacity: false
-        default-light: '#efe7d6'
-        default-dark: '#1a160f'
+        default-light: '#f0e8d4'
+        default-dark: '#1c1712'
     -
         id: at-pane-2
         title: Card / raised panel background
         type: variable-themed-color
         format: hex
         opacity: false
-        default-light: '#f6f1e6'
-        default-dark: '#211c14'
+        default-light: '#f7f1e1'
+        default-dark: '#252019'
     -
         id: at-dark-surface
         title: Dark card surface (honor / CTA cards)
@@ -101,32 +101,32 @@ settings:
         type: variable-themed-color
         format: hex
         opacity: false
-        default-light: '#1a1510'
-        default-dark: '#231d14'
+        default-light: '#241d15'
+        default-dark: '#1c1712'
     -
         id: at-text
         title: Body text
         type: variable-themed-color
         format: hex
         opacity: false
-        default-light: '#3a352c'
-        default-dark: '#e7ddc8'
+        default-light: '#2a1f14'
+        default-dark: '#f2ead6'
     -
         id: at-text-strong
         title: Headings / strong text
         type: variable-themed-color
         format: hex
         opacity: false
-        default-light: '#1f1b14'
-        default-dark: '#f5efe1'
+        default-light: '#1e160e'
+        default-dark: '#f8f1de'
     -
         id: at-muted
         title: Muted text
         type: variable-themed-color
         format: hex
         opacity: false
-        default-light: '#736959'
-        default-dark: '#a99e87'
+        default-light: '#5c4d36'
+        default-dark: '#b8a683'
 
     -
         id: at-type-heading
@@ -145,7 +145,7 @@ settings:
         title: Body & interface font
         description: Pick from common system fonts.
         type: variable-select
-        default: "'Inter', system-ui, sans-serif"
+        default: "'Spectral', Georgia, serif"
         options:
             - { label: System default (sans), value: "system-ui, -apple-system, 'Segoe UI', sans-serif" }
             - { label: Segoe UI, value: "'Segoe UI', system-ui, sans-serif" }
@@ -194,7 +194,7 @@ settings:
         title: Heading / display font
         description: Pick from common system fonts.
         type: variable-select
-        default: "'Newsreader', Georgia, serif"
+        default: "'IM Fell English', Georgia, serif"
         options:
             - { label: System default (sans), value: "system-ui, -apple-system, 'Segoe UI', sans-serif" }
             - { label: Segoe UI, value: "'Segoe UI', system-ui, sans-serif" }
@@ -243,7 +243,7 @@ settings:
         title: Monospace / label font
         description: Pick from common system fonts.
         type: variable-select
-        default: "'JetBrains Mono', ui-monospace, monospace"
+        default: "'Fira Code', ui-monospace, monospace"
         options:
             - { label: JetBrains Mono, value: "'JetBrains Mono', ui-monospace, monospace" }
             - { label: Cascadia Code, value: "'Cascadia Code', ui-monospace, monospace" }
@@ -426,6 +426,23 @@ settings:
                 label: Underline
                 value: at-tag-underline
     -
+        id: at-paper-texture
+        title: Paper texture (background)
+        description: "Ancient-paper backdrop for reading view. Painted behind the text (readability untouched) as a fixed, stationary field. Light + dark."
+        type: class-select
+        allowEmpty: false
+        default: at-paper-plain
+        options:
+            -
+                label: Plain (no texture)
+                value: at-paper-plain
+            -
+                label: Aged grain — fine laid-paper weave
+                value: at-paper-grain
+            -
+                label: Foxed & vignette — stained, darkened edges
+                value: at-paper-foxed
+    -
         id: at-heading-style
         title: Heading style
         description: Decoration for h1–h3. Italic words inside headings always show the coral emphasis.
@@ -474,7 +491,7 @@ settings:
         id: at-radius
         title: Corner radius
         type: variable-number-slider
-        default: 12
+        default: 6
         min: 0
         max: 24
         step: 1
@@ -498,6 +515,25 @@ settings:
                 value: at-halign-right
 
     -
+        id: at-density-heading
+        title: 📐 Density
+        type: heading
+        level: 1
+        collapsed: true
+    -
+        id: at-condense
+        title: Condense UI
+        description: "Tighten spacing across the whole app — sidebar rows, file tree, note list, tabs, properties, callouts, lists, tables and paragraph rhythm. Good for laptops or dense vaults."
+        type: class-toggle
+        addCommand: true
+    -
+        id: at-condense-editor
+        title: Condense reading / editor too
+        description: "Also tightens note body line-height, heading margins and block spacing (not just chrome). Requires Condense UI on."
+        type: class-toggle
+        addCommand: true
+
+    -
         id: at-features-heading
         title: ⚙️ Features & motion
         type: heading
@@ -509,6 +545,49 @@ settings:
         description: Turn off entrance + hover motion (also respects OS reduced-motion).
         type: class-toggle
         addCommand: true
+    -
+        id: at-open-anim
+        title: Opening animation
+        description: How each note's blocks enter when you open it. "Varied" cycles all three.
+        type: class-select
+        allowEmpty: false
+        default: at-open-varied
+        options:
+            -
+                label: Varied (cycle all)
+                value: at-open-varied
+            -
+                label: Ink-in wipe
+                value: at-open-inkin
+            -
+                label: Strata slide
+                value: at-open-strata
+            -
+                label: Rise
+                value: at-open-rise
+            -
+                label: Off
+                value: at-open-off
+    -
+        id: at-boot-anim
+        title: Vault opening animation
+        description: "A one-time reveal when the vault first opens (and on reload). The whole workspace animates in once — separate from the per-note opening animation above."
+        type: class-select
+        allowEmpty: false
+        default: at-boot-rise
+        options:
+            -
+                label: Rise (lift in)
+                value: at-boot-rise
+            -
+                label: Fade
+                value: at-boot-fade
+            -
+                label: Excavate (scale + clear)
+                value: at-boot-excavate
+            -
+                label: Off
+                value: at-boot-off
     -
         id: at-scroll-reveal
         title: Scroll reveal
@@ -546,146 +625,161 @@ settings:
         type: variable-themed-color
         format: hex
         opacity: false
-        default-light: '#d8552f'
-        default-dark: '#e8714c'
+        default-light: '#b0632f'
+        default-dark: '#c2784a'
 */
-
 
 /* ============================================================================
    [Tokens]  --at-* primitives (light PRIMARY + dark variant) + Obsidian bridge
    ========================================================================== */
 
 body.theme-light {
-    --at-accent: #d8552f;
-    --at-accent-rgb: 216, 85, 47;
-    --at-accent-2: #b8442a;
-    --at-gold: #b07d20;
-    --at-danger: #c0392b;
+    /* DA Parchment — warm paper, copper accent */
+    --at-accent: #b0632f;          /* copper */
+    --at-accent-rgb: 176, 99, 47;
+    --at-accent-2: #6b5232;        /* clay */
+    --at-gold: #8a7044;            /* sand */
+    --at-danger: #a23d22;
 
-    --at-bg-0: #ece3d0;
-    --at-bg-grad-a: #f1ebda;
-    --at-bg-grad-b: #e6dcc6;
-    --at-ribbon: #e6dcc6;
-    --at-pane: #efe7d6;
-    --at-pane-2: #f6f1e6;
-    --at-editor: #f7f1e4;
-    --at-raised: #fbf7ee;
+    --at-bg-0: #e8dfc8;
+    --at-bg-grad-a: #f0e8d4;
+    --at-bg-grad-b: #e2d8be;
+    --at-ribbon: #e2d8be;
+    --at-pane: #f0e8d4;
+    --at-pane-2: #f7f1e1;          /* cards */
+    --at-editor: #e8dfc8;
+    --at-raised: #fbf6ea;
 
-    --at-text: #3a352c;
-    --at-text-strong: #1f1b14;
-    --at-muted: #736959;   /* a11y: was #8a7f6d = 3.5:1 on the note bg (fails WCAG AA); #736959 = 4.8:1 */
-    --at-faint: #b3a892;
+    --at-text: #2a1f14;
+    --at-text-strong: #1e160e;
+    --at-muted: #5c4d36;
+    --at-faint: #8a795c;
 
-    --at-dark-surface: #241d15;
-    --at-on-dark: #ece4d4;
+    --at-dark-surface: #241d15;    /* honor/CTA stays dark in both modes */
+    --at-on-dark: #f2ead6;
     --at-on-dark-muted: #d3c7af;
-    --at-accent-surface: #ea6a51;       /* LIGHT: coral hero (reference) */
-    --at-on-accent: #1a1208;            /* dark ink text on the coral hero */
-    --at-on-accent-em: #f7eed9;         /* italic emphasis (cream on coral) */
-    --at-on-accent-kick: #1a1208;       /* kicker / labels */
-    --at-accent-btn-bg: #1a1208;        /* filled CTA: dark pill on the coral hero */
-    --at-accent-btn-fg: #f5efe1;
-    --at-accent-nested: #18130d;        /* dark nested cards on the coral */
-    --at-accent-nested-h: #f5efe1;      /* nested card heading */
-    --at-accent-nested-p: #d3c7af;      /* nested card body */
+    /* parchment-card paper — flips per mode (matches reference --paper) */
+    --at-paper: #fbf6e9;
+    --at-paper-ink: #2a1f14;
+    --at-paper-ink-soft: #4e3f2e;
+    --at-paper-edge: #d8c8a0;
+    --at-accent-surface: #b0632f;       /* LIGHT: copper hero */
+    --at-on-accent: #fbf6e9;            /* bone text on copper */
+    --at-on-accent-em: #f7eed9;
+    --at-on-accent-kick: #fbf6e9;
+    --at-accent-btn-bg: #2a1f14;        /* filled CTA: dark ink pill on copper */
+    --at-accent-btn-fg: #fbf6e9;
+    --at-accent-nested: #241d15;        /* dark nested cards on copper */
+    --at-accent-nested-h: #fbf6e9;
+    --at-accent-nested-p: #d3c7af;
 
-    --at-code-fg: #b8442a;
-    --at-th-bg: linear-gradient(180deg, #efe7d6, #e6dcc6);
-    --at-shadow-pop: 0 1px 2px rgba(60, 45, 25, 0.08), 0 18px 44px rgba(60, 45, 25, 0.14);
-    --at-scrim: rgba(31, 27, 20, 0.5);
-    --at-graph: #6b4a32;
-    --at-graph-line: rgba(31, 27, 20, 0.18);
+    --at-code-fg: #b0632f;
+    --at-th-bg: linear-gradient(180deg, #f0e8d4, #e2d8be);
+    --at-shadow-pop: 0 1px 2px rgba(70, 52, 28, 0.08), 0 18px 44px rgba(70, 52, 28, 0.14);
+    --at-scrim: rgba(30, 22, 14, 0.5);
+    --at-graph: #6b5232;
+    --at-graph-line: rgba(70, 52, 28, 0.18);
 
-    --at-h1: #1f1b14;
-    --at-h2: #1f1b14;
-    --at-h3: #2a241a;
-    --at-h4: #3a352c;
-    --at-h5: #4a4438;
-    --at-h6: #8a7f6d;
-    --at-bold-color: #1f1b14;
-    --at-italic-color: var(--at-accent);        /* italic = coral signature */
+    --at-h1: #1e160e;
+    --at-h2: #1e160e;
+    --at-h3: #2a1f14;
+    --at-h4: #4e3f2e;
+    --at-h5: #5c4d36;
+    --at-h6: #8a795c;
+    --at-bold-color: #1e160e;
+    --at-italic-color: var(--at-accent);        /* italic = copper signature */
     --at-bold-italic-color: var(--at-accent);
-    --at-strikethrough-color: #8a7f6d;
+    --at-strikethrough-color: #8a795c;
+
+    --at-code-surface: #ece2c9;
+    --at-code-surface-border: rgba(70, 52, 28, 0.16);
+    --at-code-text: #2a1f14;
+    --at-code-line-nr: #a3957a;
+    --code-comment: #8a795c;
+    --code-keyword: #a8551f;
+    --code-operator: #7d5f3e;
+    --code-function: #8a6a30;
+    --code-property: #9a5a2a;
+    --code-tag: #9a5a2a;
+    --code-string: #5a7038;
+    --code-value: #8a6030;
+    --code-punctuation: #6b5a3f;
+    --code-important: #a8551f;
 
     color-scheme: light;
 }
 
 body.theme-dark {
-    --at-accent: #e8714c;
-    --at-accent-rgb: 232, 113, 76;
-    --at-accent-2: #d2603f;
-    --at-gold: #d9a441;
-    --at-danger: #e0623f;
+    /* DA Excavation — deep earth, copper accent */
+    --at-accent: #c2784a;          /* copper */
+    --at-accent-rgb: 194, 120, 74;
+    --at-accent-2: #7d5f3e;        /* clay */
+    --at-gold: #a68b5c;            /* sand */
+    --at-danger: #c2724a;
 
-    /* layered WARM dark (espresso): page darkest → note → cards lighter, so
-       surfaces separate and the warmth reads instead of looking flat black. */
-    --at-bg-0: #18130d;
-    --at-bg-grad-a: #221b13;
-    --at-bg-grad-b: #130f0a;
-    --at-ribbon: #120f0a;
-    --at-pane: #221b13;
-    --at-pane-2: #2a2218;        /* cards — clearly lifted off the page */
-    --at-editor: #1c1710;        /* note bg sits between page and cards */
-    --at-raised: #342a1c;
+    --at-bg-0: #14110e;
+    --at-bg-grad-a: #1c1712;
+    --at-bg-grad-b: #14110e;
+    --at-ribbon: #1c1712;
+    --at-pane: #1c1712;
+    --at-pane-2: #252019;        /* cards — lifted off the page */
+    --at-editor: #14110e;        /* note canvas */
+    --at-raised: #2e261e;
 
-    --at-text: #e7ddc8;
-    --at-text-strong: #f5efe1;
-    --at-muted: #a99e87;
-    --at-faint: #6f6555;
+    --at-text: #f2ead6;
+    --at-text-strong: #f8f1de;
+    --at-muted: #b8a683;
+    --at-faint: #8a795c;
 
-    --at-dark-surface: #231d14;
-    --at-on-dark: #f5efe1;
-    --at-on-dark-muted: #d3c7af;
-    /* DARK: the "accent" hero becomes the BLACK version of the section — a warm-dark
-       panel with coral accents (not a coral block). Nested cards lift above it. */
-    --at-accent-surface: #0e0b08;       /* deep near-black hero (was muddy brown #1f1810) */
-    --at-on-accent: #f5efe1;            /* cream text on the dark hero */
-    --at-on-accent-em: var(--at-accent); /* italic emphasis = coral on the dark hero */
-    --at-on-accent-kick: var(--at-accent); /* kicker / labels = coral */
-    --at-accent-btn-bg: var(--at-accent); /* filled CTA: CORAL pill on the dark hero */
-    --at-accent-btn-fg: #ffffff;
-    --at-accent-nested: #2c2418;        /* nested cards lift above the dark hero */
-    --at-accent-nested-h: #f5efe1;
-    --at-accent-nested-p: #d3c7af;
+    --at-dark-surface: #1c1712;
+    --at-on-dark: #f2ead6;
+    --at-on-dark-muted: #b8a683;
 
-    --at-code-fg: #f0a07f;
-    --at-th-bg: linear-gradient(180deg, #2a2317, #211c14);
+    --at-paper: #ede4ce;
+    --at-paper-ink: #1e160e;
+    --at-paper-ink-soft: #4e3f2e;
+    --at-paper-edge: #cbb68c;
+
+    --at-accent-surface: #1a140e;       /* deep earth hero */
+    --at-on-accent: #f2ead6;
+    --at-on-accent-em: var(--at-accent); /* italic = copper on hero */
+    --at-on-accent-kick: var(--at-accent);
+    --at-accent-btn-bg: var(--at-accent); /* filled CTA: copper pill */
+    --at-accent-btn-fg: #14110e;
+    --at-accent-nested: #2e261e;        /* nested cards lift above the hero */
+    --at-accent-nested-h: #f8f1de;
+    --at-accent-nested-p: #b8a683;
+
+    --at-code-fg: #c2784a;
+    --at-th-bg: linear-gradient(180deg, #252019, #1c1712);
     --at-shadow-pop: 0 1px 2px rgba(0, 0, 0, 0.5), 0 22px 56px rgba(0, 0, 0, 0.66);
     --at-scrim: rgba(10, 8, 5, 0.66);
-    --at-graph: #d8c8aa;
-    --at-graph-line: rgba(231, 221, 200, 0.16);
+    --at-graph: #a68b5c;
+    --at-graph-line: rgba(242, 234, 214, 0.16);
 
-    --at-h1: #f5efe1;
-    --at-h2: #f5efe1;
-    --at-h3: #e7ddc8;
-    --at-h4: #d4c9b0;
-    --at-h5: #c2b69b;
-    --at-h6: #a99e87;
-    --at-bold-color: #f5efe1;
-    --at-italic-color: var(--at-accent);        /* italic = coral signature */
+    --at-h1: #f8f1de;
+    --at-h2: #f8f1de;
+    --at-h3: #f2ead6;
+    --at-h4: #d8c9a8;
+    --at-h5: #b8a683;
+    --at-h6: #8a795c;
+    --at-bold-color: #f8f1de;
+    --at-italic-color: var(--at-accent);        /* italic = copper signature */
     --at-bold-italic-color: var(--at-accent);
-    --at-strikethrough-color: #a99e87;
+    --at-strikethrough-color: #8a795c;
 
     color-scheme: dark;
 }
 
-/* Derived tokens + Obsidian bridge — identical formulas across both modes */
 body {
     --at-accent-soft: color-mix(in srgb, var(--at-accent) 14%, transparent);
     --at-accent-line: color-mix(in srgb, var(--at-accent) 55%, transparent);
     --at-code-bg: color-mix(in srgb, var(--at-accent) 12%, transparent);
     --at-chip-bg: color-mix(in srgb, var(--at-accent) 14%, transparent);
 
-    /* CODE BLOCKS: a warm dark ink in BOTH modes so syntax pops (like a terminal /
-       editor pane). Because the surface is always dark, the Prism/CodeMirror token
-       colors below are FIXED light-on-dark values — Obsidian's default tokens are
-       mode-adaptive and would go invisibly dark on this surface in light mode. */
-    --at-code-surface: #14100a;       /* deeper than the dark note bg (#1c1710) so the
-                                         block reads as a recessed terminal panel in dark
-                                         mode; a rich dark block on the cream light page.
-                                         Same value in BOTH modes = consistent. */
-    --at-code-surface-border: rgba(245, 239, 225, 0.12);
-    --at-code-text: #ece3d0;          /* default code text — warm cream */
+    --at-code-surface: #100d0a;
+    --at-code-surface-border: rgba(242, 234, 214, 0.12);
+    --at-code-text: #f2ead6;          /* default code text — warm bone */
     --at-code-line-nr: #6f6450;       /* gutter line numbers */
     --code-comment: #8a7f68;
     --code-keyword: #f0866a;          /* coral signature */
@@ -702,11 +796,10 @@ body {
     --at-border-strong: color-mix(in srgb, var(--at-text-strong) 26%, transparent);
     --at-on-dark-border: rgba(245, 239, 225, 0.12);
 
-    /* category-tag tint hues — text auto-adapts per mode */
-    --at-tag-blue: #5b87c5;
-    --at-tag-green: #5a9e6a;
-    --at-tag-amber: #c08a2e;
-    --at-tag-rose: #c75c6a;
+    --at-tag-blue: #c2784a;   /* copper */
+    --at-tag-green: #7a7d3e;  /* olive */
+    --at-tag-amber: #b5944f;  /* sand */
+    --at-tag-rose: #9c6b4a;   /* umber */
 
     /* per-callout accent fallbacks */
     --at-callout-note: var(--at-accent);
@@ -718,9 +811,10 @@ body {
     --at-callout-quote: var(--at-accent-2);
 
     /* fonts */
-    --at-font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-    --at-font-heading: 'Newsreader', Georgia, 'Times New Roman', serif;
-    --at-font-mono: 'JetBrains Mono', ui-monospace, Consolas, monospace;
+    --at-font-body: 'Spectral', Georgia, 'Times New Roman', serif;
+    --at-font-heading: 'IM Fell English', Georgia, 'Times New Roman', serif;
+    --at-font-mono: 'Fira Code', ui-monospace, Consolas, monospace;
+    --at-font-hand: 'Caveat', 'Segoe Script', cursive;   /* DA: handwritten marginalia */
 
     /* heading-color aliases used by the editor section */
     --h1-color: var(--at-h1);
@@ -735,11 +829,12 @@ body {
     --strikethrough-color: var(--at-strikethrough-color);
 
     /* shape */
-    --at-radius: 12px;
+    --at-radius: 6px;
     --at-scrollbar: 6px;
-    --radius-s: calc(var(--at-radius) - 4px);
+
+    --radius-s: var(--at-radius);
     --radius-m: var(--at-radius);
-    --radius-l: calc(var(--at-radius) + 4px);
+    --radius-l: var(--at-radius);
 
     /* editorial knobs */
     --at-para-spacing: 12px;
@@ -779,10 +874,6 @@ body {
     --interactive-accent: var(--at-accent);
     --interactive-accent-hover: color-mix(in srgb, var(--at-accent) 82%, white);
 
-    /* code BLOCKS use a warm DARK ink in both modes (terminal feel) so the syntax
-       highlight pops. Token colors are the fixed light-on-dark palette defined on
-       `body`. The coral --at-code-bg tint is for INLINE code pills only
-       (see .markdown-rendered code). */
     --code-background: var(--at-code-surface);
     --code-normal: var(--at-code-text);
 
@@ -852,11 +943,11 @@ body {
 
 /* "Use system fonts" toggle */
 body.at-system-fonts {
-    --at-font-body: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --at-font-body: Georgia, "Times New Roman", serif;
     --at-font-heading: Georgia, "Times New Roman", serif;
     --at-font-mono: ui-monospace, "Cascadia Code", Consolas, monospace;
+    --at-font-hand: cursive;
 }
-
 
 /* ============================================================================
    [Base]
@@ -891,7 +982,6 @@ body { background-color: var(--at-bg-0); }
 ::-webkit-scrollbar-thumb:hover { background: var(--at-muted); background-clip: content-box; }
 ::-webkit-scrollbar-corner { background: transparent; }
 
-
 /* ============================================================================
    [Chrome]  ribbon, tabs, sidebars, status bar
    ========================================================================== */
@@ -916,6 +1006,29 @@ body { background-color: var(--at-bg-0); }
 .workspace-split.mod-right-split { background: var(--at-pane); }
 .nav-files-container { background: transparent; }
 
+.nav-files-container {
+    --nav-item-padding: 1px 8px 1px 6px;
+    --nav-item-children-padding-start: 13px;
+    --nav-item-children-margin-start: 9px;
+}
+.nav-files-container .tree-item-self { min-height: 0; line-height: 1.3; }
+.nav-files-container .nav-file-title,
+.nav-files-container .nav-folder-title { padding-top: 1px; padding-bottom: 1px; }
+.nav-files-container .nav-file-title-content,
+.nav-files-container .nav-folder-title-content { line-height: 1.3; }
+/* denser TAG pane — tight rows, smaller count flair (global default) */
+.tag-container {
+    --nav-item-padding: 1px 8px 1px 6px;
+    --nav-item-children-padding-start: 12px;
+    --nav-item-children-margin-start: 9px;
+}
+.tag-container .tree-item-self { min-height: 0; line-height: 1.28; padding-top: 1px; padding-bottom: 1px; }
+.tag-container .tree-item-inner, .tag-container .tag-pane-tag-text { line-height: 1.28; font-size: var(--nav-item-size); }
+.tag-container .tree-item-flair, .tag-container .tag-pane-tag-count {
+    font-family: var(--at-font-mono); font-size: 9.5px; color: var(--at-faint);
+    padding: 0 5px; line-height: 1.3; min-width: 0;
+}
+
 .tree-item-self.is-clickable:hover { background: var(--at-accent-soft); border-radius: var(--radius-s); }
 .nav-file-title.is-active,
 .tree-item-self.is-active {
@@ -925,8 +1038,6 @@ body { background-color: var(--at-bg-0); }
 }
 .nav-folder-title-content { color: var(--at-gold); }
 
-/* default note + folder glyphs before each tree item (Obsidian shows none by
-   default; mirrors the MyWiki Glass treatment with Anthropic Touch tokens). */
 .nav-file-title-content::before,
 .nav-folder-title-content::before {
     content: "";
@@ -954,11 +1065,30 @@ body { background-color: var(--at-bg-0); }
 
 .status-bar { background: var(--at-pane); border-top: 1px solid var(--at-border); }
 
-/* graph view */
-.graph-view.color-fill { color: var(--at-graph); }
-.graph-view.color-line { color: var(--at-graph-line); }
-.graph-view.color-circle { color: var(--at-accent); }
+/* ----- Graph view — themed to the excavation palette -----
+   Obsidian renders the graph on canvas; node/link/label colours are driven by
+   the `color` of these helper classes. Tokens reuse the DA palette so local +
+   global graphs read as copper-on-parchment, not the default blue. */
 
+.graph-view.color-fill           { color: var(--at-accent); }            /* notes — full copper, not washed */
+.graph-view.color-fill-focused   { color: color-mix(in srgb, var(--at-accent) 60%, white); } /* hovered/selected — bright copper */
+.graph-view.color-fill-tag       { color: var(--at-gold); }              /* #tags — gold */
+.graph-view.color-fill-attachment{ color: var(--at-accent-2); }          /* images / files — clay */
+.graph-view.color-fill-unresolved{ color: color-mix(in srgb, var(--at-muted) 38%, transparent); }      /* phantom links */
+.graph-view.color-circle         { color: var(--at-accent); }           /* node ring */
+.graph-view.color-line           { color: color-mix(in srgb, var(--at-accent) 28%, transparent); }     /* links */
+.graph-view.color-line-highlight { color: var(--at-accent); }           /* lit links on hover */
+.graph-view.color-arrow          { color: var(--at-muted); }            /* directional arrows */
+.graph-view.color-text           { color: var(--at-text); }             /* node labels */
+
+.graph-controls {
+    background: color-mix(in srgb, var(--at-pane-2) 92%, transparent);
+    border: 1px solid var(--at-border-2); border-radius: var(--radius-m);
+    box-shadow: var(--at-shadow-pop); backdrop-filter: blur(6px);
+}
+.graph-controls .graph-control-section-header { font-family: var(--at-font-mono); font-size: 10px; letter-spacing: .08em;
+    text-transform: uppercase; color: var(--at-accent); }
+.graph-controls .clickable-icon:hover { color: var(--at-accent); background: color-mix(in srgb, var(--at-accent) 12%, transparent); }
 
 /* ============================================================================
    [Editor]  headings, text, links, code, tables, tags, metadata
@@ -1047,9 +1177,7 @@ body.at-halign-right .markdown-source-view .HyperMD-header { text-align: right; 
 /* ----- Body text + lists ----- */
 .markdown-rendered p { margin-block: 0 var(--at-para-spacing); }
 .markdown-rendered { line-height: var(--line-height-normal, 1.6); }
-/* LISTS — force them to actually render AS lists (markers + indent). Some vault
-   setups flatten list indent to 0, which hides the native markers; this restores
-   them everywhere, including inside callouts/columns. */
+
 .markdown-rendered :is(ul, ol) {
     padding-inline-start: 1.7em;
     list-style-position: outside;
@@ -1061,16 +1189,13 @@ body.at-halign-right .markdown-source-view .HyperMD-header { text-align: right; 
 .markdown-rendered ol { list-style-type: decimal; }
 .markdown-rendered :is(ul, ol) > li { display: list-item; margin: 0.3em 0; }
 .markdown-rendered ul > li::marker { color: var(--at-accent); }
-/* ordered lists: coral mono numerals (the Anthropic numbered-list look) */
+
 .markdown-rendered ol > li::marker { color: var(--at-accent); font-family: var(--at-font-mono); font-weight: 600; }
 .markdown-source-view.mod-cm6 .cm-formatting-list { color: var(--at-accent); }
-/* task list checkboxes pick up the accent (and keep their item un-bulleted) */
+
 .markdown-rendered li.task-list-item { list-style-type: none; }
 .markdown-rendered input[type="checkbox"] { accent-color: var(--at-accent); }
 
-/* BODY FONT SIZE — apply --font-text-size ourselves so the Style Settings slider
-   ("Body font size") and the per-note text-sm/md/lg/xl classes always take effect,
-   even if something overrides Obsidian core. Headings use em, so they scale too. */
 .markdown-preview-view,
 .markdown-reading-view .markdown-preview-sizer,
 .markdown-source-view .cm-content { font-size: var(--font-text-size); }
@@ -1093,20 +1218,20 @@ body.at-halign-right .markdown-source-view .HyperMD-header { text-align: right; 
    Two stacked gradient layers: a faint static baseline (so a link reads as a link
    at rest) + a bright accent line that animates 0→100% width via background-size.
    `:not(.tag)` keeps category-tag pills untouched. */
+
 .markdown-rendered a:not(.tag),
 .cm-hmd-internal-link, .cm-link {
     color: var(--at-accent);
     text-decoration: none;
-    background-image:
-        linear-gradient(var(--at-accent-2), var(--at-accent-2)),
-        linear-gradient(color-mix(in srgb, var(--at-accent) 32%, transparent), color-mix(in srgb, var(--at-accent) 32%, transparent));
-    background-size: 0% 1.5px, 100% 1px;
-    background-position: 0 100%, 0 100%;
-    background-repeat: no-repeat;
-    padding-bottom: 1.5px;
-    transition: color var(--at-dur-fast), background-size var(--at-dur) var(--at-ease);
+    text-underline-offset: 2px;
+    text-decoration-thickness: 1px;
+    transition: color var(--at-dur-fast);
 }
-.markdown-rendered a:not(.tag):hover { color: var(--at-accent-2); background-size: 100% 1.5px, 100% 1px; }
+.markdown-rendered a:not(.tag):hover {
+    color: var(--at-accent-2);
+    text-decoration: underline;
+    text-decoration-color: var(--at-accent-2);
+}
 
 /* ----- Focus-visible rings (keyboard accessibility) -----
    The theme previously had no focus indicator on rendered links/buttons/checkboxes.
@@ -1130,7 +1255,7 @@ body.at-halign-right .markdown-source-view .HyperMD-header { text-align: right; 
     .markdown-rendered input[type="checkbox"].task-list-item-checkbox {
         min-width: 24px;
         min-height: 24px;
-        /* the tappable row is the list item; enlarge the checkbox + its padding */
+
     }
     .markdown-rendered li.task-list-item { min-height: 44px; }
     .markdown-rendered button,
@@ -1155,7 +1280,7 @@ body.at-halign-right .markdown-source-view .HyperMD-header { text-align: right; 
     border-radius: var(--radius-m);
 }
 .markdown-rendered pre code { color: var(--at-code-text); background: none; }
-/* live-preview code block surface + gutter line numbers (warm dark, both modes) */
+
 .HyperMD-codeblock,
 .cm-s-obsidian .HyperMD-codeblock {
     background: var(--at-code-surface);
@@ -1269,9 +1394,6 @@ body.at-tag-underline .tag, body.at-tag-underline a.tag {
     border-bottom: 1px solid var(--at-accent);
 }
 
-/* Inline tags — auto-varied colours by POSITION (not per tag name), cycling the
-   theme's tag palette so each tag differs (matches the property pills). Covers
-   reading view + live preview. PP-coloured pills are unaffected (those aren't a.tag). */
 :is(.markdown-rendered, .markdown-source-view) a.tag:nth-of-type(4n + 1) {
     background: color-mix(in srgb, var(--at-tag-blue) 18%, transparent);
     color: color-mix(in srgb, var(--at-tag-blue) 74%, var(--at-text-strong));
@@ -1292,8 +1414,7 @@ body.at-tag-underline .tag, body.at-tag-underline a.tag {
 /* ----- Properties / metadata block ----- */
 .metadata-container { border: none; border-top: 1px solid var(--at-border); padding-top: 8px; }
 .metadata-property-key { color: var(--at-muted); font-family: var(--at-font-mono); font-size: 0.82em; }
-/* Tag property pills — auto-varied colours by POSITION (not per tag name), cycling
-   the theme's tag palette so each pill differs. PP's user-set colours still win. */
+
 .metadata-property[data-property-key="tags" i] .multi-select-pill:not(.custom-color):not(.theme-color):not(.transparent-color) {
     border-radius: 99px;
     border: 1px solid transparent;
@@ -1328,7 +1449,6 @@ body.at-tag-underline .tag, body.at-tag-underline a.tag {
        <span class="at-stat">37</span> commits
    They read the same tokens as the cards, so they restyle with the palette/fonts. */
 
-/* at-kicker — mono small-caps coral label with a dot (the "THE SKILL" look) */
 .markdown-rendered .at-kicker {
     font-family: var(--at-font-mono);
     text-transform: uppercase;
@@ -1340,7 +1460,6 @@ body.at-tag-underline .tag, body.at-tag-underline a.tag {
 .markdown-rendered .at-kicker::before { content: "● "; font-size: 0.8em; vertical-align: 0.1em; }
 .markdown-rendered .at-kicker.no-dot::before { content: none; }
 
-/* at-badge — filled coral pill, mono caps (the "01 · ALL-TIME CONTRIBUTOR" look) */
 .markdown-rendered .at-badge {
     display: inline-block;
     font-family: var(--at-font-mono);
@@ -1361,7 +1480,6 @@ body.at-tag-underline .tag, body.at-tag-underline a.tag {
     border: 1px solid color-mix(in srgb, var(--at-accent) 50%, transparent);
 }
 
-/* at-display — serif display run; <em> inside shows the coral italic emphasis */
 .markdown-rendered .at-display {
     font-family: var(--at-font-heading);
     font-weight: 500;
@@ -1409,9 +1527,8 @@ body.at-tag-underline .tag, body.at-tag-underline a.tag {
 .markdown-rendered .at-2xl { font-size: 2em; line-height: 1.15; }
 .markdown-rendered .at-3xl { font-size: 2.75em; line-height: 1.1; }
 .markdown-rendered .at-4xl { font-size: 3.6em; line-height: 1.05; }
-/* exact pt/px control when you need it: <span class="at-fs" style="--fs: 28px">…</span> */
-.markdown-rendered .at-fs { font-size: var(--fs, 1em); }
 
+.markdown-rendered .at-fs { font-size: var(--fs, 1em); }
 
 /* ============================================================================
    [Blockquote]
@@ -1453,19 +1570,18 @@ body.at-tag-underline .tag, body.at-tag-underline a.tag {
 }
 .markdown-rendered blockquote cite::before { content: "— "; opacity: 0.65; }
 
-
 /* ============================================================================
    [Callouts]  base recolor
    ========================================================================== */
 .callout {
     --cc: rgb(var(--callout-color));
-    border-radius: var(--radius-m);
+    border-radius: 6px;
     border: 1px solid var(--at-border-2);
     border-left: 3px solid var(--cc);
     background: color-mix(in srgb, var(--cc) 8%, var(--at-pane-2));
     transition: transform 200ms var(--at-ease), box-shadow 200ms, border-color 200ms;
 }
-.callout:hover { box-shadow: var(--at-shadow-pop); border-color: var(--at-border-strong); }
+.callout:hover { box-shadow: 0 20px 40px -24px rgba(0, 0, 0, 0.55); border-color: var(--at-border-strong); }
 .callout-icon .svg-icon { color: var(--cc); }
 
 .callout[data-callout="note"],
@@ -1486,8 +1602,6 @@ body.at-tag-underline .tag, body.at-tag-underline a.tag {
 .callout[data-callout="quote"],
 .callout[data-callout="cite"]      { --cc: var(--at-callout-quote); }
 
-/* standard-callout title: mono small-caps label in the callout's own accent
-   (scoped away from the card/grid system, which styles its own titles) */
 .callout:not([data-callout="card"]):not([data-callout="grid"]):not([data-callout="infobox"]) > .callout-title {
     padding: 4px 2px;
     gap: 8px;
@@ -1501,7 +1615,6 @@ body.at-tag-underline .tag, body.at-tag-underline a.tag {
     color: var(--cc);
 }
 .callout:not([data-callout="card"]):not([data-callout="grid"]):not([data-callout="infobox"]) .callout-content > :first-child { margin-top: 0; }
-
 
 /* ============================================================================
    [Card System]   a flexible, webpage-like card layout
@@ -1537,8 +1650,7 @@ body.at-tag-underline .tag, body.at-tag-underline a.tag {
     padding: 0;
     align-items: stretch;
 }
-/* zero the grid items' own margin so row-gap (not Obsidian's default .callout
-   margin) is what controls the vertical distance between card rows */
+
 .callout[data-callout="grid"] > .callout-content > .callout { margin: 0 !important; }
 .callout[data-callout="grid"][data-callout-metadata*="cols2"] > .callout-content { grid-template-columns: repeat(2, 1fr); }
 .callout[data-callout="grid"][data-callout-metadata*="cols3"] > .callout-content { grid-template-columns: repeat(3, 1fr); }
@@ -1568,9 +1680,7 @@ body.at-tag-underline .tag, body.at-tag-underline a.tag {
     flex-wrap: wrap;
     align-items: stretch;
 }
-/* weights: flex-grow = N off a 0 basis (so the row divides purely by ratio). The
-   base `flex: 1 1 0` on a plain card outspecifies a bare flex-grow, so use !important
-   exactly as the [!col|wN] weights do. min-width:0 lets a weighted card shrink. */
+
 .callout[data-callout="grid"] > .callout-content > .callout[data-callout="card"][data-callout-metadata~="w1"]  { flex: 1  1 0 !important; min-width: 0; }
 .callout[data-callout="grid"] > .callout-content > .callout[data-callout="card"][data-callout-metadata~="w2"]  { flex: 2  1 0 !important; min-width: 0; }
 .callout[data-callout="grid"] > .callout-content > .callout[data-callout="card"][data-callout-metadata~="w3"]  { flex: 3  1 0 !important; min-width: 0; }
@@ -1582,7 +1692,7 @@ body.at-tag-underline .tag, body.at-tag-underline a.tag {
 .callout[data-callout="grid"] > .callout-content > .callout[data-callout="card"][data-callout-metadata~="w9"]  { flex: 9  1 0 !important; min-width: 0; }
 .callout[data-callout="grid"] > .callout-content > .callout[data-callout="card"][data-callout-metadata~="w10"] { flex: 10 1 0 !important; min-width: 0; }
 @media (max-width: 700px) {
-    /* stack weighted cards on narrow panes (matches the column system's reflow) */
+
     .callout[data-callout="grid"] > .callout-content > .callout[data-callout="card"][data-callout-metadata~="w1"],
     .callout[data-callout="grid"] > .callout-content > .callout[data-callout="card"][data-callout-metadata~="w2"],
     .callout[data-callout="grid"] > .callout-content > .callout[data-callout="card"][data-callout-metadata~="w3"],
@@ -1594,18 +1704,39 @@ body.at-tag-underline .tag, body.at-tag-underline a.tag {
     .callout[data-callout="grid"] > .callout-content > .callout[data-callout="card"][data-callout-metadata~="w9"],
     .callout[data-callout="grid"] > .callout-content > .callout[data-callout="card"][data-callout-metadata~="w10"] { flex: 1 1 100% !important; }
 }
-/* the blank ">" separators between child cards can leave empty paragraphs —
-   don't let them become stray grid cells */
+
 .callout[data-callout="grid"] > .callout-content > p:empty,
 .callout[data-callout="grid"] > .callout-content > br { display: none; }
-/* Cards stretch to equal height per row via the grid's align-items:stretch (set on
-   .callout-content above). Do NOT add `height:100%` to the children — in the user's
-   plugin-heavy vault it resolves against the preview sizer and balloons/collapses the
-   whole panel into one empty dark box. align-items:stretch alone gives equal height. */
+
 /* spans (place on a child card) */
 .callout[data-callout="card"][data-callout-metadata*="span2"] { grid-column: span 2; }
 .callout[data-callout="card"][data-callout-metadata*="span3"] { grid-column: span 3; }
 .callout[data-callout="card"][data-callout-metadata*="spanfull"] { grid-column: 1 / -1; }
+
+/* ===== custom block width (any cast) =====
+   Add a pNN keyword to the callout metadata to set its width — like the
+   multi-column note width knob, but per block and Quartz-portable.
+   e.g.  > [!card|art p60]   > [!quote|illum p50]   > [!table|ledger p75]
+   Default placement = left. Add `pc` to center, `pr` to push right. */
+.callout[data-callout-metadata~="p25"]  { width: 25%  !important; }
+.callout[data-callout-metadata~="p30"]  { width: 30%  !important; }
+.callout[data-callout-metadata~="p33"]  { width: 33.33% !important; }
+.callout[data-callout-metadata~="p40"]  { width: 40%  !important; }
+.callout[data-callout-metadata~="p50"]  { width: 50%  !important; }
+.callout[data-callout-metadata~="p60"]  { width: 60%  !important; }
+.callout[data-callout-metadata~="p66"]  { width: 66.66% !important; }
+.callout[data-callout-metadata~="p70"]  { width: 70%  !important; }
+.callout[data-callout-metadata~="p75"]  { width: 75%  !important; }
+.callout[data-callout-metadata~="p80"]  { width: 80%  !important; }
+.callout[data-callout-metadata~="p90"]  { width: 90%  !important; }
+.callout[data-callout-metadata~="p100"] { width: 100% !important; }
+/* placement of a width-set block (default left) */
+.callout[data-callout-metadata~="pc"] { margin-inline: auto !important; }
+.callout[data-callout-metadata~="pr"] { margin-left: auto !important; margin-right: 0 !important; }
+
+.callout[data-callout-metadata~="fl"] { float: left;  clear: left;  margin-right: 1.4rem; }
+.callout[data-callout-metadata~="fr"] { float: right; clear: right; margin-left: 1.4rem; }
+.markdown-preview-view hr, .markdown-rendered hr { clear: both; }
 
 /* ----- shared card chrome (all styles) ----- */
 .callout[data-callout="card"] {
@@ -1615,7 +1746,7 @@ body.at-tag-underline .tag, body.at-tag-underline a.tag {
     border: 1px solid var(--at-border-2);
     border-radius: var(--radius-l);
     background: var(--at-pane-2);
-    box-shadow: var(--at-shadow-pop);
+    box-shadow: none;                /* resting flat — shadow appears on hover only */
     padding: 2px 4px 6px;
     overflow: hidden;
     transition: transform var(--at-dur) var(--at-ease), box-shadow var(--at-dur) var(--at-ease), border-color var(--at-dur) var(--at-ease);
@@ -1638,11 +1769,10 @@ body.at-tag-underline .tag, body.at-tag-underline a.tag {
 }
 .callout[data-callout="card"] .callout-title-inner em { color: var(--at-accent); font-style: italic; }
 .callout[data-callout="card"] > .callout-content { padding: 6px 20px 16px; flex: 1; overflow: visible; }
-/* cards must never show their own scrollbar (Minimal/core set overflow:auto on
-   callout-content to handle wide content). Only an inner code block may scroll. */
+
 .callout[data-callout="card"] > .callout-content > pre { overflow-x: auto; }
 .callout[data-callout="card"] > .callout-content > :not(pre) { overflow: visible; }
-/* first h6 in a card = coral mono kicker label (e.g. ###### THE SKILL) */
+
 .callout[data-callout="card"] .callout-content > h6:first-child {
     font-family: var(--at-font-mono);
     text-transform: uppercase;
@@ -1670,10 +1800,7 @@ body.at-tag-underline .tag, body.at-tag-underline a.tag {
 .callout[data-callout="card"][data-callout-metadata*="dark"] > .callout-content { color: var(--at-on-dark-muted); }
 .callout[data-callout="card"][data-callout-metadata*="dark"] > .callout-content > :is(h1, h2, h3, h4) { color: var(--at-on-dark); }
 .callout[data-callout="card"][data-callout-metadata*="dark"] > .callout-content > hr { border-top-color: var(--at-on-dark-border); }
-/* NESTED cards inside a dark surface that don't set their OWN surface still need
-   light text — Obsidian/other themes set `color` directly on every .callout, which
-   breaks inheritance and makes them render black-on-black (the four-step step cards
-   were invisible for exactly this reason, not clipping). */
+
 .callout[data-callout="card"][data-callout-metadata*="dark"] .callout[data-callout="card"]:not([data-callout-metadata*="dark"]):not([data-callout-metadata*="accent"]) {
     color: var(--at-on-dark-muted);
 }
@@ -1684,8 +1811,6 @@ body.at-tag-underline .tag, body.at-tag-underline a.tag {
     color: var(--at-on-dark-muted);
 }
 
-/* ACCENT hero. LIGHT = coral panel (reference); DARK = warm-dark panel (the black
-   version). All colours come from mode-aware tokens so each mode is correct. */
 .callout[data-callout="card"][data-callout-metadata*="accent"] {
     background: var(--at-accent-surface);
     border-color: transparent;
@@ -1699,11 +1824,6 @@ body.at-tag-underline .tag, body.at-tag-underline a.tag {
 .callout[data-callout="card"][data-callout-metadata*="accent"] > .callout-content > h6:first-child,
 .callout[data-callout="card"][data-callout-metadata*="accent"] > .callout-content > h6:first-child::before { color: var(--at-on-accent-kick); }
 
-/* NESTED cards inside the accent hero. The 6× .callout specificity (the MCL
-   "kill any background" technique) forces the fill past any vault override. Ancestor
-   requires class .callout so it matches the hero CALLOUT only — NOT the .el-div
-   wrapper (which shares the metadata) and NOT the hero itself. Token-driven fill:
-   dark cards on the coral hero (light) / lifted cards on the dark hero (dark). */
 .callout[data-callout="card"][data-callout-metadata*="accent"] .callout.callout.callout.callout.callout.callout[data-callout="card"],
 .callout[data-callout="card"][data-callout-metadata*="accent"] .callout.callout.callout.callout.callout.callout[data-callout="card"] > .callout-content {
     background: var(--at-accent-nested) !important;
@@ -1847,11 +1967,7 @@ body.at-tag-underline .tag, body.at-tag-underline a.tag {
 :is(.callout[data-callout="card"][data-callout-metadata~="step"],
     body.at-card-step .callout[data-callout="card"]:not([data-callout-metadata])) > .callout-content {
     padding: 30px 26px 40px;
-    /* equal-height grid rows + uneven content used to leave a big empty gap at the
-       BOTTOM of short cards (one long card forced them all tall). Make the content a
-       flex column and push the trailing description to the bottom: every card now has
-       icon+kicker+number aligned at the TOP and its description aligned at the BOTTOM,
-       so the slack lands as intentional mid-card breathing room, not dead space. */
+
     display: flex;
     flex-direction: column;
     flex: 1 1 auto;
@@ -1876,36 +1992,36 @@ body.at-tag-underline .tag, body.at-tag-underline a.tag {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 20px 20px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d8552f' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c2784a' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E");
 }
 /* ----- NAMED icons (intent-based, NOT position-based). Add an `icon-NAME` token to
    any step card to set its ring glyph: > [!card|step icon-cloud]. Without one, the
    default magnifier (above) is used. This replaces the old :nth-of-type rules, which
    broke whenever the grid wasn't the hero+steps slab (two cards fell on the default
-   icon → duplicate magnifiers). Stroke = coral (%23d8552f) to match the theme. ----- */
+   icon → duplicate magnifiers). Stroke = coral (%23c2784a) to match the theme. ----- */
 .callout[data-callout="card"][data-callout-metadata~="icon-search"] > .callout-content::before {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d8552f' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E") !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c2784a' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E") !important;
 }
 .callout[data-callout="card"][data-callout-metadata~="icon-file"] > .callout-content::before {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d8552f' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 4H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V9z'/%3E%3Cpath d='M14 4v5h5'/%3E%3C/svg%3E") !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c2784a' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 4H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V9z'/%3E%3Cpath d='M14 4v5h5'/%3E%3C/svg%3E") !important;
 }
 .callout[data-callout="card"][data-callout-metadata~="icon-chat"] > .callout-content::before {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d8552f' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z'/%3E%3C/svg%3E") !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c2784a' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z'/%3E%3C/svg%3E") !important;
 }
 .callout[data-callout="card"][data-callout-metadata~="icon-list"] > .callout-content::before {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d8552f' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 12l2 2 4-4M3 6l2 2 4-4M3 18l2 2 4-4M13 6h8M13 12h8M13 18h8'/%3E%3C/svg%3E") !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c2784a' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 12l2 2 4-4M3 6l2 2 4-4M3 18l2 2 4-4M13 6h8M13 12h8M13 18h8'/%3E%3C/svg%3E") !important;
 }
 .callout[data-callout="card"][data-callout-metadata~="icon-book"] > .callout-content::before {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d8552f' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 19.5A2.5 2.5 0 0 1 6.5 17H20'/%3E%3Cpath d='M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z'/%3E%3C/svg%3E") !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c2784a' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 19.5A2.5 2.5 0 0 1 6.5 17H20'/%3E%3Cpath d='M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z'/%3E%3C/svg%3E") !important;
 }
 .callout[data-callout="card"][data-callout-metadata~="icon-cloud"] > .callout-content::before {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d8552f' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M17.5 19a4.5 4.5 0 1 0 0-9 6 6 0 0 0-11.6 2.1A3.5 3.5 0 0 0 6.5 19z'/%3E%3C/svg%3E") !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c2784a' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M17.5 19a4.5 4.5 0 1 0 0-9 6 6 0 0 0-11.6 2.1A3.5 3.5 0 0 0 6.5 19z'/%3E%3C/svg%3E") !important;
 }
 .callout[data-callout="card"][data-callout-metadata~="icon-database"] > .callout-content::before {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d8552f' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cellipse cx='12' cy='5' rx='8' ry='3'/%3E%3Cpath d='M4 5v14c0 1.66 3.58 3 8 3s8-1.34 8-3V5'/%3E%3Cpath d='M4 12c0 1.66 3.58 3 8 3s8-1.34 8-3'/%3E%3C/svg%3E") !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c2784a' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cellipse cx='12' cy='5' rx='8' ry='3'/%3E%3Cpath d='M4 5v14c0 1.66 3.58 3 8 3s8-1.34 8-3V5'/%3E%3Cpath d='M4 12c0 1.66 3.58 3 8 3s8-1.34 8-3'/%3E%3C/svg%3E") !important;
 }
 .callout[data-callout="card"][data-callout-metadata~="icon-layers"] > .callout-content::before {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d8552f' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m12 2 9 5-9 5-9-5 9-5z'/%3E%3Cpath d='m3 12 9 5 9-5'/%3E%3Cpath d='m3 17 9 5 9-5'/%3E%3C/svg%3E") !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c2784a' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m12 2 9 5-9 5-9-5 9-5z'/%3E%3Cpath d='m3 12 9 5 9-5'/%3E%3Cpath d='m3 17 9 5 9-5'/%3E%3C/svg%3E") !important;
 }
 :is(.callout[data-callout="card"][data-callout-metadata~="step"],
     body.at-card-step .callout[data-callout="card"]:not([data-callout-metadata])) h3 {
@@ -1922,7 +2038,6 @@ body.at-tag-underline .tag, body.at-tag-underline a.tag {
 :is(.callout[data-callout="card"][data-callout-metadata~="step"],
     body.at-card-step .callout[data-callout="card"]:not([data-callout-metadata])) p { color: var(--at-on-dark-muted); }
 
-/* grids never show their own scrollbar (Minimal/core add overflow:auto) */
 .callout[data-callout="grid"],
 .callout[data-callout="grid"] > .callout-content { overflow: visible; }
 
@@ -1936,16 +2051,13 @@ body.at-tag-underline .tag, body.at-tag-underline a.tag {
 .callout[data-callout="grid"]:has(> .callout-content > .callout[data-callout-metadata~="step"]) > .callout-content {
     gap: 0 !important;
 }
-/* every tile squared by default; corner rules below round the four outer corners.
-   margin:0 is critical — Obsidian's default .callout margin is what opens the cream
-   gap between the header and the step row and stops them fusing into one slab. */
+
 .callout[data-callout="grid"]:has(> .callout-content > .callout[data-callout-metadata~="step"]) > .callout-content > .callout[data-callout="card"] {
     border-radius: 0 !important;
     box-shadow: none !important;
     margin: 0 !important;
 }
-/* hairline dividers: a line under the header / between rows (each step's top) and
-   between columns (each step after the first). Adapts on wrap automatically. */
+
 .callout[data-callout="grid"]:has(> .callout-content > .callout[data-callout-metadata~="step"]) > .callout-content > .callout[data-callout-metadata~="step"] {
     border-top: 1px solid color-mix(in srgb, var(--at-on-dark) 16%, transparent) !important;
 }
@@ -1989,7 +2101,6 @@ body.at-tag-underline .tag, body.at-tag-underline a.tag {
     border-bottom-right-radius: var(--radius-l) !important;
 }
 
-/* HEADER: two columns — display heading left, intro paragraph right (reference). */
 .callout[data-callout="grid"] > .callout-content > .callout[data-callout="card"][data-callout-metadata*="hero"] > .callout-content {
     display: grid;
     grid-template-columns: 1.7fr 1fr;
@@ -1998,7 +2109,7 @@ body.at-tag-underline .tag, body.at-tag-underline a.tag {
 }
 .callout[data-callout="grid"] > .callout-content > .callout[data-callout-metadata*="hero"] > .callout-content > h6:first-child { grid-column: 1 / -1; }
 .callout[data-callout="grid"] > .callout-content > .callout[data-callout-metadata*="hero"] > .callout-content > h1 { grid-column: 1; margin-bottom: 0; }
-/* intro = the plain paragraph (no button); send it to the right column */
+
 .callout[data-callout="grid"] > .callout-content > .callout[data-callout-metadata*="hero"] > .callout-content > p:not(:has(strong)) {
     grid-column: 2;
     grid-row: 2;
@@ -2160,7 +2271,7 @@ body.at-tag-underline .tag, body.at-tag-underline a.tag {
     body.at-card-channels .callout[data-callout="card"]:not([data-callout-metadata])) tr:last-child :is(th, td) { border-bottom: none; }
 
 /* ----- STYLE: hero / cta — big display heading + buttons ----- */
-/* title comes from the inner "# heading"; hide the auto callout title ("Card") */
+
 :is(.callout[data-callout="card"][data-callout-metadata*="hero"],
     body.at-card-hero .callout[data-callout="card"]:not([data-callout-metadata])) > .callout-title { display: none; }
 :is(.callout[data-callout="card"][data-callout-metadata*="hero"],
@@ -2172,11 +2283,7 @@ body.at-tag-underline .tag, body.at-tag-underline a.tag {
     margin: 0 0 16px;
     border: none;
 }
-/* buttons (direct children only, so nested-card links are NOT turned into pills):
-   plain link = outline pill, bold link **[x](y)** = filled pill */
-/* buttons — style EVERY link in the hero's own content (robust to whatever
-   wrapper Obsidian puts the buttons paragraph in), then reset nested-card links.
-   plain link = outline pill, bold link **[x](y)** = filled pill */
+
 :is(.callout[data-callout="card"][data-callout-metadata*="hero"],
     body.at-card-hero .callout[data-callout="card"]:not([data-callout-metadata])) > .callout-content a {
     display: inline-block;
@@ -2210,10 +2317,7 @@ body.at-tag-underline .tag, body.at-tag-underline a.tag {
     font-weight: inherit;
     color: var(--at-accent);
 }
-/* on the coral (accent) surface, invert buttons to dark (!important to beat the
-   high-specificity :is() default-class arm in the base button rule) */
-/* outline button — border + text follow the hero's text colour so it's visible on
-   the coral hero (light: dark ink) AND the dark hero (dark: cream) */
+
 .callout[data-callout="card"][data-callout-metadata*="accent"] > .callout-content a {
     border-color: color-mix(in srgb, var(--at-on-accent) 55%, transparent) !important;
     color: var(--at-on-accent) !important;
@@ -2222,7 +2326,7 @@ body.at-tag-underline .tag, body.at-tag-underline a.tag {
     border-color: var(--at-on-accent) !important;
     background: color-mix(in srgb, var(--at-on-accent) 8%, transparent) !important;
 }
-/* filled button — light: dark pill (reference) · dark: CORAL pill (matches accent) */
+
 .callout[data-callout="card"][data-callout-metadata*="accent"] > .callout-content strong a {
     background: var(--at-accent-btn-bg) !important;
     color: var(--at-accent-btn-fg) !important;
@@ -2243,7 +2347,6 @@ body.at-tag-underline .tag, body.at-tag-underline a.tag {
     mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M19.27 5.33A18 18 0 0 0 14.72 4l-.2.4a13.7 13.7 0 0 0-5.04 0L9.27 4a18 18 0 0 0-4.54 1.33C2.4 8.94 1.78 12.45 2.09 15.9a18.4 18.4 0 0 0 5.6 2.83l1.13-1.55a11.6 11.6 0 0 1-1.78-.86l.44-.34a13 13 0 0 0 11.04 0l.44.34c-.55.33-1.16.61-1.78.86l1.13 1.55a18.3 18.3 0 0 0 5.6-2.83c.45-4.05-.5-7.53-2.64-10.57Z'/%3E%3C/svg%3E") center / contain no-repeat;
 }
 
-
 /* ============================================================================
    [Element Variants — INFOBOX]   > [!infobox|v1..v3]  (floats; body wraps)
    ========================================================================== */
@@ -2255,13 +2358,11 @@ body { --at-infobox-width: 300px; }
     width: var(--at-infobox-width);
     max-width: 42%;
     margin: 4px 0 16px 24px;
-    /* the floated wrapper is a transparent rectangle painted above the text beside it;
-       make it click-transparent so it never swallows clicks. The card re-enables. */
+
     pointer-events: none;
 }
 .callout[data-callout="infobox"] { pointer-events: auto; }
-/* responsive: on a narrow pane the infobox stops floating and spans full width,
-   so text never gets squeezed into a sliver beside it (webpage-like reflow) */
+
 @media (max-width: 700px) {
     .markdown-preview-view .markdown-preview-sizer > div:has(> .callout[data-callout="infobox"]),
     .markdown-source-view .cm-embed-block.cm-callout:has(.callout[data-callout="infobox"]) {
@@ -2276,18 +2377,36 @@ body { --at-infobox-width: 300px; }
     float: left;
     margin: 4px 24px 18px 0;
 }
-/* center — no float, centered block (text does NOT wrap beside it) */
+
 .markdown-preview-view .markdown-preview-sizer > div:has(> .callout[data-callout="infobox"][data-callout-metadata*="center"]),
-.markdown-source-view .cm-embed-block.cm-callout:has(.callout[data-callout="infobox"][data-callout-metadata*="center"]) {
+.markdown-source-view .cm-embed-block.cm-callout:has(.callout[data-callout="infobox"][data-callout-metadata*="center"]),
+.markdown-preview-view .markdown-preview-sizer > div:has(> .callout[data-callout="infobox"][data-callout-metadata*="middle"]),
+.markdown-source-view .cm-embed-block.cm-callout:has(.callout[data-callout="infobox"][data-callout-metadata*="middle"]) {
     float: none;
     margin: 22px auto;
     max-width: var(--at-infobox-width);
 }
-/* Top-level blocks beside a floated infobox: make each wrapper a BFC (flow-root)
-   so its BOX shrinks to sit beside the float instead of sliding full-width UNDER
-   it. Headings/hr clear; blockquotes/code/tables/standard-callouts (which carry a
-   background) now wrap cleanly. Cards/grids/columns aren't direct sizer children
-   in these layouts, so their flex/grid is untouched. */
+
+.markdown-preview-view .markdown-preview-sizer > div:has(> .callout[data-callout="infobox"][data-callout-metadata*="right"]),
+.markdown-source-view .cm-embed-block.cm-callout:has(.callout[data-callout="infobox"][data-callout-metadata*="right"]) {
+    float: right;
+    margin: 4px 0 16px 24px;
+}
+
+.markdown-preview-view .markdown-preview-sizer > div:has(> .callout[data-callout="infobox"][data-callout-metadata~="photo"]),
+.markdown-source-view .cm-embed-block.cm-callout:has(.callout[data-callout="infobox"][data-callout-metadata~="photo"]) {
+    float: none;
+    margin: 22px auto;
+    max-width: var(--at-infobox-width);
+}
+
+.markdown-preview-view .markdown-preview-sizer > div:has(> .callout[data-callout="infobox"][data-callout-metadata~="narrow"]),
+.markdown-source-view .cm-embed-block.cm-callout:has(.callout[data-callout="infobox"][data-callout-metadata~="narrow"]) { --at-infobox-width: 240px; }
+.markdown-preview-view .markdown-preview-sizer > div:has(> .callout[data-callout="infobox"][data-callout-metadata~="wide"]),
+.markdown-source-view .cm-embed-block.cm-callout:has(.callout[data-callout="infobox"][data-callout-metadata~="wide"]) { --at-infobox-width: 380px; }
+.markdown-preview-view .markdown-preview-sizer > div:has(> .callout[data-callout="infobox"][data-callout-metadata~="wider"]),
+.markdown-source-view .cm-embed-block.cm-callout:has(.callout[data-callout="infobox"][data-callout-metadata~="wider"]) { --at-infobox-width: 460px; }
+
 .markdown-preview-view .markdown-preview-sizer > :is(.el-h1, .el-h2, .el-h3, .el-h4, .el-h5, .el-h6, .el-hr, .el-blockquote, .el-pre, .el-table, .el-callout),
 .markdown-reading-view .markdown-preview-sizer > :is(.el-h1, .el-h2, .el-h3, .el-h4, .el-h5, .el-h6, .el-hr, .el-blockquote, .el-pre, .el-table, .el-callout) { display: flow-root; }
 
@@ -2306,11 +2425,9 @@ body { --at-infobox-width: 300px; }
 /* HOVER: lift + deepen shadow */
 .callout[data-callout="infobox"]:hover {
     transform: translateY(-5px);
-    box-shadow: 0 2px 6px rgba(60, 45, 25, 0.12), 0 24px 56px rgba(60, 45, 25, 0.22);
+    box-shadow: 0 20px 40px -24px rgba(0, 0, 0, 0.55);
 }
-/* TITLE → coral mono-caps tag, INSIDE the card at the top-left (no overflow, so it
-   renders identically in reading AND editing mode — the peek-outside version got
-   clipped by the editing-mode embed wrapper). */
+
 .callout[data-callout="infobox"] > .callout-title {
     display: inline-flex;
     width: fit-content;
@@ -2344,7 +2461,7 @@ body { --at-infobox-width: 300px; }
     color: var(--at-text-strong);
 }
 .callout[data-callout="infobox"] .callout-content > :is(h1, h2, h3) em { color: var(--at-accent); font-style: italic; }
-/* lead description = first italic-only paragraph → muted, divider under it */
+
 .callout[data-callout="infobox"] .callout-content > p:first-child,
 .callout[data-callout="infobox"] .callout-content > :is(h1, h2, h3):first-child + p {
     font-style: italic;
@@ -2384,7 +2501,7 @@ body.at-ib-v2 .callout[data-callout="infobox"]:not([data-callout-metadata*="v"])
     color: var(--at-on-dark);
 }
 :is(.callout[data-callout="infobox"][data-callout-metadata*="v2"],
-    body.at-ib-v2 .callout[data-callout="infobox"]:not([data-callout-metadata*="v"])) :is(h1, h2):first-child { color: var(--at-on-dark); }
+    body.at-ib-v2 .callout[data-callout="infobox"]:not([data-callout-metadata*="v"])) :is(h1, h2, h3) { color: var(--at-on-dark); }
 :is(.callout[data-callout="infobox"][data-callout-metadata*="v2"],
     body.at-ib-v2 .callout[data-callout="infobox"]:not([data-callout-metadata*="v"])) :is(th, td) { color: var(--at-on-dark-muted); border-top-color: var(--at-on-dark-border); }
 :is(.callout[data-callout="infobox"][data-callout-metadata*="v2"],
@@ -2432,7 +2549,6 @@ body.at-ib-v3 .callout[data-callout="infobox"]:not([data-callout-metadata*="v"])
     line-height: 1.3;
 }
 .callout[data-callout="infobox"] .callout-content > p:has(strong):has(+ p:last-child) strong { color: var(--at-on-dark); }
-
 
 /* ============================================================================
    [Components]  multi-column machinery + dividers (lightly skinned)
@@ -2488,10 +2604,10 @@ body { --at-col-gap: 30px; --at-col-min: 200px; }
     align-items: stretch;
     padding: 0 !important;
 }
-/* drop the empty-paragraph separators so they don't become stray columns */
+
 .callout[data-callout="columns"] > .callout-content > p:empty,
 .callout[data-callout="columns"] > .callout-content > br { display: none; }
-/* each COLUMN = a plain content block: strip all card chrome, keep note content */
+
 .callout[data-callout="columns"] > .callout-content > .callout[data-callout="col"] {
     flex: 1 1 0;
     min-width: var(--at-col-min);
@@ -2507,8 +2623,7 @@ body { --at-col-gap: 30px; --at-col-min: 200px; }
 .callout[data-callout="columns"] > .callout-content > .callout[data-callout="col"] > .callout-title { display: none; }
 .callout[data-callout="columns"] > .callout-content > .callout[data-callout="col"] > .callout-content { padding: 0 !important; }
 .callout[data-callout="columns"] > .callout-content > .callout[data-callout="col"] > .callout-content > :first-child { margin-top: 0; }
-/* WIDTH WEIGHTS — flex-basis:0 makes the grow values exact ratios (w3:w7 = 30/70).
-   !important beats the higher-specificity base `flex:1 1 0` shorthand above. */
+
 .callout[data-callout="col"][data-callout-metadata~="w1"]  { flex-grow: 1 !important; }
 .callout[data-callout="col"][data-callout-metadata~="w2"]  { flex-grow: 2 !important; }
 .callout[data-callout="col"][data-callout-metadata~="w3"]  { flex-grow: 3 !important; }
@@ -2532,18 +2647,15 @@ body { --at-col-gap: 30px; --at-col-min: 200px; }
     background: linear-gradient(90deg, transparent, var(--at-border-strong), transparent);
 }
 
-
 /* ============================================================================
    [Motion]  entrance + reduced-motion
    ========================================================================== */
-/* transform-only (NO opacity): a stuck/!important-overridden animation can never
-   leave a card invisible — only opacity:0 did that in busy multi-snippet vaults. */
+
 @keyframes at-rise {
     from { transform: translateY(8px); }
     to   { transform: translateY(0); }
 }
-/* no fill-mode: after the entrance the element returns to author styles, so
-   card :hover transforms still work (fill:both would lock transform:none). */
+
 body.at-scroll-reveal .markdown-rendered :is(h1, h2, blockquote, table) {
     animation: at-rise var(--at-dur) var(--at-ease);
 }
@@ -2579,10 +2691,20 @@ body:not(.at-no-anim)::after {
     from { opacity: 0; transform: translateY(7px); }
     to   { opacity: 1; transform: translateY(0); }
 }
-body:not(.at-no-anim) .markdown-preview-view .markdown-preview-sizer,
+
 body:not(.at-no-anim) .markdown-source-view .cm-sizer {
     animation: at-open-rise 460ms var(--at-ease);
 }
+
+@keyframes at-boot-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes at-boot-rise { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
+@keyframes at-boot-excavate {
+    from { opacity: 0; transform: scale(1.035); filter: saturate(0.55) brightness(1.06); }
+    to   { opacity: 1; transform: none;          filter: none; }
+}
+body:not(.at-no-anim).at-boot-rise     .workspace { animation: at-boot-rise 820ms var(--at-ease) both; }
+body:not(.at-no-anim).at-boot-fade     .workspace { animation: at-boot-fade 720ms var(--at-ease) both; }
+body:not(.at-no-anim).at-boot-excavate .workspace { animation: at-boot-excavate 900ms var(--at-ease) both; }
 
 /* active-line highlight (live preview) */
 body.at-active-line .markdown-source-view.mod-cm6 .cm-active.cm-line {
@@ -2596,8 +2718,7 @@ body.at-no-anim *::after {
     animation: none !important;
     transition: none !important;
 }
-/* OS "reduced motion": drop the entrance keyframes but KEEP hover transitions,
-   so cards still give feedback. Use "Disable animations" to kill both. */
+
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
         animation-duration: 0.001ms !important;
@@ -2614,3 +2735,1633 @@ body.at-no-anim *::after {
     font-weight: 600;
 }
 .markdown-rendered .at-gradient em { color: var(--grad-color, var(--at-grad-color, var(--at-accent))); font-style: italic; }
+
+/* ============================================================================
+   [Atelier element variants]  Atelier-specific casts of each element.
+   SHORTCUT MODEL: auto-rendered elements (blockquote / hr / table / code /
+   properties / tags) cannot take a per-block class, so the variant is a note
+   cssclass token (works as `cssclasses: [da-bq-illum]` AND, identically, as a
+   Style-Settings body class). Per-block elements (callout / card) use a callout
+   metadata word (`[!note|seal]`, `[!card|art]`). Reference class stems kept as
+   the tokens. All colour flows through --at-* so it recolours per theme.
+   ========================================================================== */
+
+/* ---------- BLOCKQUOTE (no left bar — archaeology casts) ---------- */
+:is(.mw-bq-illum, .mw-bq-gloss, .mw-bq-tab) :is(blockquote, .HyperMD-quote) {
+    border-left: 0 !important;
+    background: transparent !important;
+    padding-left: 0;
+}
+/* v1 illuminated centre */
+.mw-bq-illum blockquote {
+    text-align: center; position: relative; padding: 8px 18px;
+}
+.mw-bq-illum blockquote::before {
+    content: "\201C"; font-family: var(--at-font-heading); font-size: 64px;
+    color: var(--at-accent); opacity: .35; line-height: .5; display: block; height: 30px;
+}
+.mw-bq-illum blockquote::after {
+    content: "\2766"; display: block; color: var(--at-accent); opacity: .6;
+    margin-top: 10px; font-size: 16px;
+}
+.mw-bq-illum blockquote p { font-family: var(--at-font-heading); font-style: italic; font-size: 20px; line-height: 1.5; }
+/* v2 marginal gloss — vertical label in the margin */
+.mw-bq-gloss blockquote {
+    display: grid; grid-template-columns: auto 1fr; column-gap: 14px; padding: 4px 0;
+}
+.mw-bq-gloss blockquote::before {
+    content: "gloss"; font-family: var(--at-font-heading); font-style: italic; font-size: 12px;
+    color: var(--at-accent); writing-mode: vertical-rl; text-orientation: mixed;
+    letter-spacing: .1em; opacity: .8; grid-row: 1 / -1; align-self: start;
+}
+.mw-bq-gloss blockquote p { border-left: 1px dotted var(--at-border-2); padding-left: 16px; font-style: italic; }
+/* v3 inscribed tablet — corner brackets */
+.mw-bq-tab blockquote {
+    position: relative; padding: 20px 22px; text-align: center;
+    background: color-mix(in srgb, var(--at-pane-2) 70%, transparent) !important; border-radius: 6px;
+}
+.mw-bq-tab blockquote::before, .mw-bq-tab blockquote::after {
+    content: ""; position: absolute; width: 16px; height: 16px; border: 1.5px solid var(--at-accent); opacity: .6;
+}
+.mw-bq-tab blockquote::before { top: 8px; left: 8px; border-right: 0; border-bottom: 0; }
+.mw-bq-tab blockquote::after { bottom: 8px; right: 8px; border-left: 0; border-top: 0; }
+.mw-bq-tab blockquote p { font-family: var(--at-font-heading); font-size: 18px; }
+
+/* ---------- CALLOUT casts ( [!type|seal] / |folio / |marg ) ---------- */
+.callout[data-callout-metadata~="seal"],
+.callout[data-callout-metadata~="folio"],
+.callout[data-callout-metadata~="marg"] {
+    background: transparent; border: 0; border-radius: 0; padding: 0;
+    transition: transform .5s cubic-bezier(.16,1,.3,1), box-shadow .5s cubic-bezier(.16,1,.3,1);
+}
+/* hover lift for every structural / quote cast */
+.callout:is([data-callout-metadata~="seal"],[data-callout-metadata~="folio"],[data-callout-metadata~="marg"],[data-callout-metadata~="illum"],[data-callout-metadata~="gloss"],[data-callout-metadata~="tab"]):hover {
+    transform: translateY(-5px) !important;
+}
+
+.callout:is([data-callout-metadata~="illum"],[data-callout-metadata~="gloss"],[data-callout-metadata~="tab"]):hover {
+    box-shadow: 0 20px 40px -24px rgba(0, 0, 0, .6) !important;
+}
+.callout[data-callout-metadata~="seal"] > .callout-title,
+.callout[data-callout-metadata~="folio"] > .callout-title,
+.callout[data-callout-metadata~="marg"] > .callout-title { padding: 0; }
+/* folio + marg carry no icon (the rail / pen glyph stand in) */
+:is(.callout[data-callout-metadata~="folio"], .callout[data-callout-metadata~="marg"]) .callout-icon { display: none; }
+
+.callout[data-callout-metadata~="seal"] {
+    position: relative; border-top: 1px solid var(--at-border-2); border-bottom: 1px solid var(--at-border-2);
+    padding: 16px 18px 16px 64px;
+}
+.callout[data-callout-metadata~="seal"] > .callout-title { position: static; }
+.callout[data-callout-metadata~="seal"] .callout-icon {
+    position: absolute; left: 14px; top: 50%; transform: translateY(-50%); margin: 0; padding: 0 !important;
+    width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; line-height: 0;
+    background: radial-gradient(circle at 35% 30%, var(--at-accent), var(--at-accent-2));
+    box-shadow: 0 4px 10px -4px rgba(0,0,0,.5), inset 0 0 0 1px rgba(255,255,255,.15);
+}
+.callout[data-callout-metadata~="seal"] .callout-icon :is(svg, .svg-icon) {
+    color: #fff; width: 18px !important; height: 18px !important; margin: 0 !important; display: block;
+}
+.callout[data-callout-metadata~="seal"] .callout-title-inner { color: var(--at-accent); text-transform: uppercase; letter-spacing: .05em; font-family: var(--at-font-heading); }
+.callout[data-callout-metadata~="seal"]::before,
+.callout[data-callout-metadata~="seal"]::after {
+    content: ""; position: absolute; width: 12px; height: 12px; border: 1.5px solid var(--at-accent); opacity: .5; pointer-events: none;
+}
+.callout[data-callout-metadata~="seal"]::before { top: 6px; right: 6px; border-left: 0; border-bottom: 0; }
+.callout[data-callout-metadata~="seal"]::after { bottom: 6px; right: 6px; border-left: 0; border-top: 0; }
+
+/* tip / success — friendly, handwritten */
+.callout:is([data-callout="tip"],[data-callout="hint"],[data-callout="important"],[data-callout="success"],[data-callout="check"],[data-callout="done"])[data-callout-metadata~="seal"] .callout-title-inner {
+    font-family: var(--at-font-hand); text-transform: none; letter-spacing: .01em; font-size: 1.25em; line-height: 1;
+}
+/* danger / failure / bug — urgent, technical mono */
+.callout:is([data-callout="danger"],[data-callout="error"],[data-callout="failure"],[data-callout="fail"],[data-callout="missing"],[data-callout="bug"])[data-callout-metadata~="seal"] .callout-title-inner {
+    font-family: var(--at-font-mono); letter-spacing: .14em; font-size: .82em; font-weight: 600;
+}
+/* question / help — curious, italic serif */
+.callout:is([data-callout="question"],[data-callout="help"],[data-callout="faq"])[data-callout-metadata~="seal"] .callout-title-inner {
+    font-style: italic; text-transform: none; letter-spacing: .01em;
+}
+/* note / info / example — calm body serif */
+.callout:is([data-callout="note"],[data-callout="abstract"],[data-callout="info"],[data-callout="todo"],[data-callout="example"])[data-callout-metadata~="seal"] .callout-title-inner {
+    font-family: var(--font-text, var(--at-font-heading)); text-transform: uppercase; letter-spacing: .08em; font-size: .85em;
+}
+
+/* v2 folio strip — vertical label rail (rail = the title text) */
+.callout[data-callout-metadata~="folio"] {
+    display: grid; grid-template-columns: 34px 1fr; overflow: hidden; border-radius: 6px;
+    background: color-mix(in srgb, var(--at-pane-2) 60%, transparent);
+}
+.callout[data-callout-metadata~="folio"] > .callout-title {
+    grid-row: 1 / 99; writing-mode: vertical-rl; text-orientation: mixed;
+    background: linear-gradient(var(--at-accent-2), var(--at-accent)); color: var(--at-on-dark);
+    display: grid; place-items: center; font-family: var(--at-font-mono); font-size: 9px;
+    letter-spacing: .24em; text-transform: uppercase; padding: 10px 0;
+}
+.callout[data-callout-metadata~="folio"] > .callout-title,
+.callout[data-callout-metadata~="folio"] > .callout-title .callout-title-inner { color: #fff !important; }
+.callout[data-callout-metadata~="folio"] > .callout-content { padding: 16px 18px; }
+
+.callout[data-callout-metadata~="marg"] { position: relative; padding-left: 30px; }
+.callout[data-callout-metadata~="marg"]::before {
+    content: "\270D"; position: absolute; left: 0; top: 6px; font-size: 18px; color: var(--at-accent);
+}
+.callout[data-callout-metadata~="marg"] .callout-title-inner {
+    font-family: var(--at-font-hand) !important; font-size: 20px !important; text-transform: none !important;
+    letter-spacing: 0 !important; font-weight: 400 !important; color: var(--at-accent);
+}
+
+/* ---------- TAGS (catalogue pill / wax dot / index slip) ---------- */
+:is(.mw-tag-wax, .mw-tag-slip) :is(.tag, a.tag) { background: none; }
+.mw-tag-pill :is(.tag, a.tag) {
+    padding: 4px 11px; color: var(--at-muted); background: var(--at-pane-2);
+    border: 1px solid var(--at-border-2); border-radius: 6px;
+}
+.mw-tag-pill :is(.tag, a.tag):hover { border-color: var(--at-accent); color: var(--at-accent); }
+.mw-tag-wax :is(.tag, a.tag) {
+    padding: 4px 12px; color: var(--at-text); background: transparent;
+    border: 1px dashed var(--at-border-2); border-radius: 20px;
+}
+.mw-tag-wax :is(.tag, a.tag)::before {
+    content: ""; display: inline-block; width: 9px; height: 9px; border-radius: 50%; vertical-align: middle;
+    background: radial-gradient(circle at 35% 30%, var(--at-accent), var(--at-accent-2)); margin-right: 4px;
+}
+.mw-tag-wax :is(.tag, a.tag):hover { border-style: solid; border-color: var(--at-accent); }
+.mw-tag-slip :is(.tag, a.tag) {
+    padding: 4px 10px 4px 8px; color: var(--at-on-dark);
+    background: linear-gradient(var(--at-accent-2), var(--at-muted)); border: 0;
+    border-radius: 3px 9px 9px 3px; box-shadow: 0 2px 6px -3px rgba(0,0,0,.5);
+}
+.mw-tag-slip :is(.tag, a.tag):hover { filter: brightness(1.12); }
+
+.callout[data-callout="tags"] {
+    background: transparent !important; border: 0 !important; box-shadow: none !important; padding: 0; margin: .6em 0;
+}
+.callout[data-callout="tags"] > .callout-title { display: none; }
+.callout[data-callout="tags"]:hover { transform: none; box-shadow: none !important; }
+.callout[data-callout="tags"] { overflow: visible !important; }
+.callout[data-callout="tags"] > .callout-content { padding: 4px 0 0; overflow: visible; }
+.callout[data-callout="tags"] > .callout-content > p { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; overflow: visible; }
+.callout[data-callout="tags"] :is(a.tag, .tag) {
+    font-family: var(--at-font-mono); font-size: 0.82em; line-height: 1.4; letter-spacing: .04em; text-transform: uppercase; text-decoration: none;
+    position: relative; z-index: 0;
+    transition: transform .25s var(--at-ease), background .3s ease, color .3s ease, border-color .3s ease, filter .3s ease;
+}
+
+.callout[data-callout="tags"] :is(a.tag, .tag):hover { transform: translateY(-2px) !important; z-index: 2; }
+.callout[data-callout="tags"][data-callout-metadata~="pill"] :is(a.tag, .tag) {
+    padding: 4px 11px; color: var(--at-muted); background: var(--at-pane-2) !important; border: 1px solid var(--at-border-2); border-radius: 6px;
+}
+.callout[data-callout="tags"][data-callout-metadata~="pill"] :is(a.tag, .tag):hover { background: var(--at-pane-2) !important; border-color: var(--at-accent); color: var(--at-accent); }
+.callout[data-callout="tags"][data-callout-metadata~="wax"] :is(a.tag, .tag) {
+    padding: 4px 12px; color: var(--at-text); background: transparent !important; border: 1px dashed var(--at-border-2); border-radius: 20px;
+}
+.callout[data-callout="tags"][data-callout-metadata~="wax"] :is(a.tag, .tag)::before {
+    content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%; vertical-align: middle;
+    background: radial-gradient(circle at 35% 30%, var(--at-accent), var(--at-accent-2)); margin-right: 5px;
+}
+.callout[data-callout="tags"][data-callout-metadata~="wax"] :is(a.tag, .tag):hover { background: transparent !important; color: var(--at-text); border-style: solid; border-color: var(--at-accent); }
+.callout[data-callout="tags"][data-callout-metadata~="slip"] :is(a.tag, .tag) {
+    padding: 4px 11px 4px 9px; color: var(--at-on-dark); background: linear-gradient(var(--at-accent-2), var(--at-muted)) !important;
+    border: 0; border-radius: 3px 9px 9px 3px; box-shadow: 0 2px 6px -3px rgba(0,0,0,.5);
+}
+.callout[data-callout="tags"][data-callout-metadata~="slip"] :is(a.tag, .tag):hover { background: linear-gradient(var(--at-accent-2), var(--at-muted)) !important; color: var(--at-on-dark); filter: brightness(1.12); }
+
+/* ---------- DIVIDERS ( da-hr-ros / da-hr-fl / da-hr-str ) ---------- */
+:is(.mw-hr-ros, .mw-hr-fl, .mw-hr-str) hr {
+    border: 0; height: auto; background: none; text-align: center; overflow: visible;
+}
+.mw-hr-ros hr { position: relative; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--at-border-2), transparent); margin: 26px 0; }
+.mw-hr-ros hr::after {
+    content: "\2766"; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+    background: var(--at-editor); padding: 0 14px; color: var(--at-accent); font-size: 15px; opacity: .85;
+}
+.mw-hr-fl hr::after {
+    content: "\2767 \2767 \2767"; color: var(--at-accent); font-size: 20px; opacity: .7; letter-spacing: .4em;
+}
+/* stratigraphic seam: sand·clay · ◆ · clay·sand (reference .dv-str) */
+.mw-hr-str hr {
+    position: relative; height: 3px; width: 168px; margin: 26px auto; overflow: visible;
+    background:
+        linear-gradient(var(--at-gold), var(--at-gold))           0    center / 24px 3px no-repeat,
+        linear-gradient(var(--at-accent-2), var(--at-accent-2))   32px center / 40px 3px no-repeat,
+        linear-gradient(var(--at-accent-2), var(--at-accent-2))   96px center / 40px 3px no-repeat,
+        linear-gradient(var(--at-gold), var(--at-gold))           144px center / 24px 3px no-repeat;
+}
+.mw-hr-str hr::after {
+    content: ""; position: absolute; left: 84px; top: 50%; width: 8px; height: 8px;
+    transform: translate(-50%, -50%) rotate(45deg); background: var(--at-accent); border-radius: 1px;
+}
+
+/* ---------- DIVIDER per-block casts ( [!hr|ros] / |fl / |str ) ----------
+   per-block, no cssclass — an <hr> can't carry metadata but a callout can.
+   Empty callout; all chrome stripped, the rule is drawn on the box itself.   */
+.callout[data-callout="hr"] {
+    border: 0 !important; background: none !important; box-shadow: none !important;
+    padding: 0 !important; margin: 26px 0 !important; position: relative; height: 18px;
+}
+.callout[data-callout="hr"] > * { display: none !important; }
+/* A · rosette: gradient line with a centred ❦ */
+.callout[data-callout="hr"][data-callout-metadata~="ros"]::before {
+    content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 1px; transform: translateY(-50%);
+    background: linear-gradient(90deg, transparent, var(--at-border-2), transparent);
+}
+.callout[data-callout="hr"][data-callout-metadata~="ros"]::after {
+    content: "\2766"; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+    background: var(--at-editor); padding: 0 14px; color: var(--at-accent); font-size: 15px; opacity: .8;
+}
+
+.callout[data-callout="hr"][data-callout-metadata~="fleur"]::after {
+    content: "\2767 \2767 \2767"; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+    color: var(--at-accent); font-size: 20px; opacity: .7; letter-spacing: .4em;
+}
+/* C · stratigraphic seam: sand·clay · ◆ · clay·sand */
+.callout[data-callout="hr"][data-callout-metadata~="str"]::before {
+    content: ""; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 168px; height: 3px;
+    background:
+        linear-gradient(var(--at-gold), var(--at-gold))           0    center / 24px 3px no-repeat,
+        linear-gradient(var(--at-accent-2), var(--at-accent-2))   32px center / 40px 3px no-repeat,
+        linear-gradient(var(--at-accent-2), var(--at-accent-2))   96px center / 40px 3px no-repeat,
+        linear-gradient(var(--at-gold), var(--at-gold))           144px center / 24px 3px no-repeat;
+}
+.callout[data-callout="hr"][data-callout-metadata~="str"]::after {
+    content: ""; position: absolute; left: 50%; top: 50%; width: 8px; height: 8px;
+    transform: translate(-50%, -50%) rotate(45deg); background: var(--at-accent); border-radius: 1px;
+}
+
+/* ---------- CARD casts ( [!card|art] / |plate / |fieldnote ) ---------- */
+.callout[data-callout="card"][data-callout-metadata~="art"] {
+    background: var(--at-pane-2); border: 1px solid var(--at-border-2); border-radius: var(--radius-m); padding: 18px;
+}
+.callout[data-callout="card"][data-callout-metadata~="plate"] {
+    background: var(--at-bg-0); border: 1px solid var(--at-border-2); border-radius: var(--radius-s); padding: 8px;
+}
+.callout[data-callout="card"][data-callout-metadata~="plate"] > .callout-content {
+    border: 1px solid var(--at-border-2); border-radius: 3px; padding: 18px 16px 14px; position: relative;
+    background: linear-gradient(160deg, var(--at-pane-2), var(--at-pane));
+}
+.callout[data-callout="card"][data-callout-metadata~="plate"] > .callout-content::before {
+    content: ""; position: absolute; inset: 5px; border: 1px dotted var(--at-border-2); border-radius: 2px; pointer-events: none;
+}
+
+.callout[data-callout="card"][data-callout-metadata~="fieldnote"] {
+    background: var(--at-paper); color: var(--at-paper-ink); border: 0; border-radius: 4px; padding: 16px 18px;
+    box-shadow: none; position: relative; overflow: hidden;   /* hover-only shadow (via base card:hover) */
+}
+.callout[data-callout="card"][data-callout-metadata~="fieldnote"]::before {
+    content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 2px;
+    background: repeating-linear-gradient(var(--at-accent) 0 2px, transparent 2px 7px); opacity: .5;
+}
+.callout[data-callout="card"][data-callout-metadata~="fieldnote"] :is(h1,h2,h3,h4,p) { color: var(--at-paper-ink); }
+
+.callout[data-callout="card"][data-callout-metadata~="art"] > .callout-title,
+.callout[data-callout="card"][data-callout-metadata~="plate"] > .callout-title,
+.callout[data-callout="card"][data-callout-metadata~="fieldnote"] > .callout-title { display: none !important; }
+.callout[data-callout="card"]:is([data-callout-metadata~="art"],[data-callout-metadata~="plate"],[data-callout-metadata~="fieldnote"]) > .callout-content > h3 {
+    font-family: var(--at-font-heading); font-weight: 500; font-size: 1.5em; line-height: 1.15;
+    color: var(--at-text-strong); margin: 2px 0 8px; border: 0; padding: 0;
+}
+/* ----- match the reference card motion + shadows (element-variations-2.html):
+   transition ease-out-expo .5s; lift -5px; per-variant shadow —
+   art   -> hover only  0 20px 40px -24px /.6
+   plate -> none (lift only)
+   note  -> resting     0 8px 20px -12px /.5 (unchanged on hover) ----- */
+.callout[data-callout="card"]:is([data-callout-metadata~="art"],[data-callout-metadata~="plate"],[data-callout-metadata~="fieldnote"]) {
+    transition: transform .5s cubic-bezier(.16,1,.3,1), box-shadow .5s cubic-bezier(.16,1,.3,1), border-color .4s ease !important;
+}
+.callout[data-callout="card"]:is([data-callout-metadata~="art"],[data-callout-metadata~="plate"],[data-callout-metadata~="fieldnote"]):hover {
+    transform: translateY(-5px) !important; border-color: var(--at-border-2) !important;
+}
+.callout[data-callout="card"][data-callout-metadata~="art"]:hover { box-shadow: 0 20px 40px -24px rgba(0,0,0,.6) !important; }
+.callout[data-callout="card"][data-callout-metadata~="plate"]:hover { box-shadow: none !important; }
+.callout[data-callout="card"][data-callout-metadata~="fieldnote"],
+.callout[data-callout="card"][data-callout-metadata~="fieldnote"]:hover { box-shadow: 0 8px 20px -12px rgba(0,0,0,.5) !important; }
+/* kicker (h6) has no leading dot in the reference */
+.callout[data-callout="card"]:is([data-callout-metadata~="art"],[data-callout-metadata~="plate"],[data-callout-metadata~="fieldnote"]) > .callout-content > h6:first-child::before { content: none !important; }
+/* fieldnote kicker = handwritten date, not mono caps */
+.callout[data-callout="card"][data-callout-metadata~="fieldnote"] > .callout-content > h6:first-child {
+    font-family: var(--at-font-hand) !important; text-transform: none !important; letter-spacing: 0 !important;
+    font-size: 1.15em !important; color: var(--at-accent) !important;
+}
+/* ruled-copy lines under the body text (starts after the heading) */
+.callout[data-callout="card"][data-callout-metadata~="fieldnote"] > .callout-content > p {
+    line-height: 28px;
+    background: repeating-linear-gradient(to bottom, transparent 0 27px, color-mix(in srgb, var(--at-accent) 22%, transparent) 27px 28px);
+}
+
+/* ---------- TABLE ( da-tbl-ledger / da-tbl-box ) ---------- */
+.mw-tbl-ledger table th { border-bottom: 1.5px solid var(--at-border-2); }
+.mw-tbl-ledger table td { border-bottom: 1px solid var(--at-border); }
+.mw-tbl-ledger table tr:hover td { background: color-mix(in srgb, var(--at-accent) 8%, transparent); }
+.mw-tbl-box table { border: 1px solid var(--at-border-2); }
+.mw-tbl-box table th { background: var(--at-pane-2); border: 1px solid var(--at-border-2); }
+.mw-tbl-box table td { border: 1px solid var(--at-border); font-family: var(--at-font-mono); font-size: 0.92em; }
+
+/* ---------- CODE BLOCK clay-tablet ( da-cb-clay ) ---------- */
+.mw-cb-clay :is(.markdown-rendered pre, .HyperMD-codeblock-bg) {
+    border: 0 !important;
+    background: linear-gradient(160deg, var(--at-accent-2), var(--at-muted)) !important;
+    border-radius: 6px; padding: 6px;
+}
+.mw-cb-clay .markdown-rendered pre > code {
+    display: block; background: color-mix(in srgb, var(--at-bg-0) 80%, var(--at-accent-2));
+    color: var(--at-on-dark); border-radius: 5px; padding: 12px 14px;
+}
+
+/* ---------- PROPERTIES — Stamped Manifest (GLOBAL, no cssclass) ----------
+   One filled card, 2-column flow, copper mono labels, dashed "Cert. Logged"
+   wax seal. Condensed rows + beautiful hover: per-row accent slide & underline
+   wipe, container lift, the seal rotates upright on hover. Quartz-portable —
+   targets Obsidian's native .metadata-* nodes, applied to every note.        */
+.metadata-container {
+    position: relative; border: 1.5px solid var(--at-border-2) !important; border-radius: 6px;
+    padding: 11px 16px !important; background: color-mix(in srgb, var(--at-pane-2) 45%, transparent) !important;
+    overflow: visible;
+    transition: border-color .5s cubic-bezier(.16,1,.3,1), box-shadow .5s cubic-bezier(.16,1,.3,1),
+                background .5s cubic-bezier(.16,1,.3,1);
+}
+.metadata-container:hover {
+    border-color: color-mix(in srgb, var(--at-accent) 55%, var(--at-border-2)) !important;
+    box-shadow: var(--at-shadow-pop);
+    background: color-mix(in srgb, var(--at-pane-2) 60%, transparent) !important;
+}
+.metadata-properties { padding: 0 !important; } /* keep Obsidian's 2-col flow */
+/* condensed rows — strip Obsidian's 7px box / hover fill / borders */
+.metadata-property {
+    position: relative; display: flex !important; gap: 8px; padding: 2px 6px !important; margin: 0 !important;
+    border: 0 !important; border-radius: 4px !important; background: transparent !important;
+    break-inside: avoid; line-height: 1.35 !important;
+    transition: background .4s cubic-bezier(.16,1,.3,1), transform .4s cubic-bezier(.16,1,.3,1);
+}
+.metadata-property-icon { display: none !important; } /* manifest has no icons */
+.metadata-property-key { flex: 0 0 92px; width: 92px; }
+.metadata-property-key-input {
+    font-family: var(--at-font-mono); font-size: 10px; letter-spacing: .1em;
+    text-transform: uppercase; color: var(--at-accent);
+    transition: letter-spacing .4s cubic-bezier(.16,1,.3,1);
+}
+.metadata-property-value { position: relative; font-family: var(--at-font-body); font-size: 13px; color: var(--at-text); }
+/* underline wipe under the value on row hover */
+.metadata-property-value::after {
+    content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 1px;
+    background: var(--at-accent); transform: scaleX(0); transform-origin: left;
+    transition: transform .45s cubic-bezier(.16,1,.3,1);
+}
+.metadata-property:hover {
+    background: color-mix(in srgb, var(--at-accent) 8%, transparent) !important;
+    transform: translateX(3px);
+}
+.metadata-property:hover .metadata-property-key-input { letter-spacing: .14em; }
+.metadata-property:hover .metadata-property-value::after { transform: scaleX(1); }
+
+.metadata-container::after {
+    content: "Cert.\A Logged"; white-space: pre; position: absolute; right: 14px; top: 12px;
+    width: 50px; height: 50px; border-radius: 50%; border: 1.5px dashed var(--at-accent);
+    display: grid; place-items: center; color: var(--at-accent); font-family: var(--at-font-mono);
+    font-size: 7.5px; letter-spacing: .1em; text-align: center; text-transform: uppercase;
+    opacity: .65; transform: rotate(-8deg); pointer-events: none;
+    transition: transform .55s cubic-bezier(.16,1,.3,1), opacity .55s ease;
+}
+.metadata-container:hover::after { opacity: 1; transform: rotate(-2deg) scale(1.04); }
+@media (prefers-reduced-motion: reduce) {
+    .metadata-container, .metadata-container::after, .metadata-property,
+    .metadata-property-key-input, .metadata-property-value::after { transition: none; }
+    .metadata-property:hover { transform: none; }
+    .metadata-property:hover .metadata-property-value::after { transform: scaleX(1); }
+}
+
+/* ---------- IMAGE FIGURE cast ( [!fig|plate] / tape / medallion / duotone / blueprint ) ----------
+   > [!fig|plate] Caption text
+   > ![[gear.svg]]
+   Image first, caption (the callout title) below it — drawn as a mono/hand label.
+   Renders 1:1 on Quartz (data-callout-metadata + .internal-embed img).            */
+.callout[data-callout="fig"] {
+    background: transparent !important; border: 0 !important; box-shadow: none !important;
+    padding: 0; margin: 1.6em 0; display: flex; flex-direction: column;
+}
+.callout[data-callout="fig"] > .callout-content { order: 1; margin: 0; }
+.callout[data-callout="fig"] > .callout-title,
+.callout[data-callout="fig"] > .callout-title .callout-title-inner { order: 2; justify-content: center; padding: 0; margin-top: 10px;
+    font-family: var(--at-font-mono) !important; font-size: 11px !important; font-weight: 500 !important; letter-spacing: .08em !important;
+    text-transform: uppercase !important; color: var(--at-faint) !important; }
+.callout[data-callout="fig"] > .callout-title .callout-icon { display: none; }
+.callout[data-callout="fig"] .internal-embed, .callout[data-callout="fig"] .image-embed { display: block; }
+.callout[data-callout="fig"] img { width: 100%; height: auto; display: block; border-radius: var(--radius-s); }
+
+.callout[data-callout="fig"]:not([data-callout-metadata]) > .callout-content,
+.callout[data-callout="fig"][data-callout-metadata~="frame"] > .callout-content {
+    background: var(--at-pane-2); border: 1px solid var(--at-border-2); border-radius: var(--radius-m);
+    padding: 8px; box-shadow: var(--at-shadow-pop); }
+
+.callout[data-callout="fig"][data-callout-metadata~="right"] { float: right; width: 320px; margin: 6px 0 16px 26px; }
+.callout[data-callout="fig"][data-callout-metadata~="left"]  { float: left;  width: 320px; margin: 6px 26px 16px 0; }
+@media (max-width: 640px) {
+    .callout[data-callout="fig"][data-callout-metadata~="right"],
+    .callout[data-callout="fig"][data-callout-metadata~="left"] { float: none; width: auto; margin: 1.6em 0; }
+}
+/* plate — dotted specimen mount */
+.callout[data-callout="fig"][data-callout-metadata~="plate"] > .callout-content {
+    position: relative; background: var(--at-bg-0); border: 1px solid var(--at-border-2);
+    border-radius: var(--radius-s); padding: 14px; }
+.callout[data-callout="fig"][data-callout-metadata~="plate"] > .callout-content::before {
+    content: ""; position: absolute; inset: 8px; border: 1px dotted var(--at-border-2); border-radius: 3px; pointer-events: none; z-index: 1; }
+/* tape — taped photo, hand caption, slight tilt */
+.callout[data-callout="fig"][data-callout-metadata~="tape"] > .callout-content {
+    position: relative; max-width: 380px; margin: 8px auto 0; background: var(--at-paper); padding: 12px 12px 8px;
+    border-radius: 2px; box-shadow: 0 10px 26px -14px rgba(0,0,0,.55); transform: rotate(-1.2deg); }
+.callout[data-callout="fig"][data-callout-metadata~="tape"] > .callout-content::before {
+    content: ""; position: absolute; top: -10px; left: 50%; transform: translateX(-50%) rotate(2deg); width: 88px; height: 22px;
+    background: color-mix(in srgb, var(--at-gold) 55%, transparent); border: 1px solid color-mix(in srgb, var(--at-gold) 70%, transparent); }
+.callout[data-callout="fig"][data-callout-metadata~="tape"] img { filter: grayscale(.3) sepia(.4); }
+.callout[data-callout="fig"][data-callout-metadata~="tape"] > .callout-title {
+    font-family: var(--at-font-hand); font-size: 1.3rem; color: var(--at-paper-ink); text-transform: none; letter-spacing: 0; }
+/* medallion — double-ring circle */
+.callout[data-callout="fig"][data-callout-metadata~="medallion"] > .callout-content {
+    width: 220px; height: 220px; margin: 0 auto; border-radius: 50%; overflow: hidden;
+    border: 3px double var(--at-accent); padding: 6px; background: var(--at-pane-2); }
+.callout[data-callout="fig"][data-callout-metadata~="medallion"] img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
+/* duotone — copper wash */
+.callout[data-callout="fig"][data-callout-metadata~="duotone"] img {
+    filter: sepia(1) saturate(1.4) hue-rotate(335deg) contrast(.95); border-radius: var(--radius-s); }
+body.theme-dark .callout[data-callout="fig"][data-callout-metadata~="duotone"] img {
+    filter: sepia(1) saturate(1.2) hue-rotate(335deg) brightness(.85) contrast(1.05); }
+/* blueprint — gridded diagram inset */
+.callout[data-callout="fig"][data-callout-metadata~="blueprint"] > .callout-content {
+    background:
+        linear-gradient(color-mix(in srgb, var(--at-accent) 8%, transparent) 1px, transparent 1px) 0 0/22px 22px,
+        linear-gradient(90deg, color-mix(in srgb, var(--at-accent) 8%, transparent) 1px, transparent 1px) 0 0/22px 22px,
+        var(--at-pane-2);
+    border: 1px solid var(--at-border-2); border-radius: var(--radius-s); padding: 20px; }
+
+.callout[data-callout="fig"][data-callout-metadata~="hero"] > .callout-content {
+    border: 1px solid var(--at-border-2); border-radius: var(--radius-m); overflow: hidden; box-shadow: var(--at-shadow-pop); }
+.callout[data-callout="fig"][data-callout-metadata~="hero"] img {
+    width: 100%; max-height: 340px; object-fit: cover; object-position: center 38%; border-radius: 0; }
+
+.callout[data-callout="infobox"] .internal-embed { display: block; }
+.callout[data-callout="infobox"] .internal-embed img { width: 100%; display: block; border-radius: var(--radius-s); margin: 0 0 10px; }
+
+/* ============================================================================
+   [DA infobox variants]  reference look from PLAIN markdown — no raw HTML.
+   You write:  > [!infobox|codex] Title         (codex / manifest / tag)
+               > Subtitle line   (optional)
+               >
+               > | Key | Value |  +  |--|--|  +  rows
+   CSS draws every decorative part (image plate, wax seal, punch hole) as
+   pseudo-elements, and the manifest table is laid out as a 2×2 stat grid.
+   th (the table's required header row) is styled identically to td, so the
+   first key/value pair is NOT lost. Renders 1:1 on Quartz (data-callout-metadata).
+   ========================================================================== */
+:is(.callout[data-callout="infobox"][data-callout-metadata~="codex"],
+    .callout[data-callout="infobox"][data-callout-metadata~="manifest"],
+    .callout[data-callout="infobox"][data-callout-metadata~="tag"]) .callout-icon { display: none; }
+
+:is(.callout[data-callout="infobox"][data-callout-metadata~="codex"],
+    .callout[data-callout="infobox"][data-callout-metadata~="manifest"],
+    .callout[data-callout="infobox"][data-callout-metadata~="tag"]) > .callout-title {
+    background: transparent !important; box-shadow: none !important; border-radius: 0 !important;
+    display: block !important; width: auto !important; margin: 0 !important;
+}
+
+:is(.callout[data-callout="infobox"][data-callout-metadata~="codex"],
+    .callout[data-callout="infobox"][data-callout-metadata~="tag"]) thead { display: table-header-group !important; }
+
+.callout[data-callout="infobox"][data-callout-metadata~="codex"] {
+    background: var(--at-pane-2); border: 1px solid var(--at-border-2); border-radius: 6px; overflow: hidden; padding: 0;
+    display: flex; flex-direction: column;
+}
+.callout[data-callout="infobox"][data-callout-metadata~="codex"] > .callout-title { order: 1; }
+.callout[data-callout="infobox"][data-callout-metadata~="codex"]::before { order: 2; }
+.callout[data-callout="infobox"][data-callout-metadata~="codex"] > .callout-content { order: 3; }
+.callout[data-callout="infobox"][data-callout-metadata~="codex"]::before {
+    content: "\26B1"; display: grid; place-items: center; height: 116px;
+    font-family: var(--at-font-heading); font-size: 54px; color: var(--at-accent); opacity: .9; text-shadow: 0 4px 14px rgba(0,0,0,.4);
+    background:
+        radial-gradient(120% 90% at 50% 18%, color-mix(in srgb, var(--at-accent) 28%, transparent), transparent 60%),
+        linear-gradient(160deg, var(--at-raised), var(--at-pane));
+    border-bottom: 1px solid var(--at-border-2);
+}
+.callout[data-callout="infobox"][data-callout-metadata~="codex"] > .callout-title { padding: 14px 16px 4px; }
+.callout[data-callout="infobox"][data-callout-metadata~="codex"] .callout-title-inner {
+    font-family: var(--at-font-heading); font-size: 22px; color: var(--at-text); line-height: 1.1;
+}
+.callout[data-callout="infobox"][data-callout-metadata~="codex"] > .callout-content { padding: 0 0 6px; }
+.callout[data-callout="infobox"][data-callout-metadata~="codex"] > .callout-content > p:not(:has(.internal-embed)) {
+    font-family: var(--at-font-heading); font-style: italic; font-size: 13px; color: var(--at-muted); margin: 0 16px 8px;
+}
+.callout[data-callout="infobox"][data-callout-metadata~="codex"] table { width: 100%; border-collapse: collapse; margin: 0; }
+.callout[data-callout="infobox"][data-callout-metadata~="codex"] :is(th, td) {
+    padding: 8px 16px; border-bottom: 1px solid var(--at-border); font-size: 0.82em; vertical-align: top; text-align: left; font-weight: 400;
+}
+.callout[data-callout="infobox"][data-callout-metadata~="codex"] tr :is(th, td):first-child {
+    font-family: var(--at-font-mono); font-size: 9.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--at-accent); width: 88px; white-space: nowrap;
+}
+.callout[data-callout="infobox"][data-callout-metadata~="codex"] tr:last-child :is(th, td) { border-bottom: 0; }
+
+.callout[data-callout="infobox"][data-callout-metadata~="codex"]:has(.internal-embed)::before { display: none; }
+.callout[data-callout="infobox"][data-callout-metadata~="codex"] .callout-content > p:has(.internal-embed) { margin: 0 0 8px !important; }
+.callout[data-callout="infobox"][data-callout-metadata~="codex"] .internal-embed img {
+    width: 100%; height: 168px; object-fit: cover; object-position: center; display: block;
+    border-radius: 0; border-bottom: 1px solid var(--at-border-2); margin: 0; }
+
+.callout[data-callout="infobox"][data-callout-metadata~="manifest"] {
+    position: relative; border: 1.5px solid var(--at-border-2); border-radius: 6px; padding: 18px;
+    background: linear-gradient(color-mix(in srgb, var(--at-pane) 50%, transparent), color-mix(in srgb, var(--at-pane-2) 60%, transparent));
+}
+.callout[data-callout="infobox"][data-callout-metadata~="manifest"]::before {
+    content: ""; position: absolute; inset: 6px; border: 1px dotted var(--at-border-2); border-radius: 6px; pointer-events: none;
+}
+.callout[data-callout="infobox"][data-callout-metadata~="manifest"] > .callout-title { padding-right: 60px; }
+.callout[data-callout="infobox"][data-callout-metadata~="manifest"] .callout-title-inner {
+    font-family: var(--at-font-heading); font-size: 23px; color: var(--at-text); line-height: 1.1;
+}
+.callout[data-callout="infobox"][data-callout-metadata~="manifest"] > .callout-title::after {
+    content: "Cert. Logged"; position: absolute; right: 4px; top: 0; width: 50px; height: 50px;
+    border-radius: 50%; border: 1.5px dashed var(--at-accent); display: grid; place-items: center;
+    color: var(--at-accent); font-family: var(--at-font-mono); font-size: 7.5px; line-height: 1.2;
+    letter-spacing: .08em; text-align: center; text-transform: uppercase; opacity: .8; transform: rotate(-9deg);
+}
+.callout[data-callout="infobox"][data-callout-metadata~="manifest"] > .callout-content { margin-top: 12px; }
+
+.callout[data-callout="infobox"][data-callout-metadata~="manifest"] table {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 1px; margin: 0;
+    background: var(--at-border); border: 1px solid var(--at-border); border-radius: 6px; overflow: hidden;
+}
+.callout[data-callout="infobox"][data-callout-metadata~="manifest"] :is(thead, tbody) { display: contents; }
+.callout[data-callout="infobox"][data-callout-metadata~="manifest"] tr { display: flex; flex-direction: column; background: var(--at-pane); padding: 11px 13px; }
+.callout[data-callout="infobox"][data-callout-metadata~="manifest"] :is(th, td) { border: 0; padding: 0; text-align: left; font-weight: 400; }
+.callout[data-callout="infobox"][data-callout-metadata~="manifest"] tr :is(th, td):first-child {
+    font-family: var(--at-font-mono); font-size: 20px; color: var(--at-text); letter-spacing: -.02em;
+}
+.callout[data-callout="infobox"][data-callout-metadata~="manifest"] tr :is(th, td):last-child {
+    font-family: var(--at-font-mono); font-size: 8.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--at-faint); margin-top: 2px;
+}
+.callout[data-callout="infobox"][data-callout-metadata~="manifest"] > .callout-content > p {
+    font-family: var(--at-font-body); font-style: italic; font-size: 12.5px; color: var(--at-muted); margin: 13px 0 0;
+}
+
+.callout[data-callout="infobox"][data-callout-metadata~="tag"] {
+    position: relative; background: var(--at-paper); color: var(--at-paper-ink);
+    border: 0; border-radius: 5px 5px 9px 9px; padding: 18px; overflow: hidden; box-shadow: 0 16px 34px -20px rgba(0,0,0,.5);
+}
+.callout[data-callout="infobox"][data-callout-metadata~="tag"]::after {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    background:
+        radial-gradient(120% 70% at 100% 0, rgba(0,0,0,.05), transparent 50%),
+        linear-gradient(120deg, transparent 60%, color-mix(in srgb, var(--at-accent-2) 12%, transparent));
+}
+.callout[data-callout="infobox"][data-callout-metadata~="tag"] > :is(.callout-title, .callout-content) { position: relative; z-index: 1; }
+.callout[data-callout="infobox"][data-callout-metadata~="tag"] > .callout-title { padding-left: 26px; }
+.callout[data-callout="infobox"][data-callout-metadata~="tag"] > .callout-title::before {
+    content: ""; position: absolute; left: 0; top: 50%; transform: translateY(-50%);
+    width: 16px; height: 16px; border-radius: 50%; background: var(--at-bg-0); box-shadow: inset 0 1px 3px rgba(0,0,0,.6);
+}
+.callout[data-callout="infobox"][data-callout-metadata~="tag"] .callout-title-inner {
+    font-family: var(--at-font-heading); font-size: 22px; color: var(--at-paper-ink); line-height: 1.1;
+}
+.callout[data-callout="infobox"][data-callout-metadata~="tag"] > .callout-content > p:first-of-type {
+    font-family: var(--at-font-hand); font-size: 19px; color: var(--at-accent-2); margin: 0 0 12px;
+}
+.callout[data-callout="infobox"][data-callout-metadata~="tag"] table {
+    width: 100%; border-collapse: collapse; margin: 0; border-top: 1px dashed color-mix(in srgb, var(--at-accent-2) 40%, transparent);
+}
+.callout[data-callout="infobox"][data-callout-metadata~="tag"] :is(th, td) {
+    padding: 6px 0; border-bottom: 1px dashed color-mix(in srgb, var(--at-accent-2) 25%, transparent); font-size: 0.85em; font-weight: 400; text-align: left;
+}
+.callout[data-callout="infobox"][data-callout-metadata~="tag"] tr :is(th, td):first-child {
+    font-family: var(--at-font-mono); font-size: 9.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--at-paper-ink-soft);
+}
+.callout[data-callout="infobox"][data-callout-metadata~="tag"] tr :is(th, td):last-child {
+    text-align: right; color: var(--at-paper-ink-soft); font-family: var(--at-font-body); font-size: 13px;
+}
+.callout[data-callout="infobox"][data-callout-metadata~="tag"] tr:last-child :is(th, td) { border-bottom: 0; }
+
+/* ============================================================================
+   [DA animations]  ported from the reference keyframes. All gated by the shared
+   .at-no-anim master switch + OS reduced-motion. dustDrift (ambient particles)
+   intentionally NOT ported (perf cost, low payoff).
+   ========================================================================== */
+@keyframes da-inkIn   { from { opacity: 0; clip-path: inset(0 100% 0 0); } to { opacity: 1; clip-path: inset(0 0 0 0); } }
+@keyframes da-strataSlide { from { opacity: 0; transform: translateX(-34px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes da-riseIn  { from { opacity: 0; transform: translateY(34px); } to { opacity: 1; transform: translateY(0); } }
+
+body:not(.at-no-anim) :is(.markdown-reading-view, .markdown-rendered) .markdown-preview-sizer > * {
+    animation: da-riseIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+/* cycle 3 entrance keyframes across consecutive blocks */
+body:not(.at-no-anim) :is(.markdown-reading-view, .markdown-rendered) .markdown-preview-sizer > :nth-child(3n+1) { animation-name: da-inkIn; }
+body:not(.at-no-anim) :is(.markdown-reading-view, .markdown-rendered) .markdown-preview-sizer > :nth-child(3n+2) { animation-name: da-strataSlide; }
+body:not(.at-no-anim) :is(.markdown-reading-view, .markdown-rendered) .markdown-preview-sizer > :nth-child(3n)   { animation-name: da-riseIn; }
+
+body:not(.at-no-anim) :is(.markdown-reading-view, .markdown-rendered) .markdown-preview-sizer > :nth-child(1) { animation-delay: 0s; }
+body:not(.at-no-anim) :is(.markdown-reading-view, .markdown-rendered) .markdown-preview-sizer > :nth-child(2) { animation-delay: .05s; }
+body:not(.at-no-anim) :is(.markdown-reading-view, .markdown-rendered) .markdown-preview-sizer > :nth-child(3) { animation-delay: .10s; }
+body:not(.at-no-anim) :is(.markdown-reading-view, .markdown-rendered) .markdown-preview-sizer > :nth-child(4) { animation-delay: .15s; }
+body:not(.at-no-anim) :is(.markdown-reading-view, .markdown-rendered) .markdown-preview-sizer > :nth-child(5) { animation-delay: .20s; }
+body:not(.at-no-anim) :is(.markdown-reading-view, .markdown-rendered) .markdown-preview-sizer > :nth-child(6) { animation-delay: .25s; }
+body:not(.at-no-anim) :is(.markdown-reading-view, .markdown-rendered) .markdown-preview-sizer > :nth-child(n+7) { animation-delay: .30s; }
+
+body.da-open-r1 :is(.markdown-reading-view, .markdown-rendered) .markdown-preview-sizer > * { animation-name: da-inkIn !important; }
+body.da-open-r2 :is(.markdown-reading-view, .markdown-rendered) .markdown-preview-sizer > * { animation-name: da-strataSlide !important; }
+body.da-open-r3 :is(.markdown-reading-view, .markdown-rendered) .markdown-preview-sizer > * { animation-name: da-riseIn !important; }
+
+body.at-open-off .markdown-preview-sizer > * { animation: none !important; }
+body.at-open-inkin  :is(.markdown-reading-view, .markdown-rendered) .markdown-preview-sizer > * { animation-name: da-inkIn !important; }
+body.at-open-strata :is(.markdown-reading-view, .markdown-rendered) .markdown-preview-sizer > * { animation-name: da-strataSlide !important; }
+body.at-open-rise   :is(.markdown-reading-view, .markdown-rendered) .markdown-preview-sizer > * { animation-name: da-riseIn !important; }
+
+:is(.backlink-pane, .embedded-backlinks) .search-result {
+    transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+                border-color 0.4s ease, box-shadow 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid transparent; border-radius: 6px;
+}
+:is(.backlink-pane, .embedded-backlinks) .search-result:hover {
+    transform: translateY(-3px);
+    border-color: var(--at-border-2);
+    box-shadow: 0 14px 26px -16px var(--at-scrim);
+}
+body:not(.at-no-anim) :is(.backlink-pane, .embedded-backlinks) .search-result {
+    animation: da-strataSlide 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+/* stagger: each subsequent clue enters a beat later */
+body:not(.at-no-anim) :is(.backlink-pane, .embedded-backlinks) .search-result:nth-child(1) { animation-delay: 0.02s; }
+body:not(.at-no-anim) :is(.backlink-pane, .embedded-backlinks) .search-result:nth-child(2) { animation-delay: 0.09s; }
+body:not(.at-no-anim) :is(.backlink-pane, .embedded-backlinks) .search-result:nth-child(3) { animation-delay: 0.16s; }
+body:not(.at-no-anim) :is(.backlink-pane, .embedded-backlinks) .search-result:nth-child(4) { animation-delay: 0.23s; }
+body:not(.at-no-anim) :is(.backlink-pane, .embedded-backlinks) .search-result:nth-child(n+5) { animation-delay: 0.3s; }
+
+/* —— search/quick-switcher results fade+rise (slowFade feel) —— */
+body:not(.at-no-anim) .prompt-results .suggestion-item {
+    animation: da-riseIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .markdown-preview-sizer > *,
+    :is(.backlink-pane, .embedded-backlinks) .search-result,
+    .prompt-results .suggestion-item { animation: none !important; }
+}
+
+/* ============================================================================
+   [DA heading casts]  note-level cssclass → all headings in the note take the
+   cast. Reading view (the published surface). Three forms from the reference:
+     mw-h-rule   · Inscribed Rule  — ruled underline under each heading
+     mw-h-illum  · Illuminated     — wax-seal block initial + copper rule fading
+     mw-h-marg   · Numbered Marginalia — auto upper-roman numeral in the margin
+   ========================================================================== */
+/* v1 inscribed rule */
+.mw-h-rule :is(h1, h2, h3) {
+    border-bottom: 1px solid var(--at-border-2);
+    padding-bottom: 8px;
+}
+/* v2 illuminated — block initial + copper rule fading right */
+.mw-h-illum :is(h2, h3) {
+    display: flex; align-items: center; gap: 14px;
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(90deg, var(--at-accent), transparent) 1;
+    padding-bottom: 10px;
+}
+.mw-h-illum :is(h2, h3)::before {
+    content: ""; flex: none; width: 32px; height: 32px; border-radius: 8px;
+    background: radial-gradient(circle at 30% 30%, var(--at-accent), var(--at-accent-2));
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.12);
+}
+
+.mw-h-marg { counter-reset: damarg; }
+.mw-h-marg :is(h2) { position: relative; }
+.mw-h-marg :is(h2)::before {
+    counter-increment: damarg; content: counter(damarg, upper-roman);
+    position: absolute; right: 100%; margin-right: 16px; white-space: nowrap;
+    font-family: var(--at-font-heading); font-style: italic; font-size: 1.5em;
+    line-height: 1; color: var(--at-accent); opacity: .55;
+}
+
+/* strip callout chrome for quote + table (code keeps a title bar) */
+:is(.callout[data-callout="quote"], .callout[data-callout="table"]) {
+    background: transparent !important; border: 0 !important; box-shadow: none !important;
+    border-radius: 0; padding: 0; margin: 1em 0;
+}
+:is(.callout[data-callout="quote"], .callout[data-callout="table"]) > .callout-title { display: none; }
+:is(.callout[data-callout="quote"], .callout[data-callout="table"], .callout[data-callout="code"]):hover {
+    transform: none; box-shadow: none !important; border-color: var(--at-border-2);
+}
+
+.callout[data-callout="quote"] {
+    border-radius: 6px; padding: 8px 14px;
+    transition: transform .5s cubic-bezier(.16,1,.3,1), box-shadow .5s cubic-bezier(.16,1,.3,1);
+}
+/* same hover as card-A (artifact): lift -5px + deep soft shadow */
+.callout[data-callout="quote"]:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 20px 40px -24px rgba(0, 0, 0, .6) !important;
+}
+/* author line = the callout title, shown below the quote */
+.callout[data-callout="quote"] { display: flex; flex-direction: column; }
+.callout[data-callout="quote"] > .callout-title {
+    display: block !important; order: 2; margin-top: 6px;
+    font-size: 11px; letter-spacing: .14em; text-transform: uppercase; font-weight: 400;
+    color: var(--at-faint); opacity: .85; background: transparent !important;
+}
+.callout[data-callout="quote"] > .callout-title .callout-icon { display: none; }
+
+.callout[data-callout="quote"][data-callout-metadata~="illum"] > .callout-title {
+    text-align: center; font-family: var(--at-font-heading); font-style: italic;
+    text-transform: none; letter-spacing: .02em; font-size: 14px; color: var(--at-accent); opacity: .7;
+}
+/* gloss: author at the right corner */
+.callout[data-callout="quote"][data-callout-metadata~="gloss"] > .callout-title {
+    text-align: right; font-family: var(--at-font-mono);
+}
+
+/* ---- QUOTE casts (mirror the blockquote casts) ---- */
+.callout[data-callout="quote"][data-callout-metadata~="illum"] > .callout-content {
+    text-align: center; position: relative; padding: 8px 18px;
+}
+.callout[data-callout="quote"][data-callout-metadata~="illum"] > .callout-content::before {
+    content: "\201C"; font-family: var(--at-font-heading); font-size: 64px; color: var(--at-accent);
+    opacity: .35; line-height: 1; display: block; height: 44px; overflow: visible;
+}
+
+.callout[data-callout="quote"][data-callout-metadata~="illum"]::after {
+    content: "\2766"; display: block; order: 3; text-align: center;
+    color: var(--at-accent); opacity: .6; margin-top: 8px; font-size: 16px;
+}
+.callout[data-callout="quote"][data-callout-metadata~="illum"] > .callout-content p {
+    font-family: var(--at-font-heading); font-style: italic; font-size: 20px; line-height: 1.5; margin: 0;
+}
+.callout[data-callout="quote"][data-callout-metadata~="gloss"] > .callout-content {
+    display: grid; grid-template-columns: auto 1fr; column-gap: 14px;
+}
+.callout[data-callout="quote"][data-callout-metadata~="gloss"] > .callout-content::before {
+    content: "gloss"; font-family: var(--at-font-heading); font-style: italic; font-size: 14px; color: var(--at-accent);
+    writing-mode: vertical-rl; text-orientation: mixed; letter-spacing: .14em; opacity: .85; grid-row: 1 / -1; align-self: center;
+    transform: rotate(180deg); padding: 2px; overflow: visible;
+}
+.callout[data-callout="quote"][data-callout-metadata~="gloss"] > .callout-content p {
+    border-left: 1px dotted var(--at-border-2); padding-left: 16px; font-style: italic; margin: 0;
+}
+
+.callout[data-callout="quote"][data-callout-metadata~="tab"] {
+    position: relative; padding: 22px 24px 16px; text-align: center;
+    background: var(--background-secondary) !important; border-radius: 5px;
+}
+.callout[data-callout="quote"][data-callout-metadata~="tab"]::before,
+.callout[data-callout="quote"][data-callout-metadata~="tab"]::after {
+    content: ""; position: absolute; width: 16px; height: 16px; border: 1.5px solid var(--at-accent); opacity: .6;
+}
+.callout[data-callout="quote"][data-callout-metadata~="tab"]::before { top: 8px; left: 8px; border-right: 0; border-bottom: 0; }
+.callout[data-callout="quote"][data-callout-metadata~="tab"]::after { bottom: 8px; right: 8px; border-left: 0; border-top: 0; }
+.callout[data-callout="quote"][data-callout-metadata~="tab"] > .callout-content p {
+    font-family: var(--at-font-heading); font-size: 18px; margin: 0;
+}
+.callout[data-callout="quote"][data-callout-metadata~="tab"] > .callout-title { text-align: center; }
+
+/* ---- TABLE casts ---- */
+.callout[data-callout="table"] > .callout-content table { width: 100%; border-collapse: collapse; margin: 0; font-size: 0.92em; }
+.callout[data-callout="table"][data-callout-metadata~="ledger"] th { border-bottom: 1.5px solid var(--at-border-2); text-align: left; }
+.callout[data-callout="table"][data-callout-metadata~="ledger"] td { border-bottom: 1px solid var(--at-border); }
+.callout[data-callout="table"][data-callout-metadata~="ledger"] tr:hover td { background: color-mix(in srgb, var(--at-accent) 8%, transparent); }
+.callout[data-callout="table"][data-callout-metadata~="box"] table { border: 1px solid var(--at-border-2); }
+.callout[data-callout="table"][data-callout-metadata~="box"] th { background: var(--at-pane-2); border: 1px solid var(--at-border-2); }
+.callout[data-callout="table"][data-callout-metadata~="box"] td { border: 1px solid var(--at-border); font-family: var(--at-font-mono); }
+
+/* ---- CODE casts (keep the title as a terminal bar) ---- */
+.callout[data-callout="code"] {
+    background: transparent !important; border: 1px solid var(--at-border-2) !important; box-shadow: none !important;
+    padding: 0; border-radius: 6px; overflow: hidden;
+}
+.callout[data-callout="code"] > .callout-content { padding: 0; }
+.callout[data-callout="code"] > .callout-content :is(pre, .HyperMD-codeblock-bg) { margin: 0; border-radius: 0; }
+.callout[data-callout="code"] > .callout-title {
+    padding: 7px 13px; background: var(--at-pane-2); border-bottom: 1px solid var(--at-border);
+    font-family: var(--at-font-mono); font-size: 9.5px; letter-spacing: .16em; text-transform: uppercase; color: var(--at-faint);
+}
+.callout[data-callout="code"] > .callout-title .callout-icon { display: none; }
+.callout[data-callout="code"] > .callout-title .callout-title-inner { color: inherit !important; }
+
+.callout[data-callout="code"] .code-styler-header-container { display: none !important; }
+
+.callout[data-callout="code"] { --container-min-height: 0px !important; --container-height: 0px !important; }
+.callout[data-callout="code"] :is(pre, .code-styler-pre, .code-styler-scroll-wrapper) { min-height: 0 !important; }
+
+.callout[data-callout="code"] pre.code-styler-pre > :not(code) { position: absolute !important; }
+
+.callout[data-callout="code"] :is(.code-emitter-block, .code-output, code.language-output) { display: none !important; }
+
+.callout[data-callout="code"] .code-styler-line > :not(.code-styler-line-text) { display: none !important; }
+.callout[data-callout="code"] .code-styler-line-text { padding-left: 0 !important; }
+
+.callout[data-callout="code"] > .callout-content pre { padding: 13px 18px !important; }
+.callout[data-callout="code"] pre > code { padding: 0 !important; }
+
+.callout[data-callout="code"] > .callout-content,
+.callout[data-callout="code"] .code-styler-pre-parent { margin-bottom: 0 !important; }
+
+/* ---- GLOBAL: the same cleanup for BARE fences (a plain ```lang block NOT
+   wrapped in a [!code] cast). All the rules above are scoped to the cast, so a
+   bare fence kept code-styler/code-emitter's in-flow run button (▶), output box,
+   and reserved bottom band — the stray rounded rule + triangle in reading view.
+   Reading-view only, so Live Preview / editing is untouched. ---- */
+.markdown-reading-view pre.code-styler-pre {
+    --container-min-height: 0px !important; --container-height: 0px !important; min-height: 0 !important;
+}
+
+.markdown-reading-view pre.code-styler-pre > :not(code) { position: absolute !important; }
+
+.markdown-reading-view :is(
+    .code-emitter-block, .code-output, code.language-output,
+    .code-styler-run-button, .run-button, button.run-code-button, .run-code-button
+) { display: none !important; }
+.markdown-reading-view .code-styler-line > :not(.code-styler-line-text) { display: none !important; }
+
+/* bar = plain titled terminal (the previously-missing variant) */
+.callout[data-callout="code"][data-callout-metadata~="bar"] pre { background: var(--at-pane) !important; }
+.callout[data-callout="code"][data-callout-metadata~="bar"] > .callout-title {
+    display: flex; align-items: center; justify-content: flex-end; position: relative; padding-left: 58px;
+}
+.callout[data-callout="code"][data-callout-metadata~="bar"] > .callout-title::before {
+    content: "\25CF\2002\25CF\2002\25CF"; position: absolute; left: 13px; top: 50%; transform: translateY(-50%);
+    color: var(--at-border); font-size: 8px; letter-spacing: 1px;
+}
+/* clay = inscribed clay tablet */
+.callout[data-callout="code"][data-callout-metadata~="clay"] {
+    border: 0 !important; background: linear-gradient(160deg, var(--at-accent-2), var(--at-paper-ink-soft)) !important;
+    padding: 5px !important; border-radius: 6px;
+}
+.callout[data-callout="code"][data-callout-metadata~="clay"] > .callout-title { background: transparent; border: 0; color: var(--at-paper) !important; opacity: .85; }
+.callout[data-callout="code"][data-callout-metadata~="clay"] pre {
+    background: color-mix(in srgb, var(--at-bg-0) 78%, var(--at-accent-2)) !important; border-radius: 5px; color: var(--at-paper) !important;
+}
+
+/* ---- HEADING per-block via a trailing tag (Quartz renders inline tags too) ----
+   ##  Title #illum   →  styled heading + the #illum chip itself is hidden.
+   Values mirror element-variations-2.html (h-insc / h-marg / h-illum). */
+:is(h1, h2, h3, h4) a.tag[href$="illum" i],
+:is(h1, h2, h3, h4) a.tag[href$="rule" i],
+:is(h1, h2, h3, h4) a.tag[href$="marg" i] { display: none; }
+/* shared cast face = IM Fell, weight 400 */
+:is(h1,h2,h3):has(a.tag[href$="rule" i]),
+:is(h1,h2,h3):has(a.tag[href$="illum" i]),
+:is(h1,h2,h3):has(a.tag[href$="marg" i]) {
+    font-family: var(--at-font-heading) !important; font-weight: 400 !important; letter-spacing: -.01em;
+}
+
+:is(h1, h2, h3):has(a.tag[href$="rule" i]) {
+    font-size: 30px !important; line-height: 1.1;
+    border-bottom: 1px solid color-mix(in srgb, var(--at-accent) 26%, transparent); padding-bottom: 8px; margin-bottom: 8px;
+}
+:is(h1, h2, h3):has(a.tag[href$="rule" i]) small {
+    display: block; font-family: var(--at-font-mono); font-size: 10px; line-height: 1; letter-spacing: .3em;
+    text-transform: uppercase; color: var(--at-accent); font-weight: 500; margin-bottom: 6px;
+}
+
+:is(h1, h2, h3):has(a.tag[href$="illum" i]) {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 12px; font-size: 30px !important;
+    border-bottom: 2px solid transparent; border-image: linear-gradient(90deg, var(--at-accent), transparent) 1; padding-bottom: 14px;
+}
+:is(h1, h2, h3):has(a.tag[href$="illum" i])::before {
+    content: ""; flex: none; width: 24px; height: 24px; border-radius: 6px;
+    background: radial-gradient(circle at 30% 30%, var(--at-accent), var(--at-accent-2)); box-shadow: inset 0 0 0 1px rgba(255,255,255,.12);
+}
+
+.markdown-preview-view, .markdown-reading-view { counter-reset: da-marg; }
+:is(h1, h2, h3):has(a.tag[href$="marg" i]) {
+    display: flex; flex-wrap: wrap; align-items: flex-start; gap: 16px; font-size: 27px !important;
+    counter-increment: da-marg; border: 0; padding: 0;
+}
+:is(h1, h2, h3):has(a.tag[href$="marg" i])::before {
+    content: counter(da-marg, upper-roman); flex: none;
+    font-family: var(--at-font-heading); font-style: italic; font-size: 34px; line-height: .9; color: var(--at-accent); opacity: .7;
+}
+.el-h2:has(a.tag[href$="marg" i]) + .el-h6 > h6,
+.el-h3:has(a.tag[href$="marg" i]) + .el-h6 > h6,
+:is(h2,h3):has(a.tag[href$="marg" i]) + h6 {
+    font-family: var(--at-font-mono) !important; font-size: 10px !important; letter-spacing: .16em !important;
+    text-transform: uppercase; color: var(--at-faint) !important; font-weight: 400; margin: -6px 0 0 50px !important; border: 0 !important; padding: 0 !important;
+}
+
+/* ---- SECTION heading rule: line begins after the title and fades right
+   (reference .ghead .ln). Plain top-level h1/h2 only — not the cast headings. ---- */
+.markdown-preview-sizer > .el-h1 > h1:not(:has(a.tag)),
+.markdown-preview-sizer > .el-h2 > h2:not(:has(a.tag)) {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 16px; border-bottom: 0 !important;
+}
+.markdown-preview-sizer > .el-h1 > h1:not(:has(a.tag))::after,
+.markdown-preview-sizer > .el-h2 > h2:not(:has(a.tag))::after {
+    content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, var(--at-border-2), transparent);
+}
+/* ---- native heading levels h3–h6: a distinct DA marker per level
+   (top-level only; cast headings, and card/callout headings, are excluded) ---- */
+/* h3 — short copper rule before the title */
+.markdown-preview-sizer > .el-h3 > h3:not(:has(a.tag)) { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.markdown-preview-sizer > .el-h3 > h3:not(:has(a.tag))::before {
+    content: ""; flex: none; width: 20px; height: 2px; border-radius: 1px; background: var(--at-accent);
+}
+/* h4 — copper diamond before the title */
+.markdown-preview-sizer > .el-h4 > h4:not(:has(a.tag)) { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px; }
+.markdown-preview-sizer > .el-h4 > h4:not(:has(a.tag))::before {
+    content: ""; flex: none; align-self: center; width: 7px; height: 7px; transform: rotate(45deg); background: var(--at-accent); opacity: .8;
+}
+/* h5 — copper mono label */
+.markdown-preview-view h5, .markdown-reading-view h5 {
+    font-family: var(--at-font-mono) !important; text-transform: uppercase; letter-spacing: .16em; font-size: .82em; color: var(--at-accent);
+}
+/* h6 — faint mono kicker (matches the kicker used by the casts) */
+.markdown-preview-view h6, .markdown-reading-view h6 {
+    font-family: var(--at-font-mono) !important; text-transform: uppercase; letter-spacing: .2em; font-size: .74em; color: var(--at-faint);
+}
+
+/* ============================================================================
+   [Webpage polish]  editorial reading affordances
+   Safe globals + opt-in utilities (mw-lede / mw-dropcap). Token-based.
+   ========================================================================== */
+/* anchor jumps never hide a heading under Obsidian's title bar */
+.markdown-preview-view :is(h1, h2, h3, h4, h5, h6) { scroll-margin-top: 1.2rem; }
+
+.markdown-preview-sizer > .el-p:not(.el-p ~ .el-p) > p {
+    font-family: var(--at-font-body); font-size: 1.18em; line-height: 1.6; color: var(--at-muted); font-style: italic;
+}
+/* GLOBAL illuminated initial on that first paragraph */
+.markdown-preview-sizer > .el-p:not(.el-p ~ .el-p) > p::first-letter {
+    font-family: var(--at-font-heading); font-size: 3.2em; line-height: .82; float: left;
+    padding: 6px 10px 0 0; color: var(--at-accent); font-weight: 400; font-style: normal;
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    .callout[data-callout="fig"]:is([data-callout-metadata~="frame"], [data-callout-metadata~="hero"], [data-callout-metadata~="plate"]) > .callout-content {
+        transition: transform .4s cubic-bezier(.16,1,.3,1), box-shadow .4s ease;
+    }
+    .callout[data-callout="fig"]:is([data-callout-metadata~="frame"], [data-callout-metadata~="hero"], [data-callout-metadata~="plate"]):hover > .callout-content {
+        transform: translateY(-3px); box-shadow: 0 18px 36px -22px rgba(0,0,0,.55);
+    }
+}
+
+.markdown-preview-sizer > .el-p > p { line-height: 1.72; margin: 0 0 1.05em; }
+.markdown-preview-sizer > .el-h2 { margin-top: 2.1em; }
+.markdown-preview-sizer > .el-h3 { margin-top: 1.6em; }
+.markdown-preview-sizer > .el-ul, .markdown-preview-sizer > .el-ol { line-height: 1.7; }
+
+.markdown-rendered :is(.footnote-ref, sup[id^="fnref"]) a, .markdown-rendered a.footnote-link {
+    color: var(--at-accent) !important; font-family: var(--at-font-mono); font-size: .72em; text-decoration: none; padding: 0 1px;
+}
+.markdown-rendered .footnotes { border-top: 1px solid var(--at-border-2); margin-top: 2.4em; padding-top: 1em; }
+.markdown-rendered .footnotes :is(ol, li) { font-size: .9em; color: var(--at-muted); line-height: 1.6; }
+.markdown-rendered .footnote-backref { color: var(--at-accent); text-decoration: none; }
+
+.markdown-preview-sizer > .el-table tbody tr:nth-child(even) td {
+    background: color-mix(in srgb, var(--at-pane-2) 45%, transparent);
+}
+.markdown-preview-sizer > .el-table tbody tr:hover td {
+    background: color-mix(in srgb, var(--at-accent) 7%, transparent);
+}
+
+/* ============================================================================
+   [Calendar]  liamcain Calendar — "Excavation Almanac"
+   Ported from element-variations-cal.html: copper-gradient header bar, bordered
+   day-tiles that LIFT on hover, TODAY wears a pulsing wax-seal dot, find-dots
+   scale in, and the month grid FADE-RISES in with a per-week stagger.
+   ========================================================================== */
+.calendar, #calendar-container, .calendar-container {
+    --color-background-heading: transparent;
+    --color-background-day: transparent;
+    --color-background-weeknum: transparent;
+    --color-background-weekend: color-mix(in srgb, var(--at-pane-2) 55%, transparent);
+    --color-dot: var(--at-accent);
+    --color-arrow: var(--at-muted);
+    --color-button: var(--at-muted);
+    --color-text-title: var(--at-text-strong);
+    --color-text-heading: var(--at-faint);
+    --color-text-day: var(--at-text);
+    --color-text-today: var(--at-accent);
+    --color-text-green: #5a7038;
+    --color-text-red: var(--at-danger);
+    --interactive-accent: var(--at-accent);
+    --interactive-accent-rgb: var(--at-accent-rgb);
+    font-family: var(--at-font-body);
+}
+/* header — copper-tinted gradient bar (ref .cal .chead) */
+.calendar .nav, .calendar .title {
+    background: linear-gradient(160deg, color-mix(in srgb, var(--at-accent) 12%, transparent), transparent 70%);
+}
+/* month in display serif, year in mono copper caps (ref .mo / .yr) */
+.calendar .title, .calendar .month {
+    font-family: var(--at-font-heading) !important; color: var(--at-text-strong); letter-spacing: -.01em;
+}
+.calendar .year {
+    font-family: var(--at-font-mono) !important; font-size: 10px; letter-spacing: .24em;
+    text-transform: uppercase; color: var(--at-accent) !important; font-style: normal;
+}
+/* nav arrows + reset */
+.calendar .arrow, .calendar .reset-button {
+    color: var(--at-muted); border-radius: var(--radius-s);
+    transition: color .2s ease, background .2s ease, transform .4s cubic-bezier(.34,1.56,.64,1);
+}
+.calendar .arrow:hover, .calendar .reset-button:hover {
+    color: var(--at-accent); background: color-mix(in srgb, var(--at-accent) 12%, transparent); transform: translateY(-1px);
+}
+/* weekday rail — mono caps, faint (ref .dow) */
+.calendar th, .calendar .weekday {
+    font-family: var(--at-font-mono) !important; font-size: 9px !important; letter-spacing: .14em;
+    text-transform: uppercase; color: var(--at-faint) !important; font-weight: 500;
+}
+.calendar .week-num { font-family: var(--at-font-mono); font-size: 10px; color: var(--at-faint); }
+/* gap between day tiles (ref grid gap:5px) */
+table.calendar { border-collapse: separate !important; border-spacing: 4px !important; }
+
+.calendar td.day, .calendar .day {
+    position: relative; border: 1px solid var(--at-border) !important; border-radius: var(--radius-s);
+    background: color-mix(in srgb, var(--at-pane-2) 55%, transparent);
+    transition: transform .4s cubic-bezier(.34,1.56,.64,1), border-color .35s ease, background .35s ease, box-shadow .4s cubic-bezier(.16,1,.3,1);
+    opacity: 0; transform: translateY(8px); animation: calCellDA .5s cubic-bezier(.16,1,.3,1) forwards;
+}
+.calendar td.day:hover, .calendar .day:hover {
+    transform: translateY(-3px); border-color: var(--at-accent) !important;
+    background: color-mix(in srgb, var(--at-accent) 8%, var(--at-pane-2));
+    box-shadow: 0 12px 26px -16px rgba(0,0,0,.5); z-index: 2; cursor: pointer;
+}
+/* per-week entrance stagger (ref staggered animation-delay) */
+.calendar tbody tr:nth-child(1) td.day { animation-delay: .04s; }
+.calendar tbody tr:nth-child(2) td.day { animation-delay: .10s; }
+.calendar tbody tr:nth-child(3) td.day { animation-delay: .16s; }
+.calendar tbody tr:nth-child(4) td.day { animation-delay: .22s; }
+.calendar tbody tr:nth-child(5) td.day { animation-delay: .28s; }
+.calendar tbody tr:nth-child(6) td.day { animation-delay: .34s; }
+
+.calendar td.day.today, .calendar .today {
+    border-color: var(--at-accent) !important;
+    background: color-mix(in srgb, var(--at-accent) 12%, var(--at-pane-2)) !important;
+    color: var(--at-accent) !important; font-weight: 600;
+}
+.calendar .day.today::after, .calendar td.day.today::after {
+    content: ""; position: absolute; right: 5px; top: 5px; width: 7px; height: 7px; border-radius: 50%;
+    background: var(--at-accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--at-accent) 22%, transparent);
+    animation: calTodayDA 3s ease-in-out infinite;
+}
+/* active / selected day — filled copper */
+.calendar .active, .calendar td.day.active {
+    background: var(--at-accent) !important; color: #fff !important; border-color: var(--at-accent) !important;
+}
+
+.calendar .dot, .calendar .dots .dot {
+    fill: var(--at-accent); color: var(--at-accent);
+    transform-box: fill-box; transform-origin: center; transform: scale(0);
+    animation: calDotDA .4s cubic-bezier(.34,1.56,.64,1) forwards;
+}
+.calendar .dot:nth-child(2) { fill: var(--at-gold); color: var(--at-gold); }
+.calendar .dot:nth-child(3) { fill: var(--at-accent-2); color: var(--at-accent-2); }
+.calendar .active .dot { fill: #fff; color: #fff; }
+@keyframes calCellDA  { to { opacity: 1; transform: translateY(0); } }
+@keyframes calDotDA   { to { transform: scale(1); } }
+@keyframes calTodayDA {
+    0%, 100% { box-shadow: 0 0 0 3px color-mix(in srgb, var(--at-accent) 22%, transparent); }
+    50%      { box-shadow: 0 0 0 6px color-mix(in srgb, var(--at-accent) 4%, transparent); }
+}
+@media (prefers-reduced-motion: reduce) {
+    .calendar td.day, .calendar .day { opacity: 1 !important; transform: none !important; animation: none !important; }
+    .calendar td.day:hover, .calendar .day:hover { transform: none; }
+    .calendar .dot { transform: scale(1) !important; animation: none !important; }
+    .calendar .day.today::after, .calendar td.day.today::after { animation: none !important; }
+}
+
+/* ============================================================================
+   [Density]  body.at-condense — tighten app chrome; +at-condense-editor for body
+   Toggled from Style Settings ▸ 📐 Density. Leans on Obsidian's own spacing vars
+   where they exist so it travels with future Obsidian builds.
+   ========================================================================== */
+body.at-condense {
+    --nav-item-padding: 2px 6px 2px 8px;
+    --nav-item-children-padding-start: 14px;
+    --nav-item-children-margin-start: 11px;
+}
+body.at-condense .workspace-tab-header-inner { padding-top: 4px; padding-bottom: 4px; }
+body.at-condense .tree-item-self { min-height: 0; line-height: 1.3; }
+body.at-condense .nav-file-title, body.at-condense .nav-folder-title { padding-top: 2px; padding-bottom: 2px; }
+body.at-condense .metadata-container { padding: 7px 12px !important; }
+body.at-condense .metadata-property { padding: 1px 6px !important; }
+body.at-condense .view-content { padding-top: 6px; }
+body.at-condense .status-bar { padding-top: 1px; padding-bottom: 1px; font-size: 11px; }
+/* editor / reading body density — only with the second toggle on */
+body.at-condense.at-condense-editor {
+    --p-spacing: 8px;
+    --line-height-normal: 1.5;
+}
+body.at-condense.at-condense-editor .markdown-preview-sizer > .el-p > p { line-height: 1.5; margin: 0 0 .7em; }
+body.at-condense.at-condense-editor .markdown-preview-sizer > .el-h2 { margin-top: 1.3em; }
+body.at-condense.at-condense-editor .markdown-preview-sizer > .el-h3 { margin-top: 1em; }
+body.at-condense.at-condense-editor .markdown-rendered :is(ul, ol) { margin: .4em 0; }
+body.at-condense.at-condense-editor .markdown-rendered li { margin: .1em 0; line-height: 1.5; }
+
+/* ============================================================================
+   [DA paper texture]  Style Settings → "Paper texture (background)".
+   Painted as background-IMAGE on the reading/live surface, so the texture sits
+   BEHIND the text — contrast is never multiplied over glyphs (the e-ink/paper
+   readability rule). background-attachment:fixed = a stationary aged-paper
+   field that the note scrolls over. at-paper-plain (default) paints nothing.
+   Pure CSS, no image files; light + dark tuned separately.
+   ========================================================================== */
+body:is(.at-paper-grain, .at-paper-foxed) .markdown-reading-view {
+    background-attachment: fixed;
+}
+
+body.at-paper-grain.theme-light .markdown-reading-view {
+    background-image:
+        repeating-linear-gradient(0deg,  transparent 0 2px, rgba(70,52,28,.045) 2px 3px),
+        repeating-linear-gradient(90deg, transparent 0 3px, rgba(70,52,28,.035) 3px 4px);
+}
+body.at-paper-grain.theme-dark .markdown-reading-view {
+    background-image:
+        repeating-linear-gradient(0deg,  transparent 0 2px, rgba(0,0,0,.20) 2px 3px),
+        repeating-linear-gradient(90deg, transparent 0 3px, rgba(0,0,0,.15) 3px 4px);
+}
+
+body.at-paper-foxed .markdown-reading-view {
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat;
+    background-position: 20% 26%, 75% 60%, 46% 84%, 0 0, 0 0;
+    background-size: 220px 220px, 280px 280px, 180px 180px, 100% 100%, auto;
+}
+body.at-paper-foxed.theme-light .markdown-reading-view {
+    background-image:
+        radial-gradient(closest-side, rgba(138,96,52,.07), transparent),
+        radial-gradient(closest-side, rgba(138,96,52,.055), transparent),
+        radial-gradient(closest-side, rgba(138,96,52,.05), transparent),
+        radial-gradient(130% 100% at 50% 50%, transparent 56%, rgba(40,28,12,.15)),
+        repeating-linear-gradient(0deg, transparent 0 3px, rgba(70,52,28,.03) 3px 4px);
+}
+body.at-paper-foxed.theme-dark .markdown-reading-view {
+    background-image:
+        radial-gradient(closest-side, rgba(198,120,74,.06), transparent),
+        radial-gradient(closest-side, rgba(198,120,74,.05), transparent),
+        radial-gradient(closest-side, rgba(198,120,74,.045), transparent),
+        radial-gradient(130% 100% at 50% 50%, transparent 50%, rgba(0,0,0,.48)),
+        repeating-linear-gradient(0deg, transparent 0 3px, rgba(0,0,0,.10) 3px 4px);
+}
+body.at-condense.at-condense-editor .callout { margin-top: 1em; margin-bottom: 1em; }
+
+/* ============================================================================
+   DA-NATIVE REFINEMENTS  (redesign — appended; overrides win by source order)
+   Same classes / callout casts (Glass & Touch unaffected — separate theme files).
+   Gives the shared components an excavation skin: engraved labels, stamped badges,
+   illuminated caps, wax seals, ledger margins, catalogue numbers, copper foil.
+   ========================================================================== */
+
+/* ----- text utilities ----- */
+/* kicker: ● dot → engraved rule + glowing copper dot */
+.markdown-rendered .at-kicker { display: inline-flex; align-items: center; gap: 9px; letter-spacing: 0.24em; }
+.markdown-rendered .at-kicker::before { content: ""; width: 24px; height: 1px; background: linear-gradient(90deg, transparent, var(--at-accent)); }
+.markdown-rendered .at-kicker::after  { content: ""; width: 4px; height: 4px; border-radius: 50%; background: var(--at-accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--at-accent) 20%, transparent); }
+.markdown-rendered .at-kicker.no-dot::before, .markdown-rendered .at-kicker.no-dot::after { content: none; }
+
+.markdown-rendered .at-badge {
+    background: color-mix(in srgb, var(--at-gold) 14%, transparent);
+    color: var(--at-accent-2);
+    border: 1.5px solid var(--at-accent-2);
+    border-radius: 0;
+    transform: rotate(-1.4deg);
+    position: relative;
+}
+.markdown-rendered .at-badge::after { content: ""; position: absolute; inset: 2px; border: 1px solid color-mix(in srgb, var(--at-accent-2) 40%, transparent); pointer-events: none; }
+.markdown-rendered .at-badge.ghost { background: transparent; color: var(--at-accent); border-color: color-mix(in srgb, var(--at-accent) 50%, transparent); transform: rotate(-1deg); }
+
+/* mark: flat block → parchment highlighter (sand underlay) */
+.markdown-rendered .at-mark { background: linear-gradient(180deg, transparent 54%, color-mix(in srgb, var(--at-gold) 55%, transparent) 54%); border-radius: 0; }
+
+/* gradient: single accent → copper-foil ramp */
+.markdown-rendered .at-gradient {
+    background: linear-gradient(95deg, var(--at-accent-2), var(--at-accent) 45%, var(--at-gold));
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+
+/* ----- card · channels — light "Manifest ledger" + FIX light-mode contrast ----- */
+
+.callout[data-callout="card"][data-callout-metadata*="channels"] {
+    background: var(--at-pane-2);
+    border-color: var(--at-border-2);
+    color: var(--at-text);
+}
+.callout[data-callout="card"][data-callout-metadata*="channels"] :is(th, td) {
+    border-bottom-color: var(--at-border-2);
+    color: var(--at-text);
+}
+.callout[data-callout="card"][data-callout-metadata*="channels"] tbody tr:nth-child(even) { background: color-mix(in srgb, var(--at-gold) 9%, transparent); }
+.callout[data-callout="card"][data-callout-metadata*="channels"] tr > :first-child { color: var(--at-accent); font-weight: 600; }
+.callout[data-callout="card"][data-callout-metadata*="channels"] tr > :last-child { color: var(--at-muted); }
+
+/* ----- card · skill — "Field Procedure": ledger margin, SPECIMEN code tab, roman steps ----- */
+.callout[data-callout="card"][data-callout-metadata*="skill"] { position: relative; }
+.callout[data-callout="card"][data-callout-metadata*="skill"]::before {
+    content: ""; position: absolute; left: 9px; top: 16px; bottom: 16px; width: 1px;
+    background: repeating-linear-gradient(var(--at-accent) 0 4px, transparent 4px 8px); opacity: 0.45; pointer-events: none;
+}
+.callout[data-callout="card"][data-callout-metadata*="skill"] > .callout-content > pre { position: relative; }
+.callout[data-callout="card"][data-callout-metadata*="skill"] > .callout-content > pre::before {
+    content: "SPECIMEN"; position: absolute; right: -1px; top: -9px; z-index: 2;
+    font-family: var(--at-font-mono); font-size: 8px; letter-spacing: 0.18em; color: #fff;
+    background: var(--at-accent); padding: 2px 7px;
+}
+.callout[data-callout="card"][data-callout-metadata*="skill"] > .callout-content ol { list-style: none; counter-reset: s; padding-left: 0; }
+.callout[data-callout="card"][data-callout-metadata*="skill"] > .callout-content ol > li { counter-increment: s; position: relative; padding-left: 34px; }
+.callout[data-callout="card"][data-callout-metadata*="skill"] > .callout-content ol > li::before {
+    content: counter(s, upper-roman); position: absolute; left: 0; top: 0;
+    font-family: var(--at-font-heading); font-size: 1.05em; color: var(--at-accent); width: 26px; text-align: center;
+}
+
+/* ----- card · section — "Plate": illuminated drop-cap on the title + em-dash markers ----- */
+
+.callout[data-callout="card"][data-callout-metadata*="section"] > .callout-content h3 {
+    color: var(--at-text-strong);
+    font-weight: 600;
+}
+.callout[data-callout="card"][data-callout-metadata*="section"] > .callout-content h3:first-of-type::first-letter {
+    font-size: 1.9em; line-height: 0.78; color: var(--at-accent); float: left;
+    margin: 0.04em 0.12em 0 0; font-family: var(--at-font-heading); font-weight: 400;
+}
+.callout[data-callout="card"][data-callout-metadata*="section"] > .callout-content ul > li::marker { content: "—  "; color: var(--at-accent); }
+
+/* ----- card · profile — "Catalogue dossier": medallion avatar + corner wax seal ----- */
+.callout[data-callout="card"][data-callout-metadata*="profile"] { position: relative; }
+.callout[data-callout="card"][data-callout-metadata*="profile"] > .callout-content img {
+    border-radius: 50%; border: 1px solid var(--at-accent);
+    outline: 3px solid color-mix(in srgb, var(--at-accent) 18%, transparent); outline-offset: 2px;
+}
+.callout[data-callout="card"][data-callout-metadata*="profile"]::after {
+    content: ""; position: absolute; right: 14px; top: 14px; width: 22px; height: 22px; border-radius: 50%;
+    background: radial-gradient(circle at 38% 35%, var(--at-accent), var(--at-accent-2));
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3); opacity: 0.88; pointer-events: none;
+}
+
+/* ----- card · honor — "Certificate plate": dashed cert border ----- */
+.callout[data-callout="card"][data-callout-metadata*="honor"] {
+    outline: 1px dashed color-mix(in srgb, var(--at-accent) 35%, transparent); outline-offset: -6px;
+    border-color: color-mix(in srgb, var(--at-accent) 35%, transparent);
+}
+
+/* ----- card · step — "Specimen marker": tape strip + Caveat caption ----- */
+.callout[data-callout="card"][data-callout-metadata~="step"] { position: relative; }
+.callout[data-callout="card"][data-callout-metadata~="step"]::after {
+    content: ""; position: absolute; left: 50%; top: -7px; transform: translateX(-50%) rotate(-1.5deg);
+    width: 64px; height: 15px; background: color-mix(in srgb, var(--at-gold) 55%, transparent);
+    border-left: 1px dashed var(--at-accent-2); border-right: 1px dashed var(--at-accent-2); pointer-events: none;
+}
+.callout[data-callout="card"][data-callout-metadata~="step"] > .callout-content > p:last-child {
+    font-family: 'Caveat', cursive; font-size: 1.3em; line-height: 1.15; color: var(--at-accent);
+}
+
+/* ----- card · hero — "Frontispiece": blueprint grid (dark) / copper foil (accent) + double-rule frame ----- */
+.callout[data-callout="card"][data-callout-metadata*="hero"] { position: relative; }
+.callout[data-callout="card"][data-callout-metadata*="hero"]::after {
+    content: ""; position: absolute; inset: 8px; pointer-events: none; border-radius: 3px;
+    border: 1px solid color-mix(in srgb, var(--at-on-dark) 22%, transparent);
+}
+.callout[data-callout="card"][data-callout-metadata*="hero"][data-callout-metadata*="dark"] {
+    background-color: var(--at-dark-surface) !important;
+    background-image:
+        repeating-linear-gradient(0deg, transparent 0 21px, color-mix(in srgb, var(--at-on-dark) 10%, transparent) 21px 22px),
+        repeating-linear-gradient(90deg, transparent 0 21px, color-mix(in srgb, var(--at-on-dark) 10%, transparent) 21px 22px) !important;
+}
+.callout[data-callout="card"][data-callout-metadata*="hero"][data-callout-metadata*="accent"] {
+    background: linear-gradient(135deg, var(--at-accent-2), var(--at-accent) 55%, var(--at-gold)) !important;
+}
+/* hero frame reads brighter on the foil/blueprint */
+.callout[data-callout="card"][data-callout-metadata*="hero"]::after { border-color: color-mix(in srgb, var(--at-on-dark) 28%, transparent); }
+
+/* ----- cards: adopt the blockquote "artifact" hover (deep soft lift off the table) ----- */
+
+.callout[data-callout="card"]:hover {
+    box-shadow: 0 20px 40px -24px rgba(0, 0, 0, 0.55);
+}
+
+/* ============================================================================
+   [DEFAULT callout medallion]  Every NATIVE callout gets a polished per-type
+   icon disc + header rule — the "sealed aside" feel, but in the type's OWN
+   colour (--cc) and flat (no copper gloss, no corner brackets — those stay the
+   `seal` cast's signature, so this never collides with [!type|seal]).
+   Per-type colour + Obsidian's per-type lucide icon = each type reads unique.
+   WHITELIST model (not blacklist): applies ONLY to the native message types
+   (note…example + aliases). Deliberately excludes quote/cite (bespoke author-
+   line design, icon hidden) and every custom type (card/grid/infobox/tags/
+   columns/col/code/fig/table/hr). Plus :not(seal/folio/marg) so those casts of
+   a native type keep their own treatment. This is why it can't leak again.
+   ========================================================================== */
+.callout:is([data-callout="note"],[data-callout="abstract"],[data-callout="info"],[data-callout="todo"],[data-callout="tip"],[data-callout="hint"],[data-callout="important"],[data-callout="success"],[data-callout="check"],[data-callout="done"],[data-callout="question"],[data-callout="help"],[data-callout="faq"],[data-callout="warning"],[data-callout="caution"],[data-callout="attention"],[data-callout="failure"],[data-callout="fail"],[data-callout="missing"],[data-callout="danger"],[data-callout="error"],[data-callout="bug"],[data-callout="example"]):not([data-callout-metadata~="seal"],[data-callout-metadata~="folio"],[data-callout-metadata~="marg"]) > .callout-title {
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid color-mix(in srgb, var(--cc) 22%, transparent);
+    padding-bottom: 7px;
+    margin-bottom: 2px;
+}
+.callout:is([data-callout="note"],[data-callout="abstract"],[data-callout="info"],[data-callout="todo"],[data-callout="tip"],[data-callout="hint"],[data-callout="important"],[data-callout="success"],[data-callout="check"],[data-callout="done"],[data-callout="question"],[data-callout="help"],[data-callout="faq"],[data-callout="warning"],[data-callout="caution"],[data-callout="attention"],[data-callout="failure"],[data-callout="fail"],[data-callout="missing"],[data-callout="danger"],[data-callout="error"],[data-callout="bug"],[data-callout="example"]):not([data-callout-metadata~="seal"],[data-callout-metadata~="folio"],[data-callout-metadata~="marg"]) > .callout-title > .callout-icon {
+    flex: 0 0 30px;
+    width: 30px; height: 30px;
+    margin: 0; padding: 0;
+    display: inline-flex; align-items: center; justify-content: center;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--cc) 14%, var(--at-pane-2));
+    box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--cc) 42%, transparent);
+    transition: background 200ms var(--at-ease), box-shadow 200ms var(--at-ease);
+}
+.callout:is([data-callout="note"],[data-callout="abstract"],[data-callout="info"],[data-callout="todo"],[data-callout="tip"],[data-callout="hint"],[data-callout="important"],[data-callout="success"],[data-callout="check"],[data-callout="done"],[data-callout="question"],[data-callout="help"],[data-callout="faq"],[data-callout="warning"],[data-callout="caution"],[data-callout="attention"],[data-callout="failure"],[data-callout="fail"],[data-callout="missing"],[data-callout="danger"],[data-callout="error"],[data-callout="bug"],[data-callout="example"]):not([data-callout-metadata~="seal"],[data-callout-metadata~="folio"],[data-callout-metadata~="marg"]) > .callout-title > .callout-icon :is(svg, .svg-icon) {
+    width: 16px !important; height: 16px !important; margin: 0 !important;
+    color: var(--cc);
+}
+
+.callout:is([data-callout="note"],[data-callout="abstract"],[data-callout="info"],[data-callout="todo"],[data-callout="tip"],[data-callout="hint"],[data-callout="important"],[data-callout="success"],[data-callout="check"],[data-callout="done"],[data-callout="question"],[data-callout="help"],[data-callout="faq"],[data-callout="warning"],[data-callout="caution"],[data-callout="attention"],[data-callout="failure"],[data-callout="fail"],[data-callout="missing"],[data-callout="danger"],[data-callout="error"],[data-callout="bug"],[data-callout="example"]):not([data-callout-metadata~="seal"],[data-callout-metadata~="folio"],[data-callout-metadata~="marg"]):hover > .callout-title > .callout-icon {
+    background: var(--cc);
+    box-shadow: inset 0 0 0 1.5px var(--cc), 0 3px 8px -4px color-mix(in srgb, var(--cc) 70%, transparent);
+}
+.callout:is([data-callout="note"],[data-callout="abstract"],[data-callout="info"],[data-callout="todo"],[data-callout="tip"],[data-callout="hint"],[data-callout="important"],[data-callout="success"],[data-callout="check"],[data-callout="done"],[data-callout="question"],[data-callout="help"],[data-callout="faq"],[data-callout="warning"],[data-callout="caution"],[data-callout="attention"],[data-callout="failure"],[data-callout="fail"],[data-callout="missing"],[data-callout="danger"],[data-callout="error"],[data-callout="bug"],[data-callout="example"]):not([data-callout-metadata~="seal"],[data-callout-metadata~="folio"],[data-callout-metadata~="marg"]):hover > .callout-title > .callout-icon :is(svg, .svg-icon) {
+    color: var(--at-pane);
+}
+
+/* ============================================================================
+   [DA callout EMOTION casts]  26 opt-in per-type casts (mock v3 -> theme).
+   100% ADDITIVE: every rule requires a NEW metadata word, so plain callouts,
+   seal/folio/marg, fig/infobox/table/code casts and the medallion default are
+   untouched. Colliding words (slip/tape/tag/plate/manifest already used by
+   tags/fig/infobox) are TYPE-LOCKED so they cannot leak. Icon language matches
+   seal/marg: wax disc, engraved glyph, pen hand, drawn object, none.
+   Aged paper: one tiled fractal-noise tile (rasterized once - cheap) + edge
+   vignette. Modern motion: paper-lift, wax press, flag wave, stamp ink.
+   ========================================================================== */
+.callout{ --paper-noise:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E"); }
+
+/* ---- shared cast surface: parchment fibre + aged vignette + paper-lift ----
+   scoped to NATIVE types x any cast word, so it never touches non-native casts */
+.callout:is([data-callout="note"],[data-callout="abstract"],[data-callout="info"],[data-callout="todo"],[data-callout="tip"],[data-callout="hint"],[data-callout="important"],[data-callout="success"],[data-callout="check"],[data-callout="done"],[data-callout="question"],[data-callout="help"],[data-callout="faq"],[data-callout="warning"],[data-callout="caution"],[data-callout="attention"],[data-callout="failure"],[data-callout="fail"],[data-callout="missing"],[data-callout="danger"],[data-callout="error"],[data-callout="bug"],[data-callout="example"]):is([data-callout-metadata~="card"],[data-callout-metadata~="slip"],[data-callout-metadata~="pin"],[data-callout-metadata~="placard"],[data-callout-metadata~="plaque"],[data-callout-metadata~="entry"],[data-callout-metadata~="flag"],[data-callout-metadata~="lamp"],[data-callout-metadata~="dogear"],[data-callout-metadata~="stamp"],[data-callout-metadata~="tick"],[data-callout-metadata~="ribbon"],[data-callout-metadata~="tape"],[data-callout-metadata~="stencil"],[data-callout-metadata~="barrier"],[data-callout-metadata~="query"],[data-callout-metadata~="tag"],[data-callout-metadata~="ponder"],[data-callout-metadata~="condemn"],[data-callout-metadata~="fragile"],[data-callout-metadata~="klaxon"],[data-callout-metadata~="specimen"],[data-callout-metadata~="plate"],[data-callout-metadata~="tray"],[data-callout-metadata~="checklist"],[data-callout-metadata~="manifest"]) {
+    border-radius: 3px;
+    background-image: var(--paper-noise);
+    background-size: 160px 160px;
+    background-blend-mode: soft-light;
+    box-shadow: inset 0 0 30px -12px rgba(80,55,28,.28), inset 0 1px 0 rgba(255,248,232,.30);
+    transition: transform .45s cubic-bezier(.16,1,.3,1), box-shadow .45s cubic-bezier(.16,1,.3,1);
+}
+.callout:is([data-callout="note"],[data-callout="abstract"],[data-callout="info"],[data-callout="todo"],[data-callout="tip"],[data-callout="hint"],[data-callout="important"],[data-callout="success"],[data-callout="check"],[data-callout="done"],[data-callout="question"],[data-callout="help"],[data-callout="faq"],[data-callout="warning"],[data-callout="caution"],[data-callout="attention"],[data-callout="failure"],[data-callout="fail"],[data-callout="missing"],[data-callout="danger"],[data-callout="error"],[data-callout="bug"],[data-callout="example"]):is([data-callout-metadata~="card"],[data-callout-metadata~="slip"],[data-callout-metadata~="pin"],[data-callout-metadata~="placard"],[data-callout-metadata~="plaque"],[data-callout-metadata~="entry"],[data-callout-metadata~="flag"],[data-callout-metadata~="lamp"],[data-callout-metadata~="dogear"],[data-callout-metadata~="stamp"],[data-callout-metadata~="tick"],[data-callout-metadata~="ribbon"],[data-callout-metadata~="tape"],[data-callout-metadata~="stencil"],[data-callout-metadata~="barrier"],[data-callout-metadata~="query"],[data-callout-metadata~="tag"],[data-callout-metadata~="ponder"],[data-callout-metadata~="condemn"],[data-callout-metadata~="fragile"],[data-callout-metadata~="klaxon"],[data-callout-metadata~="specimen"],[data-callout-metadata~="plate"],[data-callout-metadata~="tray"],[data-callout-metadata~="checklist"],[data-callout-metadata~="manifest"]):hover {
+    transform: translateY(-4px);
+    box-shadow: inset 0 0 30px -12px rgba(80,55,28,.28), inset 0 1px 0 rgba(255,248,232,.30), 0 20px 40px -24px rgba(35,22,10,.55);
+}
+
+/* ============ NOTE ============ */
+/* card - catalogue index card, engraved number */
+.callout[data-callout-metadata~="card"]:not([data-callout="card"]) { transform: rotate(-.6deg); border-left-width: 1px; }
+.callout[data-callout-metadata~="card"]:not([data-callout="card"]) > .callout-title { border-bottom-style: dashed !important; }
+.callout[data-callout-metadata~="card"]:not([data-callout="card"]) > .callout-title > .callout-icon { display: none; }
+.callout[data-callout-metadata~="card"]:not([data-callout="card"]) > .callout-title .callout-title-inner::before { content: "\2116  "; font-family: var(--at-font-heading); color: var(--cc); }
+.callout[data-callout-metadata~="card"]:not([data-callout="card"])::after { content: ""; position: absolute; top: 12px; right: 14px; width: 10px; height: 10px; border-radius: 50%; background: var(--at-pane); box-shadow: inset 0 0 0 1.5px var(--at-border-strong); }
+
+.callout:is([data-callout="note"],[data-callout="abstract"])[data-callout-metadata~="slip"] { border-left-width: 1px; }
+.callout:is([data-callout="note"],[data-callout="abstract"])[data-callout-metadata~="slip"] > .callout-title { border-bottom: 0 !important; }
+.callout:is([data-callout="note"],[data-callout="abstract"])[data-callout-metadata~="slip"] > .callout-title > .callout-icon { display: none; }
+.callout:is([data-callout="note"],[data-callout="abstract"])[data-callout-metadata~="slip"] > .callout-title::before { content: "\270E"; font-family: var(--at-font-hand); color: var(--cc); font-size: 1.5em; line-height: .8; }
+.callout:is([data-callout="note"],[data-callout="abstract"])[data-callout-metadata~="slip"] .callout-title-inner { font-family: var(--at-font-hand) !important; text-transform: none !important; letter-spacing: 0 !important; font-size: 1.5em !important; }
+.callout:is([data-callout="note"],[data-callout="abstract"])[data-callout-metadata~="slip"]::after { content: ""; position: absolute; bottom: 0; right: 0; border-width: 0 0 22px 22px; border-style: solid; border-color: transparent transparent var(--at-pane) transparent; filter: drop-shadow(-2px -2px 2px rgba(0,0,0,.18)); }
+/* pin - sheet held by a copper push-pin, object */
+.callout[data-callout-metadata~="pin"] { margin-top: 20px; border-left-width: 1px; overflow: visible; }
+.callout[data-callout-metadata~="pin"] > .callout-title > .callout-icon { display: none; }
+.callout[data-callout-metadata~="pin"]::before { content: ""; position: absolute; top: -11px; left: 50%; transform: translateX(-50%); width: 20px; height: 20px; border-radius: 50%; background: radial-gradient(circle at 35% 30%, var(--at-accent), var(--at-accent-2)); box-shadow: 0 3px 7px -2px rgba(0,0,0,.5), inset 0 0 0 1px rgba(255,255,255,.25), inset -3px -3px 4px rgba(0,0,0,.25); transition: transform .4s cubic-bezier(.16,1,.3,1); }
+.callout[data-callout-metadata~="pin"]:hover::before { transform: translateX(-50%) scale(1.14); }
+
+/* ============ INFO ============ */
+/* placard - museum exhibit label, none */
+.callout[data-callout-metadata~="placard"] { text-align: center; border: 0; border-radius: 0; background: transparent; border-top: 2px solid var(--cc); border-bottom: 2px solid var(--cc); box-shadow: none; }
+.callout[data-callout-metadata~="placard"] > .callout-title { justify-content: center; border-bottom: 0 !important; }
+.callout[data-callout-metadata~="placard"] > .callout-title > .callout-icon { display: none; }
+.callout[data-callout-metadata~="placard"] .callout-title-inner { letter-spacing: .3em; }
+.callout[data-callout-metadata~="placard"] .callout-content { text-align: center; }
+/* plaque - engraved brass, wax gold roundel */
+.callout[data-callout-metadata~="plaque"] { border: 1px solid var(--at-border-strong); box-shadow: inset 0 1px 0 rgba(255,255,255,.4), inset 0 0 0 3px color-mix(in srgb, var(--at-gold) 18%, transparent); background-color: var(--at-pane-2); background-image: var(--paper-noise), linear-gradient(135deg, color-mix(in srgb, var(--at-gold) 22%, var(--at-pane-2)), var(--at-pane-2)); background-size: 160px 160px, auto; background-blend-mode: soft-light, normal; }
+.callout[data-callout-metadata~="plaque"] > .callout-title > .callout-icon { background: radial-gradient(circle at 35% 30%, var(--at-gold), color-mix(in srgb, var(--at-gold) 55%, #000)) !important; box-shadow: 0 4px 10px -4px rgba(0,0,0,.5), inset 0 0 0 1px rgba(255,255,255,.18) !important; }
+.callout[data-callout-metadata~="plaque"] > .callout-title > .callout-icon :is(svg, .svg-icon) { color: #fff !important; }
+/* entry - ledger row led by a catalogue number, glyph rail */
+.callout[data-callout-metadata~="entry"] { padding-left: 64px; }
+.callout[data-callout-metadata~="entry"] > .callout-title > .callout-icon { display: none; }
+.callout[data-callout-metadata~="entry"]::before { content: "\2116"; position: absolute; left: 0; top: 0; bottom: 0; width: 48px; display: flex; align-items: center; justify-content: center; font-family: var(--at-font-heading); font-size: 24px; color: var(--cc); background: color-mix(in srgb, var(--cc) 12%, transparent); border-right: 1px solid var(--at-border-2); }
+
+/* ============ TIP ============ */
+/* flag - excavation find-flag, object pennant */
+.callout[data-callout-metadata~="flag"] { padding-left: 46px; overflow: hidden; }
+.callout[data-callout-metadata~="flag"] > .callout-title > .callout-icon { display: none; }
+.callout[data-callout-metadata~="flag"]::before { content: ""; position: absolute; left: 18px; top: 12px; bottom: 12px; width: 2px; background: var(--at-accent-2); }
+.callout[data-callout-metadata~="flag"]::after { content: ""; position: absolute; left: 20px; top: 12px; width: 18px; height: 13px; background: var(--cc); clip-path: polygon(0 0, 100% 0, 75% 50%, 100% 100%, 0 100%); transform-origin: left center; transition: transform .4s ease; }
+.callout[data-callout-metadata~="flag"]:hover::after { animation: da-wave .8s ease; }
+@keyframes da-wave { 0%,100% { transform: none; } 30% { transform: skewY(-7deg) scaleX(1.06); } 60% { transform: skewY(5deg); } }
+/* lamp - discovery glow, wax green */
+.callout[data-callout-metadata~="lamp"] { background-color: color-mix(in srgb, var(--cc) 6%, var(--at-pane-2)); background-image: var(--paper-noise), radial-gradient(150px 90px at 34px 30px, color-mix(in srgb, var(--cc) 24%, transparent), transparent 70%); background-size: 160px 160px, auto; background-blend-mode: soft-light, normal; }
+.callout[data-callout-metadata~="lamp"] > .callout-title > .callout-icon { background: radial-gradient(circle at 35% 30%, var(--cc), color-mix(in srgb, var(--cc) 55%, #000)) !important; box-shadow: 0 4px 10px -4px rgba(0,0,0,.5), inset 0 0 0 1px rgba(255,255,255,.18), 0 0 16px -1px var(--cc) !important; }
+.callout[data-callout-metadata~="lamp"] > .callout-title > .callout-icon :is(svg, .svg-icon) { color: #fff !important; }
+/* dogear - folded-corner aside, pen hand */
+.callout[data-callout-metadata~="dogear"] > .callout-title { border-bottom: 0 !important; }
+.callout[data-callout-metadata~="dogear"] > .callout-title > .callout-icon { display: none; }
+.callout[data-callout-metadata~="dogear"] > .callout-title::before { content: "\273A"; color: var(--cc); font-size: 1.2em; }
+.callout[data-callout-metadata~="dogear"] .callout-title-inner { font-family: var(--at-font-hand) !important; text-transform: none !important; letter-spacing: 0 !important; font-size: 1.5em !important; }
+.callout[data-callout-metadata~="dogear"]::after { content: ""; position: absolute; top: 0; right: 0; border-width: 24px 24px 0 0; border-style: solid; border-color: color-mix(in srgb, var(--cc) 42%, transparent) var(--at-pane) transparent transparent; }
+
+/* ============ SUCCESS ============ */
+
+.callout[data-callout-metadata~="stamp"] > .callout-title > .callout-icon { border: 2px solid var(--cc); border-radius: 5px; background: none !important; box-shadow: none !important; transform: rotate(-7deg); width: 30px; height: 30px; transition: transform .4s ease, filter .4s ease; }
+.callout[data-callout-metadata~="stamp"] > .callout-title > .callout-icon :is(svg, .svg-icon) { color: var(--cc) !important; }
+.callout[data-callout-metadata~="stamp"]:hover > .callout-title > .callout-icon { transform: rotate(-7deg) scale(1.06); filter: brightness(1.1); }
+.callout[data-callout-metadata~="stamp"]::after { content: "VERIFIED"; position: absolute; top: 12px; right: 14px; font-family: var(--at-font-mono); font-weight: 600; font-size: 13px; letter-spacing: .12em; color: var(--cc); border: 2px solid var(--cc); border-radius: 4px; padding: 3px 8px; transform: rotate(-9deg); opacity: .78; box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--cc) 30%, transparent); transition: opacity .4s ease, transform .4s ease; }
+.callout[data-callout-metadata~="stamp"]:hover::after { opacity: 1; transform: rotate(-7deg) scale(1.05); }
+/* tick - wax check sigil */
+.callout[data-callout-metadata~="tick"] > .callout-title > .callout-icon { background: radial-gradient(circle at 35% 30%, var(--cc), color-mix(in srgb, var(--cc) 55%, #000)) !important; box-shadow: 0 4px 10px -4px rgba(0,0,0,.5), inset 0 0 0 1px rgba(255,255,255,.18) !important; }
+.callout[data-callout-metadata~="tick"] > .callout-title > .callout-icon :is(svg, .svg-icon) { color: #fff !important; }
+/* ribbon - award rosette, object (disc + two tails via icon pseudos) */
+.callout[data-callout-metadata~="ribbon"] > .callout-title > .callout-icon { position: relative; overflow: visible; background: radial-gradient(circle at 50% 40%, var(--cc), color-mix(in srgb, var(--cc) 60%, #000)) !important; box-shadow: 0 3px 7px -3px rgba(0,0,0,.5) !important; transition: transform .4s ease; }
+.callout[data-callout-metadata~="ribbon"] > .callout-title > .callout-icon :is(svg, .svg-icon) { color: #fff !important; }
+.callout[data-callout-metadata~="ribbon"] > .callout-title > .callout-icon::before, .callout[data-callout-metadata~="ribbon"] > .callout-title > .callout-icon::after { content: ""; position: absolute; top: 24px; width: 8px; height: 14px; background: var(--cc); clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 75%, 0 100%); }
+.callout[data-callout-metadata~="ribbon"] > .callout-title > .callout-icon::before { left: 5px; transform: rotate(12deg); }
+.callout[data-callout-metadata~="ribbon"] > .callout-title > .callout-icon::after { right: 5px; transform: rotate(-12deg); }
+.callout[data-callout-metadata~="ribbon"]:hover > .callout-title > .callout-icon { transform: rotate(10deg); }
+
+/* ============ WARNING ============ */
+
+.callout:is([data-callout="warning"],[data-callout="caution"],[data-callout="attention"])[data-callout-metadata~="tape"] { padding-top: 24px; }
+.callout:is([data-callout="warning"],[data-callout="caution"],[data-callout="attention"])[data-callout-metadata~="tape"]::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 12px; background: repeating-linear-gradient(45deg, var(--cc) 0 12px, color-mix(in srgb, var(--at-text-strong) 78%, var(--cc)) 12px 24px); }
+.callout:is([data-callout="warning"],[data-callout="caution"],[data-callout="attention"])[data-callout-metadata~="tape"] > .callout-title > .callout-icon { display: none; }
+.callout:is([data-callout="warning"],[data-callout="caution"],[data-callout="attention"])[data-callout-metadata~="tape"] .callout-title-inner::before { content: "!  "; font-family: var(--at-font-heading); font-weight: 700; color: var(--cc); }
+/* stencil - spray-stencil, dashed crate + outlined caps */
+.callout[data-callout-metadata~="stencil"] { border-style: dashed; border-left-style: solid; }
+.callout[data-callout-metadata~="stencil"] > .callout-title > .callout-icon { border: 2px dashed var(--cc); border-radius: 5px; background: none !important; box-shadow: none !important; transform: rotate(-7deg); }
+.callout[data-callout-metadata~="stencil"] > .callout-title > .callout-icon :is(svg, .svg-icon) { color: var(--cc) !important; }
+.callout[data-callout-metadata~="stencil"] .callout-title-inner { -webkit-text-stroke: .4px var(--cc); color: transparent; }
+/* barrier - striped left bar, object diamond */
+.callout[data-callout-metadata~="barrier"] { border-left: 0; padding-left: 30px; }
+.callout[data-callout-metadata~="barrier"]::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 14px; background: repeating-linear-gradient(45deg, var(--cc) 0 8px, transparent 8px 16px), color-mix(in srgb, var(--cc) 25%, transparent); }
+.callout[data-callout-metadata~="barrier"] > .callout-title > .callout-icon { border-radius: 3px; background: var(--cc) !important; box-shadow: 0 3px 7px -3px rgba(0,0,0,.5) !important; transform: rotate(45deg); width: 26px; height: 26px; transition: transform .4s ease; }
+.callout[data-callout-metadata~="barrier"] > .callout-title > .callout-icon :is(svg, .svg-icon) { color: #fff !important; transform: rotate(-45deg); }
+.callout[data-callout-metadata~="barrier"]:hover > .callout-title > .callout-icon { transform: rotate(45deg) scale(1.08); }
+
+/* ============ QUESTION ============ */
+/* query - query slip, wax ? + giant watermark */
+.callout[data-callout-metadata~="query"] { border-style: dashed; border-left-style: solid; overflow: hidden; }
+.callout[data-callout-metadata~="query"] > .callout-title > .callout-icon { background: radial-gradient(circle at 35% 30%, var(--cc), color-mix(in srgb, var(--cc) 55%, #000)) !important; box-shadow: 0 4px 10px -4px rgba(0,0,0,.5), inset 0 0 0 1px rgba(255,255,255,.18) !important; }
+.callout[data-callout-metadata~="query"] > .callout-title > .callout-icon :is(svg, .svg-icon) { color: #fff !important; }
+.callout[data-callout-metadata~="query"]::after { content: "?"; position: absolute; right: 8px; bottom: -28px; font-family: var(--at-font-heading); font-size: 130px; line-height: 1; color: var(--cc); opacity: .10; pointer-events: none; }
+
+.callout:is([data-callout="question"],[data-callout="help"],[data-callout="faq"])[data-callout-metadata~="tag"] { border-radius: 4px; padding-left: 42px; clip-path: polygon(18px 0, 100% 0, 100% 100%, 18px 100%, 0 50%); }
+.callout:is([data-callout="question"],[data-callout="help"],[data-callout="faq"])[data-callout-metadata~="tag"] > .callout-title > .callout-icon { display: none; }
+.callout:is([data-callout="question"],[data-callout="help"],[data-callout="faq"])[data-callout-metadata~="tag"]::before { content: ""; position: absolute; left: 23px; top: 50%; transform: translateY(-50%); width: 9px; height: 9px; border-radius: 50%; background: var(--at-pane); box-shadow: inset 0 0 0 1.5px var(--at-border-strong); }
+/* ponder - marginal query, pen hand */
+.callout[data-callout-metadata~="ponder"] > .callout-title { border-bottom: 0 !important; }
+.callout[data-callout-metadata~="ponder"] > .callout-title > .callout-icon { display: none; }
+.callout[data-callout-metadata~="ponder"] > .callout-title::before { content: "?"; font-family: var(--at-font-hand); color: var(--cc); font-size: 1.8em; line-height: .7; }
+.callout[data-callout-metadata~="ponder"] .callout-title-inner { font-family: var(--at-font-hand) !important; text-transform: none !important; letter-spacing: 0 !important; font-size: 1.6em !important; }
+
+/* ============ DANGER ============ */
+/* condemn - condemned notice, stamp X + heavy frame + crack */
+.callout[data-callout-metadata~="condemn"] { border: 2px solid var(--cc); border-left-width: 8px; }
+.callout[data-callout-metadata~="condemn"] > .callout-title > .callout-icon { border: 2px solid var(--cc); border-radius: 5px; background: none !important; box-shadow: none !important; transform: rotate(-7deg); }
+.callout[data-callout-metadata~="condemn"] > .callout-title > .callout-icon :is(svg, .svg-icon) { color: var(--cc) !important; }
+.callout[data-callout-metadata~="condemn"]::after { content: ""; position: absolute; top: -2px; right: 18px; width: 1px; height: 26px; background: var(--cc); transform: rotate(18deg); box-shadow: 6px 4px 0 -.5px var(--cc), -7px 5px 0 -.5px var(--cc); }
+/* fragile - crate stencil, glyph warning */
+.callout[data-callout-metadata~="fragile"] { border: 2px dashed var(--cc); }
+.callout[data-callout-metadata~="fragile"] > .callout-title > .callout-icon { display: none; }
+.callout[data-callout-metadata~="fragile"] .callout-title-inner::before { content: "\26A0  "; color: var(--cc); }
+/* klaxon - double red rule, wax alarm dot (idle pulse) */
+.callout[data-callout-metadata~="klaxon"] { border: 0; border-radius: 0; background: transparent; box-shadow: none; border-top: 3px double var(--cc); border-bottom: 3px double var(--cc); }
+.callout[data-callout-metadata~="klaxon"] > .callout-title > .callout-icon { width: 18px; height: 18px; background: radial-gradient(circle at 35% 30%, var(--cc), color-mix(in srgb, var(--cc) 55%, #000)) !important; animation: da-pulse 1.8s ease-in-out infinite; }
+.callout[data-callout-metadata~="klaxon"] > .callout-title > .callout-icon :is(svg, .svg-icon) { display: none; }
+@keyframes da-pulse { 0%,100% { box-shadow: 0 0 0 4px color-mix(in srgb, var(--cc) 22%, transparent), 0 0 10px -2px var(--cc); } 50% { box-shadow: 0 0 0 7px color-mix(in srgb, var(--cc) 8%, transparent), 0 0 18px 0 var(--cc); } }
+
+/* ============ EXAMPLE ============ */
+/* specimen - specimen tray, glyph + brackets + grid */
+.callout[data-callout-metadata~="specimen"] { background-color: var(--at-pane-2); background-image: var(--paper-noise), repeating-linear-gradient(0deg, transparent 0 17px, color-mix(in srgb, var(--cc) 7%, transparent) 17px 18px), repeating-linear-gradient(90deg, transparent 0 17px, color-mix(in srgb, var(--cc) 7%, transparent) 17px 18px); background-size: 160px 160px, auto, auto; background-blend-mode: soft-light, normal, normal; }
+.callout[data-callout-metadata~="specimen"] > .callout-title { position: relative; }
+.callout[data-callout-metadata~="specimen"] > .callout-title::after { content: "CAT."; position: absolute; top: 0; right: 0; font-family: var(--at-font-mono); font-size: 10px; letter-spacing: .1em; color: var(--cc); }
+.callout[data-callout-metadata~="specimen"]::before, .callout[data-callout-metadata~="specimen"]::after { content: ""; position: absolute; width: 14px; height: 14px; border: 1.5px solid var(--cc); opacity: .6; }
+.callout[data-callout-metadata~="specimen"]::before { left: 6px; bottom: 6px; border-right: 0; border-top: 0; }
+.callout[data-callout-metadata~="specimen"]::after { right: 6px; bottom: 6px; border-left: 0; border-top: 0; }
+
+.callout:is([data-callout="example"])[data-callout-metadata~="plate"] { padding: 18px; }
+.callout:is([data-callout="example"])[data-callout-metadata~="plate"]::after { content: ""; position: absolute; inset: 7px; border: 1px solid color-mix(in srgb, var(--cc) 40%, transparent); border-radius: 5px; pointer-events: none; }
+.callout:is([data-callout="example"])[data-callout-metadata~="plate"] .callout-title-inner::before { content: "PL. \2009"; font-family: var(--at-font-mono); color: var(--cc); }
+/* tray - boxed tray + compartment divider, object */
+.callout[data-callout-metadata~="tray"] { border: 1px solid var(--cc); border-left-width: 1px; }
+.callout[data-callout-metadata~="tray"] > .callout-content { border-top: 1px dashed color-mix(in srgb, var(--cc) 40%, transparent); padding-top: 8px; margin-top: 2px; }
+
+/* checklist - ruled checklist with leading boxes */
+.callout[data-callout-metadata~="checklist"] > .callout-content ul { list-style: none; padding-left: 4px; }
+.callout[data-callout-metadata~="checklist"] > .callout-content li { position: relative; padding-left: 26px; }
+.callout[data-callout-metadata~="checklist"] > .callout-content li::before { content: ""; position: absolute; left: 0; top: .25em; width: 14px; height: 14px; border-radius: 3px; border: 1.5px solid var(--cc); }
+
+.callout:is([data-callout="todo"])[data-callout-metadata~="manifest"] { padding-left: 46px; }
+.callout:is([data-callout="todo"])[data-callout-metadata~="manifest"]::before { content: ""; position: absolute; left: 38px; top: 14px; bottom: 14px; width: 1px; background: var(--at-border-2); }
+.callout:is([data-callout="todo"])[data-callout-metadata~="manifest"] > .callout-content ol { margin: 0; padding: 0; list-style: none; counter-reset: m; }
+.callout:is([data-callout="todo"])[data-callout-metadata~="manifest"] > .callout-content li { counter-increment: m; position: relative; padding-left: 8px; }
+.callout:is([data-callout="todo"])[data-callout-metadata~="manifest"] > .callout-content li::before { content: counter(m, decimal-leading-zero); position: absolute; left: -38px; width: 30px; text-align: right; font-family: var(--at-font-mono); font-size: .8em; color: var(--cc); opacity: .7; }
+
+/* reduced motion: keep the look, drop the movement */
+@media (prefers-reduced-motion: reduce) {
+    .callout[data-callout-metadata~="klaxon"] > .callout-title > .callout-icon { animation: none; }
+    .callout[data-callout-metadata~="flag"]:hover::after { animation: none; }
+    .callout:is([data-callout="note"],[data-callout="info"],[data-callout="tip"],[data-callout="success"],[data-callout="warning"],[data-callout="question"],[data-callout="danger"],[data-callout="example"],[data-callout="todo"]):is([data-callout-metadata~="card"],[data-callout-metadata~="pin"],[data-callout-metadata~="stamp"],[data-callout-metadata~="ribbon"],[data-callout-metadata~="barrier"]):hover { transform: none; }
+}
+
+/* ============================================================================
+   [DA gap-close]  Ports the remaining proposed (compare-HTML) treatments that
+   never shipped. Additive overrides (source order wins). Nothing existing
+   breaks: text utilities keep their class names, cards keep their casts.
+   ========================================================================== */
+
+/* 1 · display -> illuminated boxed copper drop-cap */
+.markdown-rendered .at-display { display: inline-block; }
+.markdown-rendered .at-display::first-letter {
+    font-size: 2.4em; line-height: .8; color: var(--at-accent); float: left;
+    margin: .06em .12em 0 0; padding: .06em .14em; font-family: var(--at-font-heading); font-weight: 400;
+    border: 2px solid color-mix(in srgb, var(--at-accent) 45%, transparent);
+    background: color-mix(in srgb, var(--at-accent) 9%, transparent);
+    box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--at-accent) 20%, transparent);
+}
+
+.markdown-rendered .at-lead { font-style: italic; }
+.markdown-rendered .at-gloss {
+    float: right; width: 120px; margin: 2px 0 8px 16px;
+    font-family: var(--at-font-hand); font-size: 1.25em; line-height: 1.12; color: var(--at-accent);
+    transform: rotate(-3deg); position: relative;
+}
+.markdown-rendered .at-gloss::before { content: ""; position: absolute; left: -14px; top: .55em; width: 10px; height: 1px; background: var(--at-accent); }
+
+/* 3 · stat -> underlined catalogue figure (mono) */
+.markdown-rendered .at-stat {
+    font-family: var(--at-font-mono); font-weight: 500;
+    border-bottom: 2px solid color-mix(in srgb, var(--at-accent) 35%, transparent); padding: 0 2px;
+}
+
+.callout[data-callout="grid"] { counter-reset: da-plate; }
+.callout[data-callout="card"][data-callout-metadata*="section"] { position: relative; overflow: hidden; counter-increment: da-plate; }
+.callout[data-callout="card"][data-callout-metadata*="section"]::before {
+    content: counter(da-plate, upper-roman); position: absolute; right: 8px; top: 2px; z-index: 0;
+    font-family: var(--at-font-heading); font-size: 60px; line-height: 1; pointer-events: none;
+    color: color-mix(in srgb, var(--at-accent) 8%, transparent);
+}
+.callout[data-callout="card"][data-callout-metadata*="section"] > .callout-content { position: relative; z-index: 1; }
+
+.callout[data-callout="card"][data-callout-metadata*="profile"]::after {
+    content: "\2605"; width: 30px; height: 30px; right: 14px; top: 14px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: rgba(255,255,255,.85); font-size: 18px; line-height: 1; transform: rotate(-6deg); opacity: 1;
+    background: radial-gradient(circle at 38% 35%, var(--at-accent), var(--at-accent-2));
+    box-shadow: 0 1px 3px rgba(0,0,0,.3), inset 0 0 0 1px rgba(255,255,255,.18);
+}
+
+.callout[data-callout="card"][data-callout-metadata*="profile"] { padding-left: 24px; text-align: left; }
+.callout[data-callout="card"][data-callout-metadata*="profile"] > .callout-content { text-align: left; }
+.callout[data-callout="card"][data-callout-metadata*="profile"] > .callout-content img { display: block; margin-left: 0; margin-right: auto; }
+.callout[data-callout="card"][data-callout-metadata*="profile"]::before {
+    content: ""; position: absolute; left: 10px; top: 14px; bottom: 14px; width: 1px; pointer-events: none;
+    background: repeating-linear-gradient(var(--at-accent) 0 4px, transparent 4px 8px); opacity: .5;
+}
+
+.callout[data-callout="card"][data-callout-metadata*="honor"] { position: relative; text-align: center; }
+.callout[data-callout="card"][data-callout-metadata*="honor"] > .callout-content { padding-bottom: 30px; }
+.callout[data-callout="card"][data-callout-metadata*="honor"] blockquote {
+    font-family: var(--at-font-heading); font-style: italic; font-size: 1.05em; color: var(--at-text-strong);
+    border: 0 !important; background: none !important; margin: 10px auto; max-width: 92%; padding: 0;
+}
+.callout[data-callout="card"][data-callout-metadata*="honor"] > .callout-content > p:last-child {
+    font-family: var(--at-font-mono); font-size: .9em; color: var(--at-muted);
+}
+.callout[data-callout="card"][data-callout-metadata*="honor"] > .callout-content > p:last-child strong { color: var(--at-accent); }
+.callout[data-callout="card"][data-callout-metadata*="honor"]::after {
+    content: "\2605"; position: absolute; left: 50%; bottom: 12px; transform: translateX(-50%) rotate(-6deg);
+    width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    color: rgba(255,255,255,.85); font-size: 21px; line-height: 1;
+    background: radial-gradient(circle at 38% 35%, var(--at-accent), var(--at-accent-2));
+    box-shadow: 0 2px 5px -2px rgba(0,0,0,.5), inset 0 0 0 1px rgba(255,255,255,.18); pointer-events: none;
+}
+
+/* 7 · skill -> dashed strata rows between roman steps */
+.callout[data-callout="card"][data-callout-metadata*="skill"] > .callout-content ol > li {
+    padding-top: 7px; padding-bottom: 7px; border-bottom: 1px dashed var(--at-border-2);
+}
+.callout[data-callout="card"][data-callout-metadata*="skill"] > .callout-content ol > li:last-child { border-bottom: 0; }
+
+.callout[data-callout="card"]:not([data-callout-metadata*="hero"]) { transition: transform .24s var(--at-ease), box-shadow .24s var(--at-ease), border-color .24s var(--at-ease); }
+.callout[data-callout="card"]:not([data-callout-metadata*="hero"]):hover { transform: translateY(-5px); }
+
+/* ============================================================================
+   [DA gap-close round 2]  section stitching · profile avatar left · honor light
+   ========================================================================== */
+
+.callout[data-callout="card"][data-callout-metadata*="section"]::after {
+    content: ""; position: absolute; left: 10px; top: 14px; bottom: 14px; width: 1px; z-index: 0; pointer-events: none;
+    background: repeating-linear-gradient(var(--at-accent) 0 4px, transparent 4px 8px); opacity: .5;
+}
+
+.callout[data-callout="card"][data-callout-metadata*="profile"] > .callout-content img { display: block !important; margin: 0 0 12px 0 !important; }
+.callout[data-callout="card"][data-callout-metadata*="profile"] > .callout-content p:has(img) { text-align: left; margin: 0; }
+
+.callout[data-callout="card"][data-callout-metadata*="honor"] {
+    background: var(--at-pane-2) !important;
+    color: var(--at-text) !important;
+    border-color: color-mix(in srgb, var(--at-accent) 35%, transparent) !important;
+}
+.callout[data-callout="card"][data-callout-metadata*="honor"] .callout-content > h6:first-child {
+    background: none !important; color: var(--at-accent-2) !important; padding: 0 !important; border-radius: 0 !important;
+    font-family: var(--at-font-mono); letter-spacing: .16em; font-size: .8em;
+}
+.callout[data-callout="card"][data-callout-metadata*="honor"] :is(h2, h3) { color: var(--at-text-strong) !important; }
+.callout[data-callout="card"][data-callout-metadata*="honor"] blockquote {
+    color: var(--at-text-strong) !important; border-left: 0 !important; padding-left: 0 !important;
+}
+.callout[data-callout="card"][data-callout-metadata*="honor"] strong { font-size: 1em !important; }
+.callout[data-callout="card"][data-callout-metadata*="honor"] hr { border-top-color: var(--at-border-2) !important; }
